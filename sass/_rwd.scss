@@ -1,0 +1,85 @@
+.rwd {
+    background: url(../img/bg-rwd.jpg) no-repeat center / cover;
+    h2 {
+        @extend %Y50;
+        left: 10%;
+        @include m-1024 {
+            top: 30%;
+        }
+        @include m-767 {
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .device {
+        right: -180px;
+        bottom: 10%;
+        z-index: 0;
+        @include pc-1440 {
+            transform: scale(0.8);
+            right: -21%;
+            bottom: -8%;
+        }
+        @include pc-1280 {
+            transform: scale(0.65);
+            right: -33%;
+            bottom: -12%;
+        }
+        @include m-1024 {
+            bottom: -8%;
+            right: -40%;
+        }
+        @include m-767 {
+            transform: scale(0.5);
+            right: -155%;
+            bottom: -20%;
+        }
+    }
+    .slidePic {
+        z-index: -1;
+    }
+    .mac {
+        width: 1500px;
+        .slidePic {
+            width: 906px;
+            top: 53px;
+            right: 161px;
+        }
+    }
+    .phone {
+        width: 450px;
+        bottom: 0;
+        left: -20px;
+        z-index: 1;
+        @include m-767 {
+            bottom: -30px;
+            left: 50px;
+        }
+        .slidePic {
+            width: 180px;
+            top: 53px;
+            right: 25px;
+        }
+        .dots {
+            span {
+                @include size(5px);
+            }
+        }
+    }
+    .dots {
+        @extend %X50;
+        bottom: 3px;
+        z-index: 2;
+        span {
+            @include cir(7px);
+            background: $gray;
+            opacity: 0.4;
+            display: inline-block;
+            margin: 0 5px;
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}

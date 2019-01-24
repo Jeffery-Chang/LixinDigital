@@ -1,0 +1,99 @@
+.break {
+    display: block;
+}
+
+.break-m {
+    @include m-767 {
+        display: block;
+    }
+}
+
+.none-m {
+    @include m-767 {
+        display: none;
+    }
+}
+
+.none-pc {
+    @include pc-only {
+        display: none;
+    }
+}
+
+section {
+    width: 100%;
+    position: relative;
+}
+
+.abs {
+    position: absolute;
+}
+
+.por {
+    position: relative;
+}
+
+h2 {
+    font-size: 4.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    @include m-1024 {
+        font-size: 4rem;
+    }
+    @include m-767 {
+        font-size: 3.2rem;
+    }
+}
+
+.w {
+    color: #fff;
+}
+
+.org {
+    color: $orange;
+}
+
+.full-h {
+    height: calc(100vh - 70px);
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    overflow: hidden;
+}
+
+.m-bl-btn {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    padding: 15px;
+    color: #fff;
+    background: #000;
+    font-size: 1.6rem;
+    text-align: center;
+    @include pc-only {
+        display: none;
+    }
+    @include m-767 {
+        width: 85%;
+        padding: 25px 15px;
+        font-size: 1.8rem;
+    }
+}

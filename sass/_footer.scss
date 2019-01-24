@@ -1,0 +1,121 @@
+.footer-index {
+    background: $orange;
+    color: #fff;
+    font-size: 1.4rem;
+    height: 70px;
+    line-height: 70px;
+}
+
+.footer-inner {
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    font-size: 1.4rem;
+    z-index: 1;
+    .footer-info {
+        background: $orange;
+        padding-top: 100px;
+        padding-bottom: 90px;
+        width: 80%;
+        @include pc-1280 {
+            padding: 80px 0 60px;
+        }
+        @include m-1024 {
+            width: 85%;
+            padding: 45px 0 40px;
+        }
+        @include m-767 {
+            padding: 40px 0;
+            width: 100%;
+        }
+    }
+    .inner {
+        width: 80%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin: auto;
+        @include m-767 {
+            flex-direction: column;
+            width: 90%;
+            align-items: center;
+        }
+    }
+    .left {
+        @include m-767 {
+            width: 100%;
+        }
+    }
+    .info {
+        padding-left: 100px;
+        @include m-1024 {
+            padding-left: 60px;
+        }
+        @include m-767 {
+            padding-left: 55px;
+            text-align: left;
+        }
+        &:first-child {
+            margin-bottom: 50px;
+        }
+        p {
+            &:first-child {
+                font-weight: bold;
+                margin-bottom: 20px;
+                @include m-1024 {
+                    margin-bottom: 15px;
+                }
+                @include m-767 {
+                    margin-bottom: 5px;
+                }
+                &:before {
+                    content: '';
+                    width: 40px;
+                    height: 1px;
+                    background: #fff;
+                    @extend %Y50;
+                    left: -60px;
+                    @include m-767 {
+                        width: 25px;
+                        left: -45px;
+                    }
+                }
+            }
+        }
+    }
+    .building {
+        width: 60%;
+        z-index: -1;
+        right: 0;
+        bottom: -20%;
+        @include pc-1440 {
+            bottom: -10%;
+        }
+        @include m-767 {
+            display: none;
+        }
+    }
+    .right {
+        @include m-767 {
+            margin-top: 40px;
+            // text-align: center;
+        }
+        .logo {
+            width: 190px;
+            margin-bottom: 20px;
+            @extend %trans;
+            &:hover {
+                @include pc-only {
+                    transform: translateY(-5px);
+                }
+            }
+            @include m-1024 {
+                width: 130px;
+                margin-bottom: 10px;
+            }
+            @include m-767 {
+                display: none;
+            }
+        }
+    }
+}

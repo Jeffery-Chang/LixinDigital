@@ -1,0 +1,400 @@
+extends ./include/layout
+include ./include/mixin
+block own_style
+	link(rel = 'stylesheet', href = 'css/index.css')
+block prepend beforeHeader
+	- headerClasses= 'header-index'
+block logo
+	img(src="img/svg/logo-w.svg", alt="logo")
+block content
+	//kv
+	section.kv
+		.scroll
+			span.txt SCROLL
+			span.line
+				span
+		.outter
+			.slogan
+				+svg('slogan')
+			.mask
+				.wrapper.full-size
+					//- .mask-bg-color.full-size
+					.blend-multiply.full-size
+						.animated-bg.full-size    
+						.blend-screen.element-mask.full-size
+							span#circle.circle-follow
+			script(src='js/vendor/mask.js')
+			.clip
+			.bg
+	//about
+	section.about.full-h
+		.cover
+			+svg('cover')
+		.main
+			.ttBox.w.por.draw
+				h2 關於<br>立炘
+				span.deco-block.draw
+			p 
+				span.break-m
+					span.break 「立炘數位」擁有廣告數十年行銷經驗，
+					span.break 是一間替客戶規劃傳統媒體及數位行銷的整合公司。
+				span.break 我們發揮創意，挑戰改變，勇敢追求遠大目標。
+				span.break 期許在這個數位化時代，用數據看見趨勢，
+				span.break 
+					strong 用創意進行溝通，帶來不一樣的行銷方式。
+	//what we do
+	section.marketing.full-h
+		.outer
+			h2.org 數位行銷整合
+			.carouselBox
+				.circle--slider
+					.rotate--circle
+						ul#circle--rotate.circle--rotate
+							li.block
+								.icon
+									i.iconBox
+										+svg('icon-media')
+									span 
+							li.block
+								.icon
+									i.iconBox
+										+svg('icon-digital')
+									span 
+							li.block
+								.icon
+									i.iconBox
+										+svg('icon-analysis')
+									span 
+							li.block
+								.icon
+									i.iconBox
+										+svg('icon-content')
+									span 
+							li.block
+								.icon
+									i.iconBox
+										+svg('icon-web')
+									span 
+							li.block
+								.icon
+									i.iconBox
+										+svg('icon-video')
+									span 
+						.animate-wrapper
+							.animate
+								.animate-more
+									.animate-title
+										h4 媒體整合行銷
+										h5 Media
+							.animate
+								.animate-more
+									.animate-title
+										h4 數位操作規劃
+										h5 Digital
+							.animate
+								.animate-more
+									.animate-title
+										h4 數據分析優化
+										h5 Analysis
+							.animate
+								.animate-more
+									.animate-title
+										h4 內容行銷規劃
+										h5 Content
+							.animate
+								.animate-more
+									.animate-title
+										h4 網站建置管理
+										h5 Website
+							.animate
+								.animate-more
+									.animate-title
+										h4 影像故事製作
+										h5 Video
+						.prev
+							span PREV
+						.next
+							span NEXT
+				.logo.abs
+					+svg('logo_en')
+				//change the bg-icon with carous
+				.bg-icon.abs
+					+svg('icon-media')
+					// 'icon-media','icon-digital','icon-analysis','icon-content','icon-web','icon-video'
+			script(src='js/vendor/carousel.js')
+			script(src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js')
+		//remove 'ani_start' when scrolling
+		.bg-line
+			.line.line1.abs.ani_start
+			.line.line2.abs.ani_start
+			.line.line3.abs.ani_start
+			.line.line4.abs.ani_start
+			.line.line5.abs.ani_start
+			.line.line6.abs.ani_start
+			.line.line7.abs.ani_start
+			.line.line8.abs.ani_start
+	//how we do
+	section.how.full-h
+		h2.org 我們怎麼做數位
+		.howBox
+			ul
+				li
+					.iconBox
+						.icon
+							+svg('how-1')
+							.line.abs
+						p 討論策略
+
+				li
+					.iconBox
+						.icon
+							+svg('how-2')
+							.line.abs
+						p 網路操作
+				li
+					.iconBox
+						.icon
+							+svg('how-3')
+							.line.abs
+						p 數據整合分析
+
+				li
+					.iconBox
+						.icon
+							+svg('how-4')
+						p 優化轉換
+	//media partner
+	section.mediaPartner
+		h2.w 代理媒體
+		canvas#responsive-canvas
+		script(src='js/vendor/media.js')
+	section.work-video
+		.slideBox
+			.video.full-h
+				.main
+					.work-tt
+						h2.org 我們的作品
+						p 設計 + 多元版型組合 + 持續強化的系統功能 + 專案管理流程 
+					.desBox
+						//work1
+						.work1
+							.work-info
+								h3 房地產｜新板巨星｜小資購屋
+								p 好的規劃並不難，堅持到底的才有收穫
+									span.break 別人怎麼生活我不在意，我打造的是每一天都迎向更好的生活
+							a.btn(href="https://www.youtube.com/watch?v=qWE6nlKQ-4Q" target="_blank")
+								span.icon-btn-play
+									span.path1
+									span.path2
+								span 觀看影片
+						//work2
+						.work2(style='display:none')
+							.work-info
+								h3 房地產｜新板巨星｜汪星人
+								p 汪星人不說，但汪星人都懂
+									span.break 金窩銀窩，都不如有自己溫馨的窩，來聽聽汪星人怎麼說
+							a.btn(href="https://www.youtube.com/watch?v=KmQK2cPRHPw" target="_blank")
+								span.icon-btn-play
+									span.path1
+									span.path2
+								span 觀看影片
+						//work3
+						.work3(style='display:none')
+							.work-info
+								h3 房地產｜新板巨星｜名牌生活
+								p 一身名牌，不如一張門牌
+									span.break 一樣是小資女孩，她天天追潮流單品當月光族、
+									span.break 她則買下一座城堡，天天當自己的公主
+							a.btn(href="https://www.youtube.com/watch?v=-YpLkKAhUsI" target="_blank")
+								span.icon-btn-play
+									span.path1
+									span.path2
+								span 觀看影片
+						//work4
+						.work4(style='display:none')
+							.work-info
+								h3 房地產｜新板巨星｜名牌生活
+								p 小熊多多為什麼不開心？
+									span.break 他說：常常在搬家，搬來搬去都是別人的家‥
+							a.btn(href="https://www.youtube.com/watch?v=RanzJCKiiu8" target="_blank")
+								span.icon-btn-play
+									span.path1
+									span.path2
+								span 觀看影片
+						//work5
+						.work5(style='display:none')
+							.work-info
+								h3 房地產｜新板巨星｜名牌生活
+								p 我們有多久，不敢擁抱成家的夢想
+									span.break 其實夢想，不一定要到很遠的地方
+							a.btn(href="https://www.youtube.com/watch?v=uMDcyCV3qgQ" target="_blank")
+								span.icon-btn-play
+									span.path1
+									span.path2
+								span 觀看影片
+						//work6
+						.work6(style='display:none')
+							.work-info
+								h3 房地產｜超級花園｜娘娘駕到
+								p 每天從這裡恢復身心神氣
+									span.break 再去面對現實的生活，是多麼令人羨慕的呀
+							a.btn(href="https://www.youtube.com/watch?v=dWIik0v7_aA" target="_blank")
+								span.icon-btn-play
+									span.path1
+									span.path2
+								span 觀看影片
+					.btm-content
+						.arrowBox
+							a(href="#").left
+								span.icon-arrow
+							a(href="#").right
+								span.icon-arrow
+						a.more(href="works.html")
+							sapn 看更多影片
+							span.line-arrow.por
+				.yt-video
+					.embed-container
+						iframe(src='https://www.youtube.com/embed/qWE6nlKQ-4Q', frameborder='0', allowfullscreen='')
+			.slider
+				ul
+					li
+						a(href="#")
+					li
+						a(href="#")
+					li
+						a(href="#")
+					li
+						a(href="#")
+					li
+						a(href="#")
+					li
+						a(href="#")
+					.indicator
+	//rwd
+	section.rwd.full-h
+		h2 響應式設計
+		.device.abs
+			.phone.abs
+				.cover.por
+
+					+png('rwd-phone')
+					.slidePic.abs
+						.dots.abs
+							span.active
+							span
+							span
+						.picBox
+							.web-m1
+								+png('web-m1')
+			.mac
+				.cover.por
+					+png('rwd-mac')
+					.slidePic.abs
+						.dots.abs
+							span.active
+							span
+							span
+						.picBox
+							.web-pc1
+								+png('web-pc1')
+	//show case
+	section.showCaseBox
+		.arrowCube
+			a(href="#").left
+				span.icon-arrow
+			a(href="#").right
+				span.icon-arrow
+		.showCase-slide
+			.showCase.full-h.showCase_01
+				.left.por.full-h
+					a.caseBg.full-h(href="#")
+						.play
+							+svg('play')
+				.right.por
+					.main
+						h3.org 一個巨星的誕生 － 林版新
+						p 一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生
+						a.btn(href="#") DETAIL
+					a.more(href="#")
+						sapn 看更多案例
+						span.line-arrow.por
+	//client
+	section.client
+		.arrowCube
+			a(href="#").left
+				span.icon-arrow
+			a(href="#").right
+				span.icon-arrow
+		h2.org 服務客戶
+		.slideBox
+			.logoBox
+				ul
+					li
+						+png('client-far')
+					li
+						+png('client-yuan')
+					li
+						+png('client-yuan')
+					li
+						+png('client-far')
+					li
+						+png('client-yuan')
+					li
+						+png('client-far')
+			.logoBox(style='display:none')
+				ul
+					li
+						+png('client-far')
+					li
+						+png('client-yuan')
+					li
+						+png('client-yuan')
+					li
+						+png('client-far')
+					li
+						+png('client-yuan')
+					li
+						+png('client-far')
+	//contact
+	section.contact
+		p.hello.abs HELLO
+		.main
+			.infoBox
+				.info
+					p.por ADDRESS
+					p 台北市中山區建國北路二段65號4樓
+				.info
+					p.por CONTACT
+					p 電話<br>02-2500-0818
+			.form
+				.form-info
+					.mat-div          
+						label.mat-label 姓名*
+						|                         
+						input#login_acct.mat-input(type='text', autocomplete='off')
+					|                     
+					.mat-div              
+						label.mat-label 公司
+						|                         
+						input#login_code.mat-input(type='text', autocomplete='off')
+					.mat-div              
+						label.mat-label 信箱*
+						|                         
+						input#login_code.mat-input(type='text', autocomplete='off')
+					.mat-div              
+						label.mat-label 電話
+						|                         
+						input#login_code.mat-input(type='number', autocomplete='off')
+					script(src="js/vendor/form.js")
+				.textBox
+					textarea(type='text', placeholder='詢問內容', name='contactContent', maxlength='400', required='')
+	// map
+	.map
+		section#cd-google-map
+			#google-container
+			#cd-zoom-in
+			#cd-zoom-out
+		script(src="https://maps.googleapis.com/maps/api/js")
+		script(src="js/vendor/map.js")
+	footer.footer-index © 2019 立炘數位行銷有限公司.  ALL RIGHTS RESERVED.
+

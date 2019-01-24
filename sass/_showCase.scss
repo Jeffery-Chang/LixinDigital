@@ -1,0 +1,136 @@
+.arrowCube {
+    @include pos-mid;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    a {
+        @include size(60px);
+        line-height: 60px;
+        background: $orange;
+        color: white;
+        font-size: 2rem;
+        @extend %trans;
+        span {
+            display: inline-block;
+            @extend %trans;
+        }
+        &:hover {
+            background: #000;
+            span {
+                transform: translateX(-5px);
+            }
+        }
+    }
+    .right {
+        span {
+            transform: scale(-1);
+        }
+        &:hover {
+            span {
+                transform: translateX(5px) scale(-1);
+            }
+        }
+    }
+}
+
+.showCase {
+    display: flex;
+    background: #fff;
+    >div {
+        width: 50%;
+        overflow: hidden;
+    }
+    .left {
+        &:hover {
+            .caseBg {
+                @extend %trans;
+                transform: scale(1.1);
+            }
+            .play {
+                width: 80px;
+                @extend %trans;
+            }
+        }
+    }
+    .caseBg {
+        display: block;
+    }
+    .play {
+        width: 70px;
+        @include pos-mid;
+        z-index: 1;
+    }
+    .right {
+        background: #fff;
+        text-align: left;
+        @include pc-1280 {
+            padding-right: 90px;
+        }
+        .main {
+            width: 65%;
+            @include pos-mid;
+            h3 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.4rem;
+                color: $gray;
+                margin: 20px 0;
+                line-height: 32px;
+            }
+            a {
+                border: 1px solid black;
+                color: #000;
+                width: 220px;
+                padding: 15px 0;
+                text-align: center;
+                position: relative;
+                z-index: 0;
+                letter-spacing: 1px;
+                &:after {
+                    background: $orange;
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    width: 0;
+                    @extend %trans;
+                }
+                &:hover {
+                    color: #fff;
+                    border: 1px solid $orange;
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .more {
+        width: 65%;
+        font-size: 1.4rem;
+        color: #000;
+        @extend %trans;
+        font-weight: bold;
+        @extend %X50;
+        bottom: 40px;
+        margin: auto;
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            @extend %trans;
+        }
+        &:hover {
+            color: $orange;
+        }
+    }
+}
+
+.showCase_01 {
+    .caseBg {
+        background: url(../img/showCase-lin.jpg) no-repeat center / cover;
+    }
+}

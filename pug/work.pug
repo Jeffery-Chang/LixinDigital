@@ -1,0 +1,159 @@
+extends ./include/layout
+include ./include/mixin
+block work
+    a.active 作品集
+block content
+    .workBox
+        //add 'scrolled-ttBox'
+        .ttBox
+            p.work-tt.org OUR WORK
+            .tabBox.por.tab-fixed 
+                ul
+                    li
+                        a(href="#")
+                            span.icon-work-video
+                    li
+                        a(href="#").active
+                            span.icon-work-web
+        //work-video
+        .main-video(style="display:none")
+            ul
+                li
+                    a(href="https://www.youtube.com/watch?v=Lzl_eC0ITOk" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜超級城市','家人換屋','1').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=1ccNdkpdFuI" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜超級城市','親子家庭','2').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=h_7AFSWrPjU" target='_blank').por
+                        +work-video('房地產｜萬騰機構｜布拉諾花園','生活機能','3').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=h_7AFSWrPjU" target='_blank').por
+                        +work-video('房地產｜萬騰機構｜布拉諾花園','世外生活','4').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=NrmLPaJE88o" target='_blank').por
+                        +work-video('房地產｜萬騰機構｜布拉諾花園','遊吟詩人','5').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=gh63Umm3F9w" target='_blank').por
+                        +work-video('房地產｜太平洋代銷｜隱苑','生活機能','6').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=Q92jLT0IAzE" target='_blank').por
+                        +work-video('房地產｜太平洋代銷｜隱苑','紀錄證言','7').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=it0B2YMRxeU" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜超級城市','生活機能','8').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=wyC1ZjTppSo" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜超級城市','直播抽獎','9').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=rHPUvOB1NtU" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜超級城市','租不如買','10').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=sT4x6xII7gI" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜超級城市','城市空拍','11').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=f4qGvNOpX7Y" target='_blank').por
+                        +work-video('房地產｜海悅廣告｜漢寶之星','動畫廣告','12').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=uMDcyCV3qgQ" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜新板巨星','競選造勢','12').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=qWE6nlKQ-4Q" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜新板巨星','小資購屋','14').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=FXFaryfVMLM" target='_blank').por
+                        +work-video('房地產｜新潤建設｜幸福莊園','寄人籬下','15').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=qWE6nlKQ-4Q" target='_blank').por
+                        +work-video('房地產｜新和廣告｜晴空SKY1','城市空拍','16').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=TbixUARTDT0" target='_blank').por
+                        +work-video('房地產｜新和廣告｜晴空SKY1','更懂珍惜','17').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=xLKhnIMJWfI" target='_blank').por
+                        +work-video('房地產｜新和廣告｜晴空SKY1','藝術人生','18').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=oTrJUdk-asc" target='_blank').por
+                        +work-video('房地產｜新和廣告｜超級花園','生活轉變','19').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=dWIik0v7_aA" target='_blank').por
+                        +work-video('房地產｜新和廣告｜超級花園','娘娘駕到','20').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=PrNC5YAX6hc" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜德友極','通勤時間','21').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=iykY3YxXRmU" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜景上川','萬華訪談','22').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=DS35xFF9ybs" target='_blank').por
+                        +work-video('房地產｜裸心建設｜裸心納景','寬景人生','23').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=xSZOeqp9JnA" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜新板巨星','都市農耕','24').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=KmQK2cPRHPw" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜新板巨星','汪星人','25').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=xLdvfhpks0c" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜新板巨星','愛要及時','26').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=RanzJCKiiu8" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜新板巨星','不再搬家','27').work-video1
+                li
+                    a(href="https://www.youtube.com/watch?v=-YpLkKAhUsI" target='_blank').por
+                        +work-video('房地產｜海沃創意行銷｜新板巨星','名牌生活','28').work-video1
+        //work-web
+        .main-web
+            ul
+                li
+                    a(href="#" target='_blank')
+                        .pic
+                            +png('work-video-1')
+                        p 案例分享｜林版巨星
+                li
+                    a(href="#" target='_blank')
+                        .pic
+                            +png('work-video-1')
+                        p 案例分享｜林版巨星
+                li
+                    a(href="#" target='_blank')
+                        .pic
+                            +png('work-video-1')
+                        p 案例分享｜林版巨星
+                li
+                    a(href="#" target='_blank')
+                        .pic
+                            +png('work-video-1')
+                        p 案例分享｜林版巨星
+                li
+                    a(href="#" target='_blank')
+                        .pic
+                            +png('work-video-1')
+                        p 案例分享｜林版巨星
+                li
+                    a(href="#" target='_blank')
+                        .pic
+                            +png('work-video-1')
+                        p 案例分享｜林版巨星
+        a.m-bl-btn.none-pc(href="#") MORE
+        .loading
+            span
+        .bg-logo
+            +svg('logo-work')
+    footer.footer-inner.por
+        .footer-info
+            .inner
+                .left
+                    .infoBox
+                        .info
+                            p.por ADDRESS
+                            p 台北市中山區建國北路二段65號4樓
+                        .info
+                            p.por CONTACT
+                            p 電話<br>02-2500-0818
+                .right
+                    a.logo(href="index.html")  
+                        +svg('logo-w')
+                    p © 2019 立炘數位行銷有限公司.  ALL RIGHTS RESERVED.
+        .building.abs
+            +png('footer')

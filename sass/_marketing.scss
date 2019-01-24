@@ -1,0 +1,131 @@
+.marketing {
+    background: url('../img/old_mathematics.png') repeat;
+    overflow: hidden;
+    .carouselBox {
+        margin-top: 80px;
+        position: relative;
+        @include pc-1440 {
+            margin-top: 50px;
+        }
+        @include m-767 {
+            transform: scale(0.75);
+            margin-top: 0;
+        }
+    }
+    .animate-title {
+        font-size: 2.3rem;
+    }
+    .outer {
+        @include pos-mid;
+    }
+    h5 {
+        font-size: 1.5rem;
+        color: $gray;
+        @include m-1024 {
+            font-size: 1.6rem;
+        }
+    }
+    .logo {
+        @include pos-mid;
+        width: 120px;
+        @include m-767 {
+            top: 43%;
+        }
+    }
+    .icon {
+        @extend %flex-mid;
+    }
+    .iconBox {
+        width: 45%;
+    }
+    .bg-icon {
+        width: 350px;
+        left: -200px;
+        top: -100px;
+        z-index: -1;
+        opacity: 0.5;
+        @include pc-1440 {
+            width: 280px;
+            left: -150px;
+            top: -50px;
+        }
+        @include m-767 {
+            width: 96%;
+            bottom: -56%;
+            opacity: 0.7;
+            top: initial;
+        }
+    }
+    .line {
+        width: 4px;
+        transform: rotate(45deg);
+        border-radius: 4px;
+        background-color: $orange;
+        @extend %trans;
+    }
+    .line1 {
+        height: 80px;
+        opacity: 0.4;
+        left: 0%;
+        top: 15%;
+    }
+    .line2 {
+        height: 330px;
+        opacity: 0.5;
+        left: 0;
+        bottom: -8%;
+    }
+    .line3 {
+        height: 400px;
+        opacity: 0.1;
+        left: 23%;
+        top: -10%;
+    }
+    .line4 {
+        height: 300px;
+        opacity: 0.1;
+        left: 20%;
+        bottom: 13%;
+    }
+    .line5 {
+        height: 500px;
+        opacity: 0.1;
+        right: 20%;
+        top: -8%;
+    }
+    .line6 {
+        height: 180px;
+        opacity: 0.4;
+        right: 13%;
+        top: 40%;
+    }
+    .line7 {
+        height: 500px;
+        opacity: 0.1;
+        right: 20%;
+        bottom: -15%;
+    }
+    .line8 {
+        height: 300px;
+        opacity: 0.2;
+        right: 0;
+        bottom: 5%;
+    }
+    .ani_start {
+        height: 0;
+    }
+}
+
+.circle--slider {
+    margin: auto;
+    width: 400px;
+    .animate-wrapper {
+        width: 165px;
+        right: -215px;
+        @include m-767 {
+            right: 50%;
+            top: 45%;
+            transform: translateX(50%);
+        }
+    }
+}

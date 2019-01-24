@@ -1,0 +1,29 @@
+.client {
+    background: url(../img/struckaxiom.png);
+    padding: 130px 0 170px;
+    .slideBox {
+        width: 50%;
+        margin: auto;
+        @include pc-1440 {
+            width: 62%;
+        }
+        @include pc-1280 {
+            width: 66%;
+        }
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    li {
+        width: 30%;
+        height: 130px;
+        @extend %flex-mid;
+        flex-shrink: 0;
+        img {
+            height: 40px;
+            width: auto;
+        }
+    }
+}

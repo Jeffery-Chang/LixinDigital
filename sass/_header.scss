@@ -1,0 +1,145 @@
+// header
+header {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: white;
+    @include m-1024 {
+        padding: 0 20px;
+    }
+    ;
+    a {
+        @extend %trans;
+        &:hover {
+            @include pc-only {
+                transform: translateY(-5px);
+            }
+        }
+    }
+    .logo {
+        width: 188px;
+        &:hover {
+            @include pc-only {
+                opacity: 0.8;
+            }
+        }
+    }
+    .pc {
+        display: flex;
+        @include m-1024 {
+            display: none;
+        }
+    }
+    li {
+        display: inline-block;
+        margin-left: 40px;
+        a {
+            font-size: 1.6rem;
+            color: $gray;
+        }
+    }
+    .index-menu {
+        a {
+            position: relative;
+            font-weight: 500;
+            &:after {
+                content: '';
+                width: 0;
+                height: 2px;
+                background: $orange;
+                display: block;
+                position: absolute;
+                right: 0;
+                @extend %trans;
+            }
+            &.active {
+                pointer-events: none;
+            }
+            &:hover,
+            &.active {
+                @include pc-only {
+                    color: $orange;
+                    &:after {
+                        width: 100%;
+                        left: 0;
+                        right: inherit;
+                    }
+                }
+            }
+        }
+    }
+    .social {
+        a {
+            &:hover {
+                @include pc-only {
+                    opacity: 0.8;
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
+
+.scrolled {
+    background: $orange;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .1);
+    border: 0;
+    height: 70px;
+    .logo {
+        width: 150px;
+    }
+}
+
+.header-index {
+    border-bottom: 1px solid white;
+    background: transparent;
+}
+
+.header-index,
+.scrolled {
+    li {
+        a {
+            color: #fff;
+        }
+    }
+    .index-menu {
+        a {
+            &:after {
+                background: white;
+            }
+            &.active {
+                color: white;
+            }
+            &:hover {
+                @include pc-only {
+                    color: white;
+                }
+            }
+        }
+    }
+    .social {
+        a {
+            &:hover {
+                @include pc-only {
+                    opacity: 0.8;
+                    color: white;
+                }
+            }
+        }
+    }
+    .button_container span {
+        background: #fff;
+    }
+}
+
+.scrolled {
+    background: $orange;
+    border: 0;
+}

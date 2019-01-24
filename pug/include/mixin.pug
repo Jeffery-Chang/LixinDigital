@@ -1,0 +1,45 @@
+//- svg
+mixin svg(name)
+	-var path = "img/svg/"
+	-var file = ".svg"
+	img(src=path + name + file)
+
+//- img
+mixin png(name)
+	-var path = "img/"
+	-var file = ".png"
+	img(src=path + name + file)
+
+//- jpg
+mixin jpg(name)
+	-var path = "img/"
+	-var file = ".jpg"
+	img(src=path + name + file)
+//- gif
+mixin gif(name)
+	-var path = "img/"
+	-var file = ".gif"
+	img(src=path + name + file)
+//- tt
+mixin tt(name)
+	span.tt
+		+png(name)
+		span.flag.flag-l
+			+png("tt-flag1")
+		span.flag.flag-r
+			+png("tt-flag2")
+
+
+mixin work-video(project,clien,num)
+	.inner
+		.pic.por&attributes(attributes)
+			.icon
+				+svg('play')
+		.infoBox
+			.info
+				p PROJECT
+				p #{project}
+			.info
+				p CLIENT
+				p #{clien}
+		.num.abs #{num}

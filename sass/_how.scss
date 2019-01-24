@@ -1,0 +1,80 @@
+.how {
+    background: url(../img/bg-3.jpg) no-repeat center / cover;
+    @extend %flex-mid;
+    flex-direction: column;
+    @include m-767 {
+        height: auto;
+        padding: 60px 0;
+    }
+    .icon {
+        width: 130px;
+        position: relative;
+        @include m-1024 {
+            width: 100%;
+        }
+    }
+    ul {
+        @extend %flex-mid;
+        margin-top: 100px;
+        @include m-1024 {
+            justify-content: space-between;
+            margin-top: 60px;
+        }
+        @include m-767 {
+            margin-top: 50px;
+            flex-direction: column;
+        }
+    }
+    li:not(:last-child) {
+        margin-right: 155px;
+        @include m-1024 {
+            margin-right: 0;
+        }
+    }
+    li {
+        @include m-1024 {
+            width: 15%;
+        }
+        @include m-767 {
+            width: 50%;
+            margin-bottom: 120px;
+        }
+    }
+    p {
+        font-size: 1.6rem;
+        color: #fff;
+        margin-top: 40px;
+        font-weight: bold;
+        @include m-1024 {
+            font-size: 1.8rem;
+        }
+        @include m-767 {
+            font-size: 2.2rem;
+            margin-top: 20px;
+        }
+    }
+    .line {
+        width: 40px;
+        height: 1px;
+        opacity: 0.32;
+        background-color: #ffffff;
+        @extend %Y50;
+        right: -90px;
+        @include m-1024 {
+            right: -78px;
+        }
+        @include m-767 {
+            width: 1px;
+            height: 60px;
+            right: 50%;
+            top: inherit;
+            bottom: -100%;
+        }
+    }
+}
+
+.howBox {
+    @include m-1024 {
+        width: 80%;
+    }
+}

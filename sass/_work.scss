@@ -1,0 +1,303 @@
+.workBox {
+    // padding-top: 150px;
+    text-align: left;
+    margin-bottom: 80px;
+    @include m-1024 {
+        margin-bottom: 160px;
+    }
+    @include m-767 {
+        margin-bottom: 100px;
+    }
+    .loading {
+        width: 1px;
+        height: 100px;
+        margin: auto;
+        position: relative;
+        margin-bottom: 130px;
+        @media only screen and (max-width: 1024px) {
+            display: none;
+        }
+        span {
+            width: 100%;
+            background: $orange;
+            animation: scroll 1s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    .ttBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 50px;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+        background: #fff;
+        top: 70px;
+        @include pc-1280 {
+            padding-top: 35px;
+            margin-bottom: 20px;
+        }
+        @include m-767 {
+            align-items: flex-end;
+            top: 45px;
+            padding-bottom: 25px;
+        }
+    }
+    .work-tt {
+        font-size: 13.2rem;
+        font-weight: bold;
+        margin-left: -15px;
+        line-height: 1;
+        @include pc-1440 {
+            font-size: 11rem;
+        }
+        @include m-1024 {
+            font-size: 8rem;
+        }
+        @include m-767 {
+            font-size: 6rem;
+            margin-left: -6px;
+        }
+    }
+}
+
+.scrolled-ttBox {
+    box-shadow: 0px 0px 21px 1px rgba(0, 0, 0, .1);
+    padding-bottom: 5px;
+}
+
+.tabBox {
+    background: white;
+    ul {
+        display: flex;
+    }
+    a {
+        @include size(75px);
+        background: #eeeeee;
+        color: #000;
+        font-size: 4rem;
+        line-height: 75px;
+        text-align: center;
+        @extend %trans;
+        &.active {
+            background: $orange;
+            color: white;
+            pointer-events: none;
+        }
+        &:hover {
+            background: black;
+            color: white;
+            transform: translateY(-10px);
+        }
+        @include m-767 {
+            @include size(65px);
+            font-size: 3rem;
+            line-height: 65px;
+        }
+    }
+    &:before {
+        content: '';
+        width: 200px;
+        height: 1px;
+        background: $orange;
+        @extend %Y50;
+        left: -280px;
+        @include m-1024 {
+            width: 130px;
+            left: -125px;
+        }
+        @include m-767 {
+            display: none;
+        }
+    }
+}
+
+.main-video {
+    li {
+        width: calc(100%/3);
+        border: 0.5px solid rgba(159, 154, 152, 0.22);
+        @include m-767 {
+            width: 100%;
+            border: 0.5px solid rgba(159, 154, 152, 1);
+        }
+    }
+    a {
+        @extend %all-100;
+        padding: 50px 0;
+        @extend %trans;
+        z-index: 1;
+        &:hover {
+            @include media-min(1025px) {
+                .pic {
+                    box-shadow: -8.56px 2.781px 31.15px 3.85px rgba(0, 0, 0, 0.14);
+                    transform: translateY(-10px) scale(1.01);
+                }
+                p {
+                    &:first-child,
+                    &:last-child {
+                        color: white;
+                    }
+                }
+                .num {
+                    color: rgba(255, 255, 255, 0.12);
+                }
+                &:after {
+                    background: $orange;
+                    width: 100%;
+                }
+            }
+        }
+        &:after {
+            content: '';
+            width: 1px;
+            height: 100%;
+            background: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            @extend %trans;
+        }
+    }
+    .inner {
+        width: 75%;
+        margin: auto;
+    }
+    .pic {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 30px;
+        border-radius: 100%;
+        @extend %trans;
+        &:after {
+            content: '';
+            display: block;
+            margin-top: 100%;
+        }
+    }
+    p {
+        @extend %trans;
+        &:first-child {
+            font-size: 1rem;
+            color: $gray-l;
+            @include m-767 {
+                font-size: 1.5rem;
+            }
+        }
+        &:last-child {
+            font-size: 1.6rem;
+            color: #000;
+            font-weight: bold;
+            @include m-767 {
+                font-size: 1.8rem;
+            }
+        }
+    }
+    .info {
+        &:first-child {
+            margin-bottom: 30px;
+            @include pc-1280 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .icon {
+        @include pos-mid;
+        width: 70px;
+    }
+    .num {
+        font-size: 17rem;
+        font-weight: bold;
+        color: rgba(237, 109, 52, 0.12);
+        bottom: -18px;
+        left: 5%;
+        @extend %trans;
+    }
+}
+
+.work-video1 {
+    background: url(../img/work-video-1.png) no-repeat center;
+}
+
+.main-video,
+.main-web {
+    margin: 20% auto 80px;
+    @include m-1024 {
+        margin-bottom: 15px;
+    }
+    @include m-767 {
+        margin-bottom: 55px;
+        margin-top: 65%;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.main-web {
+    width: 90%;
+    margin-top: 20%;
+    @include pc-1440 {
+        width: 80%;
+        margin-top: 20%;
+    }
+    @include pc-1280 {
+        margin-top: 24%;
+    }
+    @include m-767 {
+        margin-top: 65%;
+        width: 85%;
+        margin-bottom: 20px;
+    }
+    ul {
+        justify-content: space-between;
+    }
+    li {
+        width: 30%;
+        margin-bottom: 50px;
+        @include pc-1280 {
+            margin-bottom: 40px;
+        }
+        @include m-767 {
+            width: 100%;
+        }
+    }
+    .pic {
+        width: 100%;
+    }
+    p {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-top: 20px;
+        color: #000;
+        @include pc-1280 {
+            font-size: 1.6rem;
+            margin-top: 10px;
+        }
+        @include m-767 {
+            font-size: 1.8rem;
+        }
+    }
+    a {
+        pointer-events: none;
+    }
+}
+
+.bg-logo {
+    width: 50%;
+    position: fixed;
+    right: -20%;
+    top: 30%;
+    z-index: -2;
+    opacity: 0.2;
+    @include pc-1280 {
+        width: 40%;
+        right: -10%;
+        top: 45%;
+    }
+}

@@ -1,0 +1,53 @@
+doctype html
+html
+    head
+        include head
+        // own style
+        block own_style
+            link(rel = 'stylesheet', href = '')
+    body
+        block trans
+            include trans
+            //add '.scrolled'
+        - var headerClasses= [ ];
+        block beforeHeader
+        header(class=headerClasses).scrolled
+            a.logo(href="index.html") 
+                block logo
+                    img(src="img/svg/logo.svg", alt="logo")
+            // bur
+            block bur
+                include bur
+            // M Menu
+            include menubox
+            // PC menu 
+            block menu
+                nav.pc
+                    ul.index-menu 
+                        li
+                            a.line(href="index.html") 回首頁
+                        li
+                            block work
+                                a.line(href="work.html") 作品集
+                        li
+                            a.line(href="＃") 聯絡我們
+                        li
+                            a.line(href="＃") 菁英招募
+                    ul.social
+                        li
+                            a.fb(href="#")
+                                span.icon-fb
+                        li
+                            a.yt(href="#")
+                                span.icon-yt
+            
+        // content
+        .wrap
+            block content
+    //bootstrap
+    //Optional JavaScript
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            
+
+

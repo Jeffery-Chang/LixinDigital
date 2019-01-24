@@ -1,0 +1,185 @@
+// all mixins.
+%all-100 {
+    width: 100%;
+    height: 100%;
+}
+
+%txt_justify {
+    text-align: justify;
+    text-justify: inter-ideographic;
+}
+
+%shade {
+    box-shadow: 0px 9px 28.42px 0.58px rgba(12, 11, 12, 0.11);
+}
+
+%shade2 {
+    box-shadow: -8.56px 2.781px 31.15px 3.85px rgba(0, 0, 0, 0.14);
+}
+
+%trans {
+    transition: all .2s ease;
+}
+
+%center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%flex-mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%pos-mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%Y50 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+%X50 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+// constant-width-to-height-ratio
+%square {
+    background: #333;
+    width: 50%;
+    padding-top: 50%;
+}
+
+@mixin v-write {
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+@mixin bg-clip($bg) {
+    background: url(../img/#{$bg}.jpg);
+    -webkit-background-clip: text;
+    color: transparent !important;
+}
+
+Custom text selection::selection {
+    background: #ed6d34;
+    color: black;
+}
+
+// Hover underline animation
+@mixin hover-underline-animation($color) {
+    display: inline-block;
+    position: relative;
+    color: $color;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $color;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    &:hover {
+        &:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+}
+
+// Disable selection
+%unselectable {
+    user-select: none;
+}
+
+// Donut spinner
+@keyframes donut-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@mixin donut($border, $color, $w, $h) {
+    display: inline-block;
+    border: $border solid rgba(0, 0, 0, 0.25);
+    border-left-color: $color;
+    border-radius: 50%;
+    width: $w;
+    height: $h;
+    animation: donut-spin 1.2s linear infinite;
+}
+
+// gradient-text
+@mixin gradient-text($color1, $color2) {
+    background: -webkit-linear-gradient($color1, $color2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+// flex box mid
+@mixin flex-mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// flex equal-height box
+@mixin flex-h {
+    display: flex;
+    align-items: stretch;
+}
+
+// img size
+@mixin img_size($image) {
+    width: image-width("../img/#{$image}");
+    height: image-height("../img/#{$image}");
+    background: url("../img/#{$image}") no-repeat;
+}
+
+// circle
+@mixin cir($unit) {
+    width: $unit;
+    height: $unit;
+    border-radius: 100%;
+}
+
+@mixin pos-mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// full-screen
+@mixin full-screen {
+    width: 100%;
+    min-height: 100%;
+}
+
+// vertical align
+@mixin v-align($h) {
+    &:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+        height: $h;
+    }
+}

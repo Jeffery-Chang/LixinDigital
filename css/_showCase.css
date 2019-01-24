@@ -1,0 +1,15 @@
+.showCase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showCase > div {
+  width: 50%;
+}
+
+.showCase_01 .left {
+  background: url(../img/showCase-lin.jpg) no-repeat center/cover;
+}
+
+/*# sourceMappingURL=_showCase.css.map */
