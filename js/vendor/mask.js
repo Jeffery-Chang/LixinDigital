@@ -19,8 +19,8 @@ jQuery(document).ready(function($) {
         // it will show the circle with opacity transition 
         circle.addClass('moving');
         // get the mouse position minus 160px to center the circle
-        mouseX = e.pageX - 160;
-        mouseY = e.pageY - 160;
+        mouseX = e.pageX - 110;
+        mouseY = e.pageY - 110;
         // if mouse stop moving clear timer and call mouseStopped function
         clearTimeout(timer);
         timer = setTimeout(mouseStopped, 3000);
