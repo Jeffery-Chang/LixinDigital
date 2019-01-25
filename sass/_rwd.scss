@@ -11,6 +11,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+        @include m-374 {
+            width: 100%;
+        }
     }
     .device {
         right: -180px;
@@ -34,6 +37,16 @@
             transform: scale(0.5);
             right: -155%;
             bottom: -20%;
+        }
+        @include m-413 {
+            transform: scale(0.4);
+            right: -160%;
+            bottom: -26%;
+        }
+        @include m-374 {
+            transform: scale(0.35);
+            right: -195%;
+            bottom: -33%;
         }
     }
     .slidePic {

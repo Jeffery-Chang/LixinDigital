@@ -217,7 +217,7 @@ h6 {
   width: 100%;
   height: 100%; }
 
-header a, header .index-menu a:after, .footer-inner .right .logo, .marketing .line, .work-video a, .work-video a span, .work-video .icon-btn-play .path1:before, .arrowCube a, .arrowCube a span, .showCase .left:hover .caseBg, .showCase .left:hover .play, .showCase .right .main a:after, .showCase .more, .showCase .more span, .tabBox a, .main-video a, .main-video a:after, .main-video .pic, .main-video p, .main-video .num {
+header a, header .index-menu a:after, .footer-inner .right .logo, .marketing .line, .work-video a, .work-video a span, .work-video .icon-btn-play .path1:before, .arrowCube a, .arrowCube a span, .showCase .caseBg, .showCase .play, .showCase .right .main a:after, .showCase .more, .showCase .more span, .send:after, .tabBox a, .main-video a, .main-video a:after, .main-video .pic, .main-video p, .main-video .num {
   -webkit-transition: all .2s ease;
   transition: all .2s ease; }
 
@@ -244,12 +244,12 @@ header a, header .index-menu a:after, .footer-inner .right .logo, .marketing .li
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%); }
 
-Custom text selection::-moz-selection {
-  background: #ed6d34;
+::-moz-selection {
+  background: #167ac6;
   color: black; }
 
-Custom text selection::selection {
-  background: #ed6d34;
+::selection {
+  background: #167ac6;
   color: black; }
 
 @-webkit-keyframes donut-spin {
@@ -431,12 +431,84 @@ h2 {
   @media screen and (max-width: 767px) {
     .m-bl-btn {
       width: 85%;
-      padding: 25px 15px;
-      font-size: 1.8rem; } }
+      padding: 20px 15px;
+      font-size: 1.6rem; } }
+  @media screen and (max-width: 374px) {
+    .m-bl-btn {
+      padding: 15px;
+      font-size: 1.4rem; } }
 
 /* z-index: 1 */
 /* z-index: 3 */
 /* z-index: 2 */
+.loadingBox {
+  background: #ed6d34;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 50; }
+  .loadingBox .loading {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+.bounceball {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 12px;
+  margin: 0 8px; }
+  .bounceball:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-animation: bounce 500ms alternate infinite ease;
+    animation: bounce 500ms alternate infinite ease; }
+
+.bounceball2:before {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s; }
+
+@-webkit-keyframes bounce {
+  0% {
+    top: 50px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    -webkit-transform: scaleX(2);
+    transform: scaleX(2); }
+  35% {
+    height: 12px;
+    border-radius: 50%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  100% {
+    top: 0; } }
+
+@keyframes bounce {
+  0% {
+    top: 50px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    -webkit-transform: scaleX(2);
+    transform: scaleX(2); }
+  35% {
+    height: 12px;
+    border-radius: 50%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  100% {
+    top: 0; } }
+
 .trans_bg {
   position: fixed;
   top: 0;
@@ -819,7 +891,7 @@ header {
       -webkit-transform: translateY(-5px);
       transform: translateY(-5px); } }
   header .logo {
-    width: 188px; }
+    width: 250px; }
     @media screen and (min-width: 1025px) {
       header .logo:hover {
         opacity: 0.8; } }
@@ -1303,7 +1375,7 @@ header {
     -webkit-animation: scroll-text 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
     animation: scroll-text 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
     letter-spacing: 1px;
-    margin-top: 20px;
+    margin-top: 10px;
     -webkit-writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl; }
@@ -1518,6 +1590,11 @@ _:-ms-fullscreen,
         -webkit-transform: scale(0.75);
         transform: scale(0.75);
         margin-top: 0; } }
+    @media screen and (max-width: 374px) {
+      .marketing .carouselBox {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+        margin-top: -40px; } }
   .marketing .animate-title {
     font-size: 23px;
     font-size: 2.3rem; }
@@ -1830,21 +1907,25 @@ _:-ms-fullscreen,
     @media screen and (max-width: 1024px) {
       .how .icon {
         width: 100%; } }
-  .how ul {
-    margin-top: 100px; }
+  .how h2 {
+    margin-bottom: 100px; }
     @media screen and (max-width: 1024px) {
-      .how ul {
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        margin-top: 60px; } }
+      .how h2 {
+        margin-bottom: 60px; } }
     @media screen and (max-width: 767px) {
-      .how ul {
-        margin-top: 50px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column; } }
+      .how h2 {
+        margin-bottom: 50px; } }
+  @media screen and (max-width: 1024px) {
+    .how ul {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
+  @media screen and (max-width: 767px) {
+    .how ul {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   .how li:not(:last-child) {
     margin-right: 155px; }
     @media screen and (max-width: 1024px) {
@@ -1868,7 +1949,6 @@ _:-ms-fullscreen,
         font-size: 1.8rem; } }
     @media screen and (max-width: 767px) {
       .how p {
-        font-size: 2.2rem;
         margin-top: 20px; } }
   .how .line {
     width: 40px;
@@ -1886,6 +1966,12 @@ _:-ms-fullscreen,
         right: 50%;
         top: inherit;
         bottom: -100%; } }
+    @media screen and (max-width: 413px) {
+      .how .line {
+        bottom: -110%; } }
+    @media screen and (max-width: 374px) {
+      .how .line {
+        bottom: -125%; } }
 
 @media screen and (max-width: 1024px) {
   .howBox {
@@ -1944,7 +2030,7 @@ canvas {
         transform: translate(0);
         background: #fff;
         position: inherit;
-        padding: 30px 30px 80px; } }
+        padding: 30px 10% 100px; } }
   .work-video h3 {
     margin-bottom: 10px; }
     @media screen and (max-width: 1024px) {
@@ -1967,7 +2053,7 @@ canvas {
     font-size: 1.4rem;
     color: #000;
     font-weight: bold; }
-    @media screen and (max-width: 1024px) {
+    @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
       .work-video a {
         font-size: 1.8rem;
         margin-top: 10px; } }
@@ -2100,6 +2186,9 @@ canvas {
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%); } }
+    @media screen and (max-width: 374px) {
+      .rwd h2 {
+        width: 100%; } }
   .rwd .device {
     right: -180px;
     bottom: 10%;
@@ -2126,6 +2215,18 @@ canvas {
         transform: scale(0.5);
         right: -155%;
         bottom: -20%; } }
+    @media screen and (max-width: 413px) {
+      .rwd .device {
+        -webkit-transform: scale(0.4);
+        transform: scale(0.4);
+        right: -160%;
+        bottom: -26%; } }
+    @media screen and (max-width: 374px) {
+      .rwd .device {
+        -webkit-transform: scale(0.35);
+        transform: scale(0.35);
+        right: -195%;
+        bottom: -33%; } }
   .rwd .slidePic {
     z-index: -1; }
   .rwd .mac {
@@ -2178,6 +2279,9 @@ canvas {
   -ms-flex-pack: justify;
   justify-content: space-between;
   z-index: 1; }
+  @media screen and (max-width: 767px) {
+    .arrowCube {
+      top: 20%; } }
   .arrowCube a {
     height: 60px;
     width: 60px;
@@ -2188,11 +2292,17 @@ canvas {
     font-size: 2rem; }
     .arrowCube a span {
       display: inline-block; }
-    .arrowCube a:hover {
-      background: #000; }
-      .arrowCube a:hover span {
-        -webkit-transform: translateX(-5px);
-        transform: translateX(-5px); }
+    @media screen and (min-width: 1025px) {
+      .arrowCube a:hover {
+        background: #000; }
+        .arrowCube a:hover span {
+          -webkit-transform: translateX(-5px);
+          transform: translateX(-5px); } }
+    @media screen and (max-width: 767px) {
+      .arrowCube a {
+        height: 40px;
+        width: 40px;
+        line-height: 40px; } }
   .arrowCube .right span {
     -webkit-transform: scale(-1);
     transform: scale(-1); }
@@ -2205,16 +2315,33 @@ canvas {
   display: -ms-flexbox;
   display: flex;
   background: #fff; }
+  @media screen and (max-width: 767px) {
+    .showCase {
+      height: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   .showCase > div {
     width: 50%;
     overflow: hidden; }
-  .showCase .left:hover .caseBg {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1); }
-  .showCase .left:hover .play {
-    width: 80px; }
+    @media screen and (max-width: 767px) {
+      .showCase > div {
+        width: 100%; } }
+  @media screen and (max-width: 767px) {
+    .showCase .left {
+      height: 40vh; } }
+  @media screen and (min-width: 1025px) {
+    .showCase .left:hover .caseBg {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); }
+    .showCase .left:hover .play {
+      width: 80px; } }
   .showCase .caseBg {
     display: block; }
+    @media screen and (max-width: 767px) {
+      .showCase .caseBg {
+        height: 100%; } }
   .showCase .play {
     width: 70px;
     position: absolute;
@@ -2229,25 +2356,41 @@ canvas {
     @media screen and (max-width: 1280px) {
       .showCase .right {
         padding-right: 90px; } }
+    @media screen and (max-width: 767px) {
+      .showCase .right {
+        padding: 50px 0 0; } }
     .showCase .right .main {
-      width: 65%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
+      width: 65%; }
+      @media screen and (min-width: 768px) {
+        .showCase .right .main {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          left: 45%; } }
+      @media screen and (max-width: 767px) {
+        .showCase .right .main {
+          width: 80%;
+          margin: auto; } }
       .showCase .right .main h3 {
         font-size: 30px;
         font-size: 3rem; }
+        @media screen and (max-width: 413px) {
+          .showCase .right .main h3 {
+            font-size: 2.4rem; } }
       .showCase .right .main p {
         font-size: 14px;
         font-size: 1.4rem;
         color: #585858;
         margin: 20px 0;
         line-height: 32px; }
+        @media screen and (max-width: 413px) {
+          .showCase .right .main p {
+            margin: 10px 0; } }
       .showCase .right .main a {
         border: 1px solid black;
-        color: #000;
+        color: black;
         width: 220px;
         padding: 15px 0;
         text-align: center;
@@ -2263,24 +2406,36 @@ canvas {
           left: 0;
           top: 0;
           width: 0; }
-        .showCase .right .main a:hover {
-          color: #fff;
-          border: 1px solid #ed6d34; }
-          .showCase .right .main a:hover:after {
-            width: 100%; }
+        @media screen and (min-width: 1025px) {
+          .showCase .right .main a:hover {
+            color: white;
+            border: 1px solid #ed6d34; }
+            .showCase .right .main a:hover:after {
+              width: 100%; } }
+        @media screen and (max-width: 767px) {
+          .showCase .right .main a {
+            width: 100%;
+            margin: 30px 0; } }
   .showCase .more {
     width: 65%;
     font-size: 14px;
     font-size: 1.4rem;
-    color: #000;
+    color: black;
     font-weight: bold;
     bottom: 40px;
-    margin: auto; }
+    margin: auto;
+    left: 45%; }
     .showCase .more span {
       display: inline-block;
       vertical-align: middle; }
-    .showCase .more:hover {
-      color: #ed6d34; }
+    @media screen and (min-width: 1025px) {
+      .showCase .more:hover {
+        color: #ed6d34; } }
+    @media screen and (max-width: 767px) {
+      .showCase .more {
+        width: auto;
+        margin: 50px auto 0;
+        position: inherit; } }
 
 .showCase_01 .caseBg {
   background: url(../img/showCase-lin.jpg) no-repeat center/cover; }
@@ -2288,6 +2443,9 @@ canvas {
 .client {
   background: url(../img/struckaxiom.png);
   padding: 130px 0 170px; }
+  @media screen and (max-width: 767px) {
+    .client {
+      padding: 50px 50px 115px; } }
   .client .slideBox {
     width: 50%;
     margin: auto; }
@@ -2297,6 +2455,10 @@ canvas {
     @media screen and (max-width: 1280px) {
       .client .slideBox {
         width: 66%; } }
+    @media screen and (max-width: 767px) {
+      .client .slideBox {
+        width: 100%;
+        margin-top: 30px; } }
   .client ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2311,59 +2473,108 @@ canvas {
     height: 130px;
     -ms-flex-negative: 0;
     flex-shrink: 0; }
+    @media screen and (max-width: 767px) {
+      .client li {
+        width: 48%;
+        height: auto;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: 40px; } }
     .client li img {
       height: 40px;
       width: auto; }
+      @media screen and (max-width: 767px) {
+        .client li img {
+          width: 80%;
+          height: auto;
+          margin: auto; } }
+  @media screen and (max-width: 767px) {
+    .client .arrowCube {
+      top: 50%; } }
 
 .contact {
   background: #fff;
-  height: 60vh;
-  padding-top: 80px; }
+  padding-top: 80px;
+  padding-bottom: 50px;
+  z-index: 0; }
   @media screen and (max-height: 800px) {
     .contact {
-      height: 65vh;
       padding-top: 25px; } }
   @media screen and (max-width: 1024px) {
     .contact {
-      padding-top: 10px;
-      height: 63vh; } }
+      padding-top: 10px; } }
+  @media screen and (max-width: 767px) {
+    .contact {
+      padding-bottom: 50px; } }
   .contact:before {
     content: '';
     width: 100%;
-    height: 125px;
+    height: 205px;
     background: #fff;
     -webkit-transform: skewY(5deg);
     transform: skewY(5deg);
     position: absolute;
     top: -75px;
-    left: 0; }
+    left: 0;
+    z-index: -1; }
+    @media screen and (max-width: 767px) {
+      .contact:before {
+        top: -70px; } }
   .contact .main {
     width: 60%;
-    margin: 30px auto;
+    margin: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
     @media screen and (max-width: 1024px) {
       .contact .main {
         width: 70%; } }
+    @media screen and (max-width: 767px) {
+      .contact .main {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: -30px;
+        width: 75%; } }
     .contact .main > div {
       width: 50%; }
+      @media screen and (max-width: 767px) {
+        .contact .main > div {
+          width: 100%; } }
   .contact .infoBox {
     padding-top: 35px; }
+    @media screen and (max-width: 767px) {
+      .contact .infoBox {
+        padding-left: 4%; } }
   .contact .info {
     font-size: 14px;
     font-size: 1.4rem;
     text-align: left;
     margin-bottom: 60px;
     padding-left: 65px; }
+    @media screen and (max-width: 767px) {
+      .contact .info {
+        margin-bottom: 50px;
+        font-size: 1.6rem; } }
+    @media screen and (max-width: 374px) {
+      .contact .info {
+        font-size: 1.4rem; } }
     .contact .info p:first-child {
       font-weight: bold; }
+      @media screen and (max-width: 767px) {
+        .contact .info p:first-child {
+          margin-bottom: 10px; } }
       .contact .info p:first-child:before {
         content: '';
         width: 45px;
         height: 1px;
         background: #000;
         left: -65px; }
+        @media screen and (max-width: 767px) {
+          .contact .info p:first-child:before {
+            width: 30px;
+            left: -45px; } }
     .contact .info p:last-child {
       color: #585858; }
 
@@ -2381,6 +2592,13 @@ canvas {
   @media screen and (max-width: 1024px) {
     .hello {
       font-size: 12rem; } }
+  @media screen and (max-width: 767px) {
+    .hello {
+      font-size: 8rem;
+      top: -110px; } }
+
+.form {
+  text-align: right; }
 
 .form-info {
   display: -webkit-box;
@@ -2393,7 +2611,8 @@ canvas {
   justify-content: space-between; }
 
 .mat-div {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  width: 100%; }
   @media screen and (min-width: 768px) {
     .mat-div {
       width: 48%; } }
@@ -2419,11 +2638,45 @@ canvas {
     border: 1px solid #ed6d34;
     -webkit-transition: 0.5s;
     transition: 0.5s; }
+  @media screen and (max-width: 767px) {
+    .textBox textarea {
+      min-height: 115px; } }
 
 .map {
   width: 100%;
   overflow: hidden;
   position: relative; }
+
+.send {
+  border: 1px solid white;
+  color: white;
+  width: 220px;
+  padding: 15px 0;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  letter-spacing: 1px;
+  background: #ed6d34;
+  margin: 30px 0; }
+  .send:after {
+    background: black;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 0; }
+  @media screen and (min-width: 1025px) {
+    .send:hover {
+      color: white;
+      border: 1px solid black; }
+      .send:hover:after {
+        width: 100%; } }
+  @media screen and (max-width: 767px) {
+    .send {
+      width: 100%;
+      margin: 30px 0; } }
 
 #google-container {
   position: relative;
@@ -2614,6 +2867,12 @@ canvas {
         width: 65px;
         font-size: 3rem;
         line-height: 65px; } }
+    @media screen and (max-width: 374px) {
+      .tabBox a {
+        height: 50px;
+        width: 50px;
+        font-size: 2.6rem;
+        line-height: 50px; } }
   .tabBox:before {
     content: '';
     width: 200px;
@@ -2683,6 +2942,9 @@ canvas {
   @media screen and (max-width: 767px) {
     .main-video p:first-child {
       font-size: 1.5rem; } }
+  @media screen and (max-width: 374px) {
+    .main-video p:first-child {
+      font-size: 1.4rem; } }
 
 .main-video p:last-child {
   font-size: 16px;
@@ -2692,6 +2954,9 @@ canvas {
   @media screen and (max-width: 767px) {
     .main-video p:last-child {
       font-size: 1.8rem; } }
+  @media screen and (max-width: 374px) {
+    .main-video p:last-child {
+      font-size: 1.6rem; } }
 
 .main-video .info:first-child {
   margin-bottom: 30px; }
@@ -2796,5 +3061,43 @@ canvas {
       width: 40%;
       right: -10%;
       top: 45%; } }
+  @media screen and (max-width: 767px) {
+    .bg-logo {
+      width: 100%;
+      right: -38%;
+      top: 50%; } }
+
+@media screen and (max-device-width: 767px) {
+  .android .kv .clip {
+    background: url(../img/svg/clip-m.svg) no-repeat 25% center/100%; } }
+
+@media screen and (max-device-width: 767px) {
+  .android .scroll {
+    bottom: 13vh; } }
+
+@media screen and (max-width: 767px) {
+  .android .carouselBox {
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+    margin-top: 30px; } }
+
+@media screen and (max-width: 767px) {
+  .android .device {
+    -webkit-transform: scale(0.55);
+    transform: scale(0.55);
+    right: -130%;
+    bottom: -15%; } }
+
+@media screen and (max-width: 767px) {
+  .android h2 {
+    font-size: 4rem; } }
+
+@media screen and (max-width: 767px) {
+  .android .workBox .ttBox {
+    top: 70px; } }
+
+@media screen and (max-width: 767px) {
+  .android .main-video {
+    margin-top: 40%; } }
 
 /*# sourceMappingURL=style.css.map */

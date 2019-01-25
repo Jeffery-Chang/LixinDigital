@@ -16,12 +16,17 @@
     <link rel="icon" href="img/favicon.ico">
     <!-- css style-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <!--if gt IE 9-->
     <script src="js/vendor/html5shiv.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ismobilejs/0.4.1/isMobile.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"> </script>
     <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- <script src="js/vendor/jquery.tubular.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.21/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
@@ -37,6 +42,15 @@
   </head>
   <body>
     <span id="vue" v-cloak>
+      <!--0125 add-->
+      <transition name="fade">
+      <div class="loadingBox" v-if="!isLoaded">
+        <div class="loading">
+          <div class="bounceball"></div>
+          <div class="bounceball bounceball2"></div>
+        </div>
+      </div>
+      </transition>
       <div class="trans_bg">
         <div class="trans_ipad">
           <div class="trans_center"><img src="img/ipad_ok_landscape.png">                
@@ -61,11 +75,11 @@
               <li><a class="line" href="work.html">作品集</a>
               </li>
               <li @click.prevent="ctrlMenu('.contact');"><a class="line" href="#">聯絡我們</a></li>
-              <li><a class="line" href="#">菁英招募</a></li>
+              <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&amp;j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01" target="_blank">菁英招募</a></li>
             </ul>
             <ul class="social">
-              <li><a class="fb" href="#"><span class="icon-fb"></span></a></li>
-              <li><a class="yt" href="#"><span class="icon-yt"></span></a></li>
+              <li><a class="fb" href="https://www.facebook.com/lixin.com.tw/" target="_blank"><span class="icon-fb"></span></a></li>
+              <li><a class="yt" href="https://www.youtube.com/channel/UChwYvwlnfXs_PTJMUdyR2Eg" target="_blank"><span class="icon-yt"></span></a></li>
             </ul>
           </nav>
         </div>
@@ -76,11 +90,11 @@
             <li><a class="line" href="work.html">作品集</a>
             </li>
             <li @click.prevent="ctrlMenu('.contact');"><a class="line" href="#">聯絡我們</a></li>
-            <li><a class="line" href="#">菁英招募</a></li>
+            <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&amp;j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01" target="_blank">菁英招募</a></li>
           </ul>
           <ul class="social">
-            <li><a class="fb" href="#"><span class="icon-fb"></span></a></li>
-            <li><a class="yt" href="#"><span class="icon-yt"></span></a></li>
+            <li><a class="fb" href="https://www.facebook.com/lixin.com.tw/" target="_blank"><span class="icon-fb"></span></a></li>
+            <li><a class="yt" href="https://www.youtube.com/channel/UChwYvwlnfXs_PTJMUdyR2Eg" target="_blank"><span class="icon-yt"></span></a></li>
           </ul>
         </nav>
       </header>
@@ -101,7 +115,9 @@
               </div>
             </div>
             <div class="clip"></div>
-            <div class="bg"></div>
+            <div class="bg">
+              <!-- <iframe src="https://www.youtube.com/embed/0rZ39S9wY-g?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=0rZ39S9wY-g" frameborder="0" allowfullscreen=""></iframe> -->
+            </div>
           </div>
         </section>
         <!--about-->
@@ -347,6 +363,10 @@
                   <div class="picBox">
                     <div class="web-m1"><img src="img/web-m1.png"/>
                     </div>
+                    <div class="web-m1"><img src="img/web-m1.png"/>
+                    </div>
+                    <div class="web-m1"><img src="img/web-m1.png"/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -356,6 +376,10 @@
                 <div class="slidePic abs">
                   <div class="dots abs"><span class="active"></span><span></span><span></span></div>
                   <div class="picBox">
+                    <div class="web-pc1"><img src="img/web-pc1.png"/>
+                    </div>
+                    <div class="web-pc1"><img src="img/web-pc1.png"/>
+                    </div>
                     <div class="web-pc1"><img src="img/web-pc1.png"/>
                     </div>
                   </div>
@@ -457,6 +481,7 @@
               <div class="textBox">
                 <textarea type="text" placeholder="詢問內容" name="contactContent" maxlength="400" required=""></textarea>
               </div>
+              <!--0125 add btn--><a class="send" href="#">GO!</a>
             </div>
           </div>
         </section>

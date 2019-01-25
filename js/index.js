@@ -4,6 +4,7 @@
         data: {
             isScroll: false,
             isOpen: false,
+            isLoaded: false,
         },
         computed: {},
         created() {
@@ -11,12 +12,17 @@
         },
         mounted() {
             window.onload = () => {
-                this.kvEffect();
-                this.marketEffect();
-                this.mediaEffect();
-                new WOW({
-                    offset: (window.innerWidth <= 1025) ? 100 : 0
-                }).init();
+                this.isLoaded = true;
+                this.$nextTick(() => {
+                    this.kvEffect();
+                    this.marketEffect();
+                    this.mediaEffect();
+                    this.wordEffect();
+                    this.rwdEffect();
+                    new WOW({
+                        offset: (window.innerWidth <= 1025) ? 100 : 0
+                    }).init();
+                });
             }
         },
         methods: {
@@ -34,6 +40,26 @@
                 });
             },
             kvEffect() {
+                var imgWidth = document.querySelector('.kv .slogan').offsetWidth;
+                TweenMax.set('.kv .slogan img', {
+                    width: imgWidth,
+                    maxWidth: imgWidth,
+                    minWidth: imgWidth,
+                });
+                TweenMax.set('.kv .slogan', {
+                    width: 0,
+                });
+
+                TweenMax.to('.kv .slogan', .75, {
+                    width: imgWidth,
+                    delay: .75,
+                    onComplete: () => {
+                        TweenMax.set(['.kv .slogan', '.kv .slogan img'], {
+                            clearProps: "all"
+                        });
+                    }
+                });
+
                 var timer,
                     mouseX = 0,
                     mouseY = 0,
@@ -211,6 +237,49 @@
                 }
 
                 animate();
+            },
+            wordEffect() {
+                // $('.work-video .main .desBox').slick({
+                //     arrows: false,
+                //     slidesToShow: 1,
+                // });
+                // var swiper = new Swiper('.work-video .swiper-container', {
+                //     pagination: {
+                //       el: '.work-video .slider',
+                //     },
+                //   });
+                // var index = 1;
+                // $('.work-video .btm-content .right').click((e) => {
+                //     e.preventDefault();
+                //     console.log('index:', index);
+                //     if(index > ($('.desBox > div').length)) index = 1
+                //     $('.work-video .work' + index).fadeOut('fast', () => {
+                //         $('.work-video .work' + (index + 1)).fadeIn('fast', () => {
+                //             index += 1;
+                            
+                //         })
+                //     })
+                // });
+            },
+            rwdEffect(){
+                // 從 dots 開始修
+                $('.rwd .phone .picBox').slick({
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                });
+                // 從 dots 開始修
+                $('.rwd .mac .picBox').slick({
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                });
             }
         },
         destroyed() {

@@ -1,0 +1,57 @@
+.loadingBox {
+    background: $orange;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 50;
+    .loading {
+        width: 100%;
+        @include pos-mid;
+    }
+}
+
+$width: 12px;
+$height: 12px;
+$bounce_height: 50px;
+.bounceball {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    width: $width;
+    margin: 0 8px;
+    &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        width: $width;
+        height: $height;
+        border-radius: 50%;
+        background-color: white;
+        transform-origin: 50%;
+        animation: bounce 500ms alternate infinite ease;
+    }
+}
+
+.bounceball2 {
+    &:before {
+        animation-delay: 0.3s;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        top: $bounce_height;
+        height: 5px;
+        border-radius: 60px 60px 20px 20px;
+        transform: scaleX(2);
+    }
+    35% {
+        height: $height;
+        border-radius: 50%;
+        transform: scaleX(1);
+    }
+    100% {
+        top: 0;
+    }
+}

@@ -98,6 +98,11 @@
             font-size: 3rem;
             line-height: 65px;
         }
+        @include m-374 {
+            @include size(50px);
+            font-size: 2.6rem;
+            line-height: 50px;
+        }
     }
     &:before {
         content: '';
@@ -187,6 +192,9 @@
             @include m-767 {
                 font-size: 1.5rem;
             }
+            @include m-374 {
+                font-size: 1.4rem;
+            }
         }
         &:last-child {
             font-size: 1.6rem;
@@ -194,6 +202,9 @@
             font-weight: bold;
             @include m-767 {
                 font-size: 1.8rem;
+            }
+            @include m-374 {
+                font-size: 1.6rem;
             }
         }
     }
@@ -299,5 +310,10 @@
         width: 40%;
         right: -10%;
         top: 45%;
+    }
+    @include m-767 {
+        width: 100%;
+        right: -38%;
+        top: 50%;
     }
 }

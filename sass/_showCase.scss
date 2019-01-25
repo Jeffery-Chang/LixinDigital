@@ -4,6 +4,9 @@
     display: flex;
     justify-content: space-between;
     z-index: 1;
+    @include m-767 {
+        top: 20%;
+    }
     a {
         @include size(60px);
         line-height: 60px;
@@ -16,10 +19,16 @@
             @extend %trans;
         }
         &:hover {
-            background: #000;
-            span {
-                transform: translateX(-5px);
+            @include pc-only {
+                background: #000;
+                span {
+                    transform: translateX(-5px);
+                }
             }
+        }
+        @include m-767 {
+            @include size(40px);
+            line-height: 40px;
         }
     }
     .right {
@@ -37,29 +46,44 @@
 .showCase {
     display: flex;
     background: #fff;
+    @include m-767 {
+        height: auto;
+        flex-direction: column;
+    }
     >div {
         width: 50%;
         overflow: hidden;
+        @include m-767 {
+            width: 100%;
+        }
     }
     .left {
+        @include m-767 {
+            height: 40vh;
+        }
         &:hover {
-            .caseBg {
-                @extend %trans;
-                transform: scale(1.1);
-            }
-            .play {
-                width: 80px;
-                @extend %trans;
+            @include pc-only {
+                .caseBg {
+                    transform: scale(1.1);
+                }
+                .play {
+                    width: 80px;
+                }
             }
         }
     }
     .caseBg {
         display: block;
+        @extend %trans;
+        @include m-767 {
+            height: 100%;
+        }
     }
     .play {
         width: 70px;
         @include pos-mid;
         z-index: 1;
+        @extend %trans;
     }
     .right {
         background: #fff;
@@ -67,65 +91,42 @@
         @include pc-1280 {
             padding-right: 90px;
         }
+        @include m-767 {
+            padding: 50px 0 0;
+        }
         .main {
             width: 65%;
-            @include pos-mid;
+            @include media-min(768px) {
+                @include pos-mid;
+                left: 45%;
+            }
+            @include m-767 {
+                width: 80%;
+                margin: auto;
+            }
             h3 {
                 font-size: 3rem;
+                @include m-413 {
+                    font-size: 2.4rem;
+                }
             }
             p {
                 font-size: 1.4rem;
                 color: $gray;
                 margin: 20px 0;
                 line-height: 32px;
+                @include m-413 {
+                    margin: 10px 0;
+                }
             }
             a {
-                border: 1px solid black;
-                color: #000;
-                width: 220px;
-                padding: 15px 0;
-                text-align: center;
-                position: relative;
-                z-index: 0;
-                letter-spacing: 1px;
-                &:after {
-                    background: $orange;
-                    content: '';
-                    position: absolute;
-                    z-index: -1;
-                    height: 100%;
-                    left: 0;
-                    top: 0;
-                    width: 0;
-                    @extend %trans;
-                }
-                &:hover {
-                    color: #fff;
-                    border: 1px solid $orange;
-                    &:after {
-                        width: 100%;
-                    }
-                }
+                @include btn-action(black, null, $orange, white);
             }
         }
     }
     .more {
-        width: 65%;
-        font-size: 1.4rem;
-        color: #000;
-        @extend %trans;
-        font-weight: bold;
-        @extend %X50;
-        bottom: 40px;
-        margin: auto;
-        span {
-            display: inline-block;
-            vertical-align: middle;
-            @extend %trans;
-        }
-        &:hover {
-            color: $orange;
-        }
+        @include btn-more(65%, black, $orange);
+        left: 45%;
     }
 }
 

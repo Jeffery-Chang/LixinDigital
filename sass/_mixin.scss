@@ -1,4 +1,66 @@
 // all mixins.
+@mixin btn-more($w, $color, $hover) {
+    width: $w;
+    font-size: 1.4rem;
+    color: $color;
+    @extend %trans;
+    font-weight: bold;
+    @extend %X50;
+    bottom: 40px;
+    margin: auto;
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        @extend %trans;
+    }
+    &:hover {
+        @include pc-only {
+            color: $hover;
+        }
+    }
+    @include m-767 {
+        width: auto;
+        margin: 50px auto 0;
+        position: inherit;
+    }
+}
+
+@mixin btn-action($color, $bg, $after-c, $hover-c) {
+    border: 1px solid $color;
+    color: $color;
+    width: 220px;
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    letter-spacing: 1px;
+    background: $bg;
+    &:after {
+        background: $after-c;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 0;
+        @extend %trans;
+    }
+    &:hover {
+        @include pc-only {
+            color: $hover-c;
+            border: 1px solid $after-c;
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+    @include m-767 {
+        width: 100%;
+        margin: 30px 0;
+    }
+}
+
 %all-100 {
     width: 100%;
     height: 100%;
@@ -71,8 +133,9 @@
     color: transparent !important;
 }
 
-Custom text selection::selection {
-    background: #ed6d34;
+// Custom text selection
+::selection {
+    background: #167ac6;
     color: black;
 }
 

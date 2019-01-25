@@ -1,6 +1,9 @@
 .client {
     background: url(../img/struckaxiom.png);
     padding: 130px 0 170px;
+    @include m-767 {
+        padding: 50px 50px 115px;
+    }
     .slideBox {
         width: 50%;
         margin: auto;
@@ -9,6 +12,10 @@
         }
         @include pc-1280 {
             width: 66%;
+        }
+        @include m-767 {
+            width: 100%;
+            margin-top: 30px;
         }
     }
     ul {
@@ -21,9 +28,25 @@
         height: 130px;
         @extend %flex-mid;
         flex-shrink: 0;
+        @include m-767 {
+            width: 48%;
+            height: auto;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
         img {
             height: 40px;
             width: auto;
+            @include m-767 {
+                width: 80%;
+                height: auto;
+                margin: auto;
+            }
+        }
+    }
+    .arrowCube {
+        @include m-767 {
+            top: 50%;
         }
     }
 }

@@ -69,7 +69,7 @@
         font-size: 1.3rem;
         animation: scroll-text 1.5s cubic-bezier(.455, .03, .515, .955) infinite;
         letter-spacing: 1px;
-        margin-top: 20px;
+        margin-top: 10px;
         @include v-write;
     }
     .line {

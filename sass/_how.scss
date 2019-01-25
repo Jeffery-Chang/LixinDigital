@@ -13,15 +13,21 @@
             width: 100%;
         }
     }
-    ul {
-        @extend %flex-mid;
-        margin-top: 100px;
+    h2 {
+        margin-bottom: 100px;
         @include m-1024 {
-            justify-content: space-between;
-            margin-top: 60px;
+            margin-bottom: 60px;
         }
         @include m-767 {
-            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
+    ul {
+        @extend %flex-mid;
+        @include m-1024 {
+            justify-content: space-between;
+        }
+        @include m-767 {
             flex-direction: column;
         }
     }
@@ -49,7 +55,6 @@
             font-size: 1.8rem;
         }
         @include m-767 {
-            font-size: 2.2rem;
             margin-top: 20px;
         }
     }
@@ -69,6 +74,12 @@
             right: 50%;
             top: inherit;
             bottom: -100%;
+        }
+        @include m-413 {
+            bottom: -110%;
+        }
+        @include m-374 {
+            bottom: -125%;
         }
     }
 }

@@ -1,0 +1,44 @@
+.android {
+    .kv {
+        .clip {
+            @include media-m(767px) {
+                background: url(../img/svg/clip-m.svg) no-repeat 25% center / 100%;
+            }
+        }
+    }
+    .scroll {
+        @include media-m(767px) {
+            bottom: 13vh;
+        }
+    }
+    .carouselBox {
+        @include m-767 {
+            transform: scale(0.85);
+            margin-top: 30px;
+        }
+    }
+    .device {
+        @include m-767 {
+            transform: scale(0.55);
+            right: -130%;
+            bottom: -15%;
+        }
+    }
+    h2 {
+        @include m-767 {
+            font-size: 4rem;
+        }
+    }
+    .workBox {
+        .ttBox {
+            @include m-767 {
+                top: 70px;
+            }
+        }
+    }
+    .main-video {
+        @include m-767 {
+            margin-top: 40%;
+        }
+    }
+}
