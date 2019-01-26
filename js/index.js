@@ -256,29 +256,27 @@
                 //     $('.work-video .work' + index).fadeOut('fast', () => {
                 //         $('.work-video .work' + (index + 1)).fadeIn('fast', () => {
                 //             index += 1;
-                            
+
                 //         })
                 //     })
                 // });
             },
-            rwdEffect(){
-                // 從 dots 開始修
+            rwdEffect() {
                 $('.rwd .phone .picBox').slick({
                     arrows: false,
                     dots: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     autoplay: true,
-                    autoplaySpeed: 2000,
+                    autoplaySpeed: 5000,
                 });
-                // 從 dots 開始修
                 $('.rwd .mac .picBox').slick({
                     arrows: false,
                     dots: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     autoplay: true,
-                    autoplaySpeed: 2000,
+                    autoplaySpeed: 5000,
                 });
             }
         },

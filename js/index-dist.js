@@ -253,23 +253,21 @@
                 // });
             },
             rwdEffect: function rwdEffect() {
-                // 從 dots 開始修
                 $('.rwd .phone .picBox').slick({
                     arrows: false,
                     dots: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     autoplay: true,
-                    autoplaySpeed: 2000
+                    autoplaySpeed: 5000
                 });
-                // 從 dots 開始修
                 $('.rwd .mac .picBox').slick({
                     arrows: false,
                     dots: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     autoplay: true,
-                    autoplaySpeed: 2000
+                    autoplaySpeed: 5000
                 });
             }
         },

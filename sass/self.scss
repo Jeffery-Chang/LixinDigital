@@ -66,8 +66,26 @@
     animation-name: fadeIn
 }
 
-.kv .slogan{
+.kv .slogan {
     overflow: hidden;
 }
 
-.rwd .slick-dots{}
+.rwd {
+    .phone .slick-dots {
+        bottom: 10px;
+
+        li {
+            margin: 0 -2.5px;
+            transform: scale(0.5);
+        }
+    }
+
+    .mac .slick-dots {
+        bottom: 20px;
+
+        li {
+            margin: 0 -1.5px;
+            transform: scale(0.75);
+        }
+    }
+}
