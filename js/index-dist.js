@@ -24,6 +24,7 @@
                     _this.wordEffect();
                     _this.rwdEffect();
                     _this.caseEffect();
+                    _this.clientEffect();
                     new WOW({
                         offset: window.innerWidth <= 1025 ? 100 : 0
                     }).init();
@@ -118,7 +119,7 @@
                 }
 
                 $("#circle--rotate").circle({
-                    autoPlay: true,
+                    autoPlay: false,
                     delay: 3500
                 });
                 autoHeightCircle();
@@ -211,7 +212,7 @@
                 logoList.forEach(function (obj, index) {
                     var logoImg = new Image();
                     logoImg.src = 'img/media-' + obj + '.png';
-                    var radius = isMobile.phone ? Math.random() + 60 : Math.random() + 100;
+                    var radius = isMobile.phone ? Math.random() + 60 : Math.random() + 60;
                     var x = Math.random() * (canvas.width - radius * 2) + radius;
                     var dx = Math.random() - 0.5;
                     var y = Math.random() * (canvas.height - radius * 2) + radius;
@@ -271,7 +272,30 @@
                     autoplaySpeed: 5000
                 });
             },
-            caseEffect: function caseEffect() {}
+            caseEffect: function caseEffect() {
+                // $('.showCaseBox .showCase_01').multiscroll();
+                // $('.rwd .phone .picBox').slick({
+                //     arrows: false,
+                //     dots: true,
+                //     slidesToShow: 1,
+                //     slidesToScroll: 1,
+                //     autoplay: true,
+                //     autoplaySpeed: 5000,
+                // });
+            },
+            clientEffect: function clientEffect() {
+                $('.client .slideBox').slick({
+                    arrows: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                    infinite: false,
+                    prevArrow: $('.client .arrowCube .left'),
+                    nextArrow: $('.client .arrowCube .right')
+                    // autoplay: true,
+                    // autoplaySpeed: 5000,
+                });
+            }
         },
         destroyed: function destroyed() {
             window.removeEventListener('scroll', this.ctrlScroll);

@@ -20,10 +20,8 @@
 }
 
 .animated {
-    -webkit-animation-duration: 1s;
     animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both
+    animation-fill-mode: both;
 }
 
 @keyframes fadeInUp {
@@ -39,7 +37,7 @@
 
     100% {
         opacity: 1;
-        transform: none
+        transform: none;
     }
 }
 
@@ -70,12 +68,12 @@
 
     100% {
         opacity: 1;
-        transform: none
+        transform: none;
     }
 }
 
 .fadeInUp {
-    animation-name: fadeInUp
+    animation-name: fadeInUp;
 }
 
 .fadeInRight {
@@ -83,12 +81,32 @@
 }
 
 .fadeIn {
-    animation-name: fadeIn
+    animation-name: fadeIn;
 }
 
-.kv .slogan {
-    overflow: hidden;
+.kv {
+    .slogan {
+        overflow: hidden;
+    }
+
+    // .bg {
+    //     animation: scale 20s ease infinite;
+    // }
 }
+
+// @keyframes scale {
+//     0% {
+//         transform: scale(1);
+//     }
+
+//     50% {
+//         transform: scale(2);
+//     }
+
+//     100% {
+//         transform: none;
+//     }
+// }
 
 .rwd {
     .phone .slick-dots {
