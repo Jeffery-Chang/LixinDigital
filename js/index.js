@@ -241,27 +241,19 @@
                 animate();
             },
             wordEffect() {
-                // $('.work-video .main .desBox').slick({
-                //     arrows: false,
-                //     slidesToShow: 1,
-                // });
-                // var swiper = new Swiper('.work-video .swiper-container', {
-                //     pagination: {
-                //       el: '.work-video .slider',
-                //     },
-                //   });
-                // var index = 1;
-                // $('.work-video .btm-content .right').click((e) => {
-                //     e.preventDefault();
-                //     console.log('index:', index);
-                //     if(index > ($('.desBox > div').length)) index = 1
-                //     $('.work-video .work' + index).fadeOut('fast', () => {
-                //         $('.work-video .work' + (index + 1)).fadeIn('fast', () => {
-                //             index += 1;
-
-                //         })
-                //     })
-                // });
+                $('.work-video .main .desBox').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    prevArrow: $('.work-video .arrowBox .left'),
+                    nextArrow: $('.work-video .arrowBox .right'),
+                    appendDots: $('.work-video .slider'),
+                    customPaging : function(slider, i) {
+                        return '<div class="indicator"></div>';
+                    },
+                }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                    $('.indicator').css('margin-left', nextSlide * (290 / 6) + 'px');
+                });
             },
             rwdEffect() {
                 $('.rwd .phone .picBox').slick({
@@ -293,12 +285,15 @@
                 // });
             },
             clientEffect(){
+                $('.client .arrowCube .left, .client .arrowCube .right').click((e)=>{
+                    e.preventDefault();
+                })
                 $('.client .slideBox').slick({
-                    arrows: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     dots: false,
                     infinite: false,
+                    arrows: true,
                     prevArrow: $('.client .arrowCube .left'),
                     nextArrow: $('.client .arrowCube .right'),
                     // autoplay: true,

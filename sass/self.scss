@@ -12,8 +12,6 @@
     opacity: 0;
 }
 
-
-
 /* WOW */
 .wow {
     visibility: hidden;
@@ -55,8 +53,6 @@
     }
 }
 
-
-
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -84,30 +80,25 @@
     animation-name: fadeIn;
 }
 
+/* KV */
 .kv {
     .slogan {
         overflow: hidden;
     }
-
-    // .bg {
-    //     animation: scale 20s ease infinite;
-    // }
 }
 
-// @keyframes scale {
-//     0% {
-//         transform: scale(1);
-//     }
+/* VIDEO */
+.work-video {
+    .main {
+        width: 50%;
+    }
 
-//     50% {
-//         transform: scale(2);
-//     }
+    .indicator {
+        transition: margin .5s ease;
+    }
+}
 
-//     100% {
-//         transform: none;
-//     }
-// }
-
+/* RWD */
 .rwd {
     .phone .slick-dots {
         bottom: 10px;
@@ -125,5 +116,9 @@
             margin: 0 -1.5px;
             transform: scale(0.75);
         }
+    }
+
+    .dots.abs {
+        display: none;
     }
 }
