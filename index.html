@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slick.min.css">
     <link rel="stylesheet" href="css/slick-theme.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/multiscroll.js/0.2.2/jquery.multiscroll.min.css"> -->
     <!--if gt IE 9-->
     <script src="js/vendor/html5shiv.js"></script>
     <script src="js/vendor/isMobile.min.js"></script>
@@ -25,9 +26,10 @@
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="js/vendor/wow.min.js"> </script>
     <script src="js/vendor/jquery-3.2.1.min.js"></script>
-    <script src="js/vendor/slick.min.js"></script>
     <!-- <script src="js/vendor/jquery.tubular.min.js"></script> -->
     <script src="js/vendor/jquery-ui.min.js"></script>
+    <script src="js/vendor/slick.min.js"></script>
+    <script src="https://cdn.bootcss.com/multiscroll.js/0.2.2/jquery.multiscroll.min.js"></script>
     <script src="js/vendor/vue.min.js"></script>
     <script src="js/vendor/vue-scrollto.min.js"></script>
     <script src="js/carousel-dist.js"></script>
@@ -75,7 +77,7 @@
               <li><a class="line" href="work.html">作品集</a>
               </li>
               <li @click.prevent="ctrlMove('.contact', true);"><a class="line" href="#">聯絡我們</a></li>
-              <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&amp;j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01" target="_blank">菁英招募</a></li>
+              <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01" target="_blank">菁英招募</a></li>
             </ul>
             <ul class="social">
               <li><a class="fb" href="https://www.facebook.com/lixin.com.tw/" target="_blank"><span class="icon-fb"></span></a></li>
@@ -337,7 +339,8 @@
               </div>
               <div class="yt-video">
                 <div class="embed-container">
-                  <iframe src="https://www.youtube.com/embed/qWE6nlKQ-4Q" frameborder="0" allowfullscreen=""></iframe>
+                  <!-- <iframe src="https://www.youtube.com/embed/qWE6nlKQ-4Q" frameborder="0" allowfullscreen=""></iframe> -->
+                  <iframe src="https://www.youtube.com/embed/qWE6nlKQ-4Q?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=qWE6nlKQ-4Q" frameborder="0" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
@@ -360,7 +363,7 @@
             <h2>響應式設計</h2>
           </span>
           <div class="device abs">
-            <div class="phone abs wow fadeInRight" data-wow-delay=".5s">
+            <div class="phone abs wow fadeInRight" data-wow-delay=".35s">
               <div class="cover por"><img src="img/rwd-phone.png"/>
                 <div class="slidePic abs">
                   <div class="dots abs"><span class="active"></span><span></span><span></span></div>
@@ -397,15 +400,19 @@
           <div class="arrowCube"><a class="left" href="#"><span class="icon-arrow"></span></a><a class="right" href="#"><span class="icon-arrow"></span></a></div>
           <div class="showCase-slide">
             <div class="showCase full-h showCase_01">
-              <div class="left por full-h"><a class="caseBg full-h" href="#">
-                  <div class="play"><img src="img/svg/play.svg"/>
-                  </div></a></div>
+              <div class="left por full-h">
+                <a class="caseBg full-h" href="#">
+                  <div class="play"><img src="img/svg/play.svg"/></div>
+                </a>
+              </div>
               <div class="right por">
-                <div class="main">
-                  <h3 class="org">一個巨星的誕生 － 林版新</h3>
-                  <p>一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生</p><a class="btn" href="#">DETAIL</a>
-                </div><a class="more" href="#">
-                  <span>看更多案例</span><span class="line-arrow por"></span></a>
+                <span>
+                  <div class="main">
+                    <h3 class="org">一個巨星的誕生 － 林版新</h3>
+                    <p>一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生</p><a class="btn" href="#">DETAIL</a>
+                  </div>
+                  <a class="more" href="#"><span>看更多案例</span><span class="line-arrow por"></span></a>
+                </span>
               </div>
             </div>
           </div>

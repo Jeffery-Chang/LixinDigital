@@ -19,6 +19,7 @@
                     this.mediaEffect();
                     this.wordEffect();
                     this.rwdEffect();
+                    this.caseEffect();
                     new WOW({
                         offset: (window.innerWidth <= 1025) ? 100 : 0
                     }).init();
@@ -278,7 +279,10 @@
                     autoplay: true,
                     autoplaySpeed: 5000,
                 });
-            }
+            },
+            caseEffect(){
+
+            },
         },
         destroyed() {
             window.removeEventListener('scroll', this.ctrlScroll);
