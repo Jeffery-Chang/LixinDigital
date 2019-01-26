@@ -274,15 +274,17 @@
                 });
             },
             caseEffect(){
-                // $('.showCaseBox .showCase_01').multiscroll();
-                // $('.rwd .phone .picBox').slick({
-                //     arrows: false,
-                //     dots: true,
-                //     slidesToShow: 1,
-                //     slidesToScroll: 1,
-                //     autoplay: true,
-                //     autoplaySpeed: 5000,
-                // });
+                $('.showCaseBox .showSlick').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                    infinite: false,
+                    arrows: true,
+                    prevArrow: $('.showCaseBox .arrowCube .left'),
+                    nextArrow: $('.showCaseBox .arrowCube .right'),
+                    // autoplay: true,
+                    // autoplaySpeed: 5000,
+                });
             },
             clientEffect(){
                 $('.client .arrowCube .left, .client .arrowCube .right').click((e)=>{
