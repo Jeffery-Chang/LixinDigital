@@ -64,7 +64,7 @@
         </div>
       </div>
       <!--add '.scrolled'-->
-      <header class="header-index" :class="{ 'scrolled': isScroll }"><a class="logo" href="index.html"> <img src="img/svg/logo-w.svg" alt="logo"></a>
+      <header class="header-index" :class="{ 'scrolled': isScroll }"><a class="logo" href="index.html" @click.prevent="ctrlMove('body', false);"> <img src="img/svg/logo-w.svg" alt="logo"></a>
         <!-- bur-->
         <div class="button_container" id="toggle" :class="{ 'active': isOpen }" @click.prevent="isOpen = !isOpen"><span class="top"></span>  <span class="middle"></span>  <span class="bottom"></span></div>
         <!-- M Menu-->
@@ -74,7 +74,7 @@
               <li><a class="line" href="index.html">回首頁</a></li>
               <li><a class="line" href="work.html">作品集</a>
               </li>
-              <li @click.prevent="ctrlMenu('.contact');"><a class="line" href="#">聯絡我們</a></li>
+              <li @click.prevent="ctrlMove('.contact', true);"><a class="line" href="#">聯絡我們</a></li>
               <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&amp;j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01" target="_blank">菁英招募</a></li>
             </ul>
             <ul class="social">
@@ -89,7 +89,7 @@
             <li><a class="line" href="index.html">回首頁</a></li>
             <li><a class="line" href="work.html">作品集</a>
             </li>
-            <li @click.prevent="ctrlMenu('.contact');"><a class="line" href="#">聯絡我們</a></li>
+            <li @click.prevent="ctrlMove('.contact', true);"><a class="line" href="#">聯絡我們</a></li>
             <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&amp;j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01" target="_blank">菁英招募</a></li>
           </ul>
           <ul class="social">
@@ -360,7 +360,7 @@
             <h2>響應式設計</h2>
           </span>
           <div class="device abs">
-            <div class="phone abs wow fadeInUp">
+            <div class="phone abs wow fadeInRight" data-wow-delay=".5s">
               <div class="cover por"><img src="img/rwd-phone.png"/>
                 <div class="slidePic abs">
                   <div class="dots abs"><span class="active"></span><span></span><span></span></div>
@@ -375,7 +375,7 @@
                 </div>
               </div>
             </div>
-            <div class="mac wow fadeInUp">
+            <div class="mac wow fadeInRight">
               <div class="cover por"><img src="img/rwd-mac.png"/>
                 <div class="slidePic abs">
                   <div class="dots abs"><span class="active"></span><span></span><span></span></div>

@@ -30,8 +30,8 @@
                 var scrollY = window.scrollY || document.documentElement.scrollTop;
                 this.isScroll = (scrollY > 0) ? true : false;
             },
-            ctrlMenu(target) {
-                this.isOpen = false;
+            ctrlMove(target, isMenu) {
+                if(isMenu) this.isOpen = false;
                 this.$scrollTo(target, 500, {
                     offset: document.querySelector(".header-index").offsetHeight * -1,
                     onDone: function (element) {
