@@ -132,4 +132,164 @@
             transform: translateX(50%);
         }
     }
+    .rotate2 {
+        .circle--rotate>li .icon {
+            transform: rotate(-30deg);
+        }
+        .count6 li {
+            &:nth-child(2) {
+                .icon {
+                    transform: rotate(-145deg);
+                }
+            }
+            &:nth-child(3) {
+                .icon {
+                    transform: rotate(-150deg);
+                }
+            }
+            &:nth-child(4) {
+                .icon {
+                    transform: rotate(150deg);
+                }
+            }
+            &:nth-child(5) {
+                .icon {
+                    transform: rotate(90deg);
+                }
+            }
+            &:nth-child(6) {
+                .icon {
+                    transform: rotate(30deg);
+                }
+            }
+        }
+    }
+    .rotate3 {
+        .circle--rotate>li .icon {
+            transform: rotate(30deg);
+        }
+        .count6 li {
+            &:nth-child(2) {
+                .icon {
+                    transform: rotate(-90deg);
+                }
+            }
+            &:nth-child(3) {
+                .icon {
+                    transform: rotate(-90deg);
+                }
+            }
+            &:nth-child(4) {
+                .icon {
+                    transform: rotate(150deg);
+                }
+            }
+            &:nth-child(5) {
+                .icon {
+                    transform: rotate(150deg);
+                }
+            }
+            &:nth-child(6) {
+                .icon {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    .rotate4 {
+        .circle--rotate>li .icon {
+            transform: rotate(90deg);
+        }
+        .count6 li {
+            &:nth-child(2) {
+                .icon {
+                    transform: rotate(-30deg);
+                }
+            }
+            &:nth-child(3) {
+                .icon {
+                    transform: rotate(-30deg);
+                }
+            }
+            &:nth-child(4) {
+                .icon {
+                    transform: rotate(-90deg);
+                }
+            }
+            &:nth-child(5) {
+                .icon {
+                    transform: rotate(-150deg);
+                }
+            }
+            &:nth-child(6) {
+                .icon {
+                    transform: rotate(-210deg);
+                }
+            }
+        }
+    }
+    .rotate5 {
+        .circle--rotate>li .icon {
+            transform: rotate(-205deg);
+        }
+        .count6 li {
+            &:nth-child(2) {
+                .icon {
+                    transform: rotate(-30deg);
+                }
+            }
+            &:nth-child(3) {
+                .icon {
+                    transform: rotate(30deg);
+                }
+            }
+            &:nth-child(4) {
+                .icon {
+                    transform: rotate(-30deg);
+                }
+            }
+            &:nth-child(5) {
+                .icon {
+                    transform: rotate(-90deg);
+                }
+            }
+            &:nth-child(6) {
+                .icon {
+                    transform: rotate(-150deg);
+                }
+            }
+        }
+    }
+    .rotate6 {
+        .circle--rotate>li .icon {
+            transform: rotate(-150deg);
+        }
+        .count6 li {
+            &:nth-child(2) {
+                .icon {
+                    transform: rotate(90deg);
+                }
+            }
+            &:nth-child(3) {
+                .icon {
+                    transform: rotate(90deg);
+                }
+            }
+            &:nth-child(4) {
+                .icon {
+                    transform: rotate(300deg);
+                }
+            }
+            &:nth-child(5) {
+                .icon {
+                    transform: rotate(-30deg);
+                }
+            }
+            &:nth-child(6) {
+                .icon {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
 }

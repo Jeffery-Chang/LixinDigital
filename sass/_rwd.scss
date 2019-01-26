@@ -17,37 +17,69 @@
     }
     .device {
         right: -180px;
-        bottom: 10%;
+        bottom: 3%;
         z-index: 0;
         @include pc-1440 {
             transform: scale(0.8);
             right: -21%;
             bottom: -8%;
         }
+        @media screen and (max-width: 1440px) and (min-height: 750px) {
+            bottom: 0;
+        }
+        @include pc-1366 {
+            transform: scale(0.75);
+            right: -23%;
+            bottom: -12%;
+        }
         @include pc-1280 {
             transform: scale(0.65);
             right: -33%;
             bottom: -12%;
         }
+        @include media-w-h(1280px, 769px) {
+            transform: scale(0.85);
+            right: -26%;
+            bottom: -4%;
+        }
         @include m-1024 {
+            transform: scale(0.65);
             bottom: -8%;
             right: -40%;
         }
         @include m-767 {
+            right: -72%;
+        }
+        @include media-w-h(667px, 750px) {
+            right: -85%;
+        }
+        @include media-w-h(595px, 750px) {
+            right: -116%;
+        }
+        @include media-w-h(500px, 750px) {
+            transform: scale(0.5);
+            right: -132%;
+        }
+        @include media-w-h(450px, 750px) {
+            right: -182%;
+        }
+        @include m-only(767px) {
             transform: scale(0.5);
             right: -155%;
             bottom: -20%;
         }
-        @include m-413 {
+        @include m-only(413px) {
             transform: scale(0.4);
             right: -160%;
             bottom: -26%;
         }
-        @include m-374 {
+        @include m-only(374px) {
             transform: scale(0.35);
             right: -195%;
             bottom: -33%;
         }
+        @include m-413 {}
+        @include m-374 {}
     }
     .slidePic {
         z-index: -1;

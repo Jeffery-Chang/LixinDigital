@@ -25,6 +25,12 @@ header {
     }
     .logo {
         width: 250px;
+        @include m-413 {
+            width: 200px;
+        }
+        @include m-374 {
+            width: 170px;
+        }
         &:hover {
             @include pc-only {
                 opacity: 0.8;

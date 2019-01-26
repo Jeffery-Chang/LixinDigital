@@ -25,23 +25,10 @@
     }
     li {
         width: 30%;
-        height: 130px;
-        @extend %flex-mid;
-        flex-shrink: 0;
         @include m-767 {
             width: 48%;
             height: auto;
             flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-        img {
-            height: 40px;
-            width: auto;
-            @include m-767 {
-                width: 80%;
-                height: auto;
-                margin: auto;
-            }
         }
     }
     .arrowCube {

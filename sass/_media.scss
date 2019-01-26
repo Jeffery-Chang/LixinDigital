@@ -11,6 +11,12 @@
     }
 }
 
+@mixin pc-1366 {
+    @media screen and (max-width: 1366px) {
+        @content
+    }
+}
+
 @mixin pc-1280 {
     @media screen and (max-width: 1280px) {
         @content
@@ -60,6 +66,12 @@
 
 @mixin media-m($width) {
     @media screen and (max-device-width: $width) {
+        @content
+    }
+}
+
+@mixin media-w-h($width, $height) {
+    @media screen and (max-width: $width) and ( min-height: $height) {
         @content
     }
 }

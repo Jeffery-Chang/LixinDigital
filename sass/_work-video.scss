@@ -19,6 +19,7 @@
         text-align: left;
         @extend %Y50;
         right: 10%;
+        width: 550px;
         @include m-1024 {
             right: 8%;
             padding: 40px 50px 100px;
@@ -75,7 +76,7 @@
         }
         &:hover {
             @include pc-only {
-                transform: scale(1.1) translateX(-5px);
+                transform: translateX(5px);
                 .icon-btn-play {
                     .path1:before {
                         color: #000;

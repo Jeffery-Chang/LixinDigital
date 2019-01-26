@@ -1,4 +1,4 @@
-(function () {
+(function() {
     const indexCtrl = new Vue({
         el: '#vue',
         data: {
@@ -33,10 +33,10 @@
                 this.isScroll = (scrollY > 0) ? true : false;
             },
             ctrlMove(target, isMenu) {
-                if(isMenu) this.isOpen = false;
+                if (isMenu) this.isOpen = false;
                 this.$scrollTo(target, 500, {
                     offset: document.querySelector(".header-index").offsetHeight * -1,
-                    onDone: function (element) {
+                    onDone: function(element) {
 
                     }
                 });
@@ -92,14 +92,14 @@
             },
             marketEffect() {
                 //Background image
-                $('div').each(function () {
+                $('div').each(function() {
                     var url = $(this).attr('data-image');
                     if (url) {
                         $(this).css('background-image', 'url(' + url + ')');
                     }
                 });
 
-                $('section').each(function () {
+                $('section').each(function() {
                     var url = $(this).attr('data-image');
                     if (url) {
                         $(this).css('background-image', 'url(' + url + ')');
@@ -139,12 +139,12 @@
 
                 var colorArray = [
                     'rgba(99, 84, 75, 0.61)',
-                    'rgba(65, 58, 55, 0.6)',
-                    'rgba(57, 51, 48, 0.6)',
+                    'rgba(196, 126, 33, 0.6)',
+                    'rgba(194, 138, 48, 0.5)',
                     'rgba(79, 69, 63, 0.65)'
                 ];
 
-                window.addEventListener('mousemove', function (event) {
+                window.addEventListener('mousemove', function(event) {
                     mouse.x = event.x;
                     mouse.y = event.y;
                 });
@@ -162,7 +162,7 @@
                     this.isImg = isImg || false;
                     this.img_src = img_src || null;
 
-                    this.draw = function () {
+                    this.draw = function() {
                         if (this.isImg) {
                             c.drawImage(
                                 this.img_src,
@@ -178,7 +178,7 @@
                             c.fill();
                         }
                     }
-                    this.update = function () {
+                    this.update = function() {
                         if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
                             this.dx = -this.dx;
                         }
@@ -248,10 +248,10 @@
                     prevArrow: $('.work-video .arrowBox .left'),
                     nextArrow: $('.work-video .arrowBox .right'),
                     appendDots: $('.work-video .slider'),
-                    customPaging : function(slider, i) {
+                    customPaging: function(slider, i) {
                         return '<div class="indicator"></div>';
                     },
-                }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
                     $('.indicator').css('margin-left', nextSlide * (290 / 6) + 'px');
                 });
             },
@@ -273,7 +273,7 @@
                     autoplaySpeed: 5000,
                 });
             },
-            caseEffect(){
+            caseEffect() {
                 $('.showCaseBox .showSlick').slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -286,8 +286,8 @@
                     // autoplaySpeed: 5000,
                 });
             },
-            clientEffect(){
-                $('.client .arrowCube .left, .client .arrowCube .right').click((e)=>{
+            clientEffect() {
+                $('.client .arrowCube .left, .client .arrowCube .right').click((e) => {
                     e.preventDefault();
                 })
                 $('.client .slideBox').slick({

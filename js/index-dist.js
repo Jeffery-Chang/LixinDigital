@@ -140,7 +140,7 @@
                 var imgMaxRadius = 150;
                 // var minRadius = 2;
 
-                var colorArray = ['rgba(99, 84, 75, 0.61)', 'rgba(65, 58, 55, 0.6)', 'rgba(57, 51, 48, 0.6)', 'rgba(79, 69, 63, 0.65)'];
+                var colorArray = ['rgba(99, 84, 75, 0.61)', 'rgba(196, 126, 33, 0.6)', 'rgba(194, 138, 48, 0.5)', 'rgba(79, 69, 63, 0.65)'];
 
                 window.addEventListener('mousemove', function (event) {
                     mouse.x = event.x;
