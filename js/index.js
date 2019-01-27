@@ -10,7 +10,7 @@
                 company: '',
                 email: '',
                 phone: '',
-                msg: '',
+                msg: '', 
             }
         },
         computed: {},
