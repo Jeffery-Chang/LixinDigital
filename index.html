@@ -16,25 +16,23 @@
     <link rel="icon" href="img/favicon.ico">
     <!-- css style-->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slick.min.css">
-    <link rel="stylesheet" href="css/slick-theme.min.css">
     <!--if gt IE 9-->
-    <script src="js/vendor/html5shiv.js"></script>
-    <script src="js/vendor/isMobile.min.js"></script>
-    <script src="js/vendor/TweenMax.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script src="js/vendor/wow.min.js"> </script>
-    <script src="js/vendor/jquery-3.2.1.min.js"></script>
-    <!-- <script src="js/vendor/jquery.tubular.min.js"></script> -->
-    <script src="js/vendor/jquery-ui.min.js"></script>
-    <script src="js/vendor/slick.min.js"></script>
-    <script src="js/vendor/vue.min.js"></script>
-    <script src="js/vendor/vue-scrollto.min.js"></script>
-    <script src="js/carousel-dist.js"></script>
+    <script src="vendor/html5shiv.js"></script>
+    <script src="vendor/isMobile.min.js"></script>
+    <script src="vendor/TweenMax.min.js"></script>
+    <script src="vendor/wow.min.js"> </script>
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script src="vendor/jquery-ui.min.js"></script>
+    <script src="vendor/slick.min.js"></script>
+    <script src="vendor/jquery.fancybox.min.js"></script>
+    <script src="vendor/vue.min.js"></script>
+    <script src="vendor/vue-scrollto.min.js"></script>
+    <script src="vendor/carousel.min.js"></script>
     <!--bootstrap-->
     <!--Optional JavaScript-->
-    <script src="js/vendor/popper.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="vendor/popper.min.js"></script>
+    <script src="vendor/bootstrap.min.js"></script>
   
     <!-- own style-->
     <!-- <link rel="stylesheet" href="css/index.css"> -->
@@ -240,28 +238,28 @@
               <li class="wow fadeIn">
                 <div class="iconBox">
                   <div class="icon"><img src="img/svg/how-1.svg"/>
-                    <div class="line abs"></div>
+                    <div class="line abs howLine" ></div>
                   </div>
                   <p>討論策略</p>
                 </div>
               </li>
-              <li class="wow fadeIn" data-wow-delay=".15s">
+              <li class="wow fadeIn" data-wow-delay=".5s">
                 <div class="iconBox">
                   <div class="icon"><img src="img/svg/how-2.svg"/>
-                    <div class="line abs"></div>
+                    <div class="line abs howLine" ></div>
                   </div>
                   <p>網路操作</p>
                 </div>
               </li>
-              <li class="wow fadeIn" data-wow-delay=".3s">
+              <li class="wow fadeIn" data-wow-delay="1s">
                 <div class="iconBox">
                   <div class="icon"><img src="img/svg/how-3.svg"/>
-                    <div class="line abs"></div>
+                    <div class="line abs howLine" ></div>
                   </div>
                   <p>數據整合分析</p>
                 </div>
               </li>
-              <li class="wow fadeIn" data-wow-delay=".45s">
+              <li class="wow fadeIn" data-wow-delay="1.5s">
                 <div class="iconBox">
                   <div class="icon"><img src="img/svg/how-4.svg"/>
                   </div>
@@ -292,42 +290,42 @@
                     <div class="work-info">
                       <h3>房地產｜新板巨星｜小資購屋</h3>
                       <p>好的規劃並不難，堅持到底的才有收穫<span class="break">別人怎麼生活我不在意，我打造的是每一天都迎向更好的生活</span></p>
-                    </div><a class="btn" href="https://www.youtube.com/watch?v=qWE6nlKQ-4Q" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
+                    </div><a class="btn" id="btn1" data-bg="mUEwilasYVY" href="https://www.youtube.com/watch?v=qWE6nlKQ-4Q" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
                   </div>
                   <!--work2-->
-                  <div class="work2" style="display:none">
+                  <div class="work2">
                     <div class="work-info">
                       <h3>房地產｜新板巨星｜汪星人</h3>
                       <p>汪星人不說，但汪星人都懂<span class="break">金窩銀窩，都不如有自己溫馨的窩，來聽聽汪星人怎麼說</span></p>
-                    </div><a class="btn" href="https://www.youtube.com/watch?v=KmQK2cPRHPw" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
+                    </div><a class="btn" id="btn2" data-bg="u0WVNVc1Y3Q" href="https://www.youtube.com/watch?v=KmQK2cPRHPw" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
                   </div>
                   <!--work3-->
-                  <div class="work3" style="display:none">
+                  <div class="work3">
                     <div class="work-info">
                       <h3>房地產｜新板巨星｜名牌生活</h3>
                       <p>一身名牌，不如一張門牌<span class="break">一樣是小資女孩，她天天追潮流單品當月光族、</span><span class="break">她則買下一座城堡，天天當自己的公主</span></p>
-                    </div><a class="btn" href="https://www.youtube.com/watch?v=-YpLkKAhUsI" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
+                    </div><a class="btn" id="btn3" data-bg="JeJ2N2T6Cr0" href="https://www.youtube.com/watch?v=-YpLkKAhUsI" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
                   </div>
                   <!--work4-->
-                  <div class="work4" style="display:none">
+                  <div class="work4">
                     <div class="work-info">
-                      <h3>房地產｜新板巨星｜名牌生活</h3>
+                      <h3>房地產｜新板巨星｜不再搬家</h3>
                       <p>小熊多多為什麼不開心？<span class="break">他說：常常在搬家，搬來搬去都是別人的家‥</span></p>
-                    </div><a class="btn" href="https://www.youtube.com/watch?v=RanzJCKiiu8" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
+                    </div><a class="btn" id="btn4" data-bg="4HaJl62UTbE" href="https://www.youtube.com/watch?v=RanzJCKiiu8" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
                   </div>
                   <!--work5-->
-                  <div class="work5" style="display:none">
+                  <div class="work5">
                     <div class="work-info">
-                      <h3>房地產｜新板巨星｜名牌生活</h3>
+                      <h3>房地產｜新板巨星｜競選</h3>
                       <p>我們有多久，不敢擁抱成家的夢想<span class="break">其實夢想，不一定要到很遠的地方</span></p>
-                    </div><a class="btn" href="https://www.youtube.com/watch?v=uMDcyCV3qgQ" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
+                    </div><a class="btn" id="btn5" data-bg="JX_3PrA3GdU" href="https://www.youtube.com/watch?v=uMDcyCV3qgQ" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
                   </div>
                   <!--work6-->
-                  <div class="work6" style="display:none">
+                  <div class="work6">
                     <div class="work-info">
                       <h3>房地產｜超級花園｜娘娘駕到</h3>
                       <p>每天從這裡恢復身心神氣<span class="break">再去面對現實的生活，是多麼令人羨慕的呀</span></p>
-                    </div><a class="btn" href="https://www.youtube.com/watch?v=dWIik0v7_aA" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
+                    </div><a class="btn" id="btn6" data-bg="ZV4c1IXGy7Q" href="https://www.youtube.com/watch?v=dWIik0v7_aA" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
                   </div>
                 </div>
                 <div class="btm-content">
@@ -338,7 +336,7 @@
               <div class="yt-video">
                 <div class="embed-container">
                   <!-- <iframe src="https://www.youtube.com/embed/qWE6nlKQ-4Q" frameborder="0" allowfullscreen=""></iframe> -->
-                  <iframe src="https://www.youtube.com/embed/qWE6nlKQ-4Q?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=qWE6nlKQ-4Q" frameborder="0" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/mUEwilasYVY?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
@@ -489,23 +487,23 @@
               <div class="form-info">
                 <div class="mat-div wow fadeInUp">         
                   <label class="mat-label">姓名*</label>                        
-                  <input class="mat-input" id="login_acct" type="text" autocomplete="off">
+                  <input class="mat-input" type="text" autocomplete="off" v-model="sendData.name">
                 </div>                    
                 <div class="mat-div wow fadeInUp">             
                   <label class="mat-label">公司</label>                        
-                  <input class="mat-input" id="login_code" type="text" autocomplete="off">
+                  <input class="mat-input" type="text" autocomplete="off" v-model="sendData.company">
                 </div>
                 <div class="mat-div wow fadeInUp">             
                   <label class="mat-label">信箱*</label>                        
-                  <input class="mat-input" id="login_code" type="text" autocomplete="off">
+                  <input class="mat-input" type="text" autocomplete="off" v-model="sendData.email">
                 </div>
                 <div class="mat-div wow fadeInUp">             
                   <label class="mat-label">電話</label>                        
-                  <input class="mat-input" id="login_code" type="number" autocomplete="off">
+                  <input class="mat-input" type="number" autocomplete="off" v-model.number="sendData.phone">
                 </div>
               </div>
               <div class="textBox wow fadeInUp">
-                <textarea type="text" placeholder="詢問內容" name="contactContent" maxlength="400" required=""></textarea>
+                <textarea type="text" placeholder="詢問內容" name="contactContent" maxlength="400" v-model="sendData.msg"></textarea>
               </div>
               <!--0125 add btn--><a class="send wow fadeInUp" href="#">GO!</a>
             </div>
@@ -522,12 +520,6 @@
         <footer class="footer-index">© 2019 立炘數位行銷有限公司.  ALL RIGHTS RESERVED.</footer>
       </div>
     </span>
-    <!-- <script src="js/vendor/bur.js"></script> -->
-    <!-- <script src="js/vendor/mask.js"></script> -->
-    <!-- <script src="js/vendor/carousel.js"></script> -->
-    <!-- <script src="js/vendor/media.js"></script> -->
-    <!-- <script src="js/vendor/form.js"></script> -->
-    <!-- <script src="js/vendor/map.js"></script> -->
-    <script src="js/index.js"></script>
+    <script src="js/index.bundle.js"></script>
   </body>
  </html>

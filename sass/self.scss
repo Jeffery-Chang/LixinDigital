@@ -1,3 +1,7 @@
+@import '../css/slick.min.css';
+@import '../css/slick-theme.min.css';
+@import '../css/jquery.fancybox.min.css';
+
 [v-cloak] {
     display: none;
 }
@@ -29,10 +33,12 @@
         opacity: 0;
         transform: translate3d(0, 50%, 0)
     }
+
     25% {
         opacity: 0;
         transform: translate3d(0, 25%, 0)
     }
+
     100% {
         opacity: 1;
         transform: none;
@@ -45,6 +51,7 @@
         -webkit-transform: translate3d(50%, 0, 0);
         transform: translate3d(50%, 0, 0);
     }
+
     to {
         opacity: 1;
         -webkit-transform: translate3d(0, 0, 0);
@@ -56,12 +63,13 @@
     0% {
         opacity: 0;
     }
+
     25% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
-        transform: none;
     }
 }
 
@@ -86,10 +94,79 @@
     }
 }
 
+/* HOW */
+.how {
+    .howBox {
+        li {
+            .howLine {
+                transform: translateY(-50%) scaleX(0);
+                transform-origin: left center;
+                transition: transform .5s ease;
+            }
+
+            &:nth-child(1) {
+                .howLine {
+                    transition-delay: .4s;
+                }
+            }
+
+            &:nth-child(2) {
+                .howLine {
+                    transition-delay: .85s;
+                }
+            }
+
+            &:nth-child(3) {
+                .howLine {
+                    transition-delay: 1.35s;
+                }
+            }
+
+            &.animated {
+                .howLine {
+                    transform: translateY(-50%) scaleX(1);
+                }
+            }
+
+            @media screen and (max-width: 767px) {
+                .howLine {
+                    transform-origin: top center;
+                    transform: translateY(-50%) scaleY(0);
+                }
+
+                &:nth-child(1) {
+                    .howLine {
+                        transition-delay: .2s;
+                    }
+                }
+
+                &:nth-child(2) {
+                    .howLine {
+                        transition-delay: .4s;
+                    }
+                }
+
+                &:nth-child(3) {
+                    .howLine {
+                        transition-delay: .6s;
+                    }
+                }
+
+                &.animated {
+                    .howLine {
+                        transform: translateY(-50%) scaleY(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 /* VIDEO */
 
 .work-video {
+
     // .main {
     //     width: 50%;
     // }
@@ -104,18 +181,22 @@
 .rwd {
     .phone .slick-dots {
         bottom: 10px;
+
         li {
             margin: 0 -2.5px;
             transform: scale(0.5);
         }
     }
+
     .mac .slick-dots {
         bottom: 20px;
+
         li {
             margin: 0 -1.5px;
             transform: scale(0.75);
         }
     }
+
     .dots.abs {
         display: none;
     }
@@ -128,6 +209,7 @@
     .showCase {
         .right {
             padding-right: 0;
+
             .showSlick {
                 .main {
                     position: relative;
@@ -137,9 +219,11 @@
                     margin-top: 25%;
                     margin-left: 15%;
                 }
+
                 position: relative;
                 width: 100%;
                 height: 100%;
+
                 &>div {
                     position: relative;
                     width: 100%;
