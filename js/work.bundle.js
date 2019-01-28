@@ -3,6 +3,7 @@
 void new Vue({
     el: "#vue",
     data: {
+        ieFG: !1,
         isScroll: !1,
         isOpen: !1,
         isLoaded: !1,
@@ -156,9 +157,15 @@ void new Vue({
     created: function() {
         window.addEventListener("scroll", this.ctrlScroll);
     },
+    beforeMount: function() {
+        var tab = new URL(location.href).searchParams.get("tab");
+        if (tab) this.tab = tab;
+    },
     mounted: function() {
         var _this = this;
+        if (this.chkIE() <= 10) return this.ieFG = !0, void (location.href = "index_ie.html");
         window.onload = function() {
+            if (_this.getMobileOperatingSystem()) document.querySelector("body").classList.add("android");
             _this.isLoaded = !0, _this.$nextTick(function() {
                 $(".main-video li a").fancybox(), new WOW({
                     offset: 200
@@ -189,6 +196,14 @@ void new Vue({
         },
         getMore: function() {
             if (this.count += 6, this.count >= this.videoList.length) this.isMore = !1;
+        },
+        getMobileOperatingSystem: function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) return !0; else return !1;
+        },
+        chkIE: function() {
+            var userAgent = navigator.userAgent, fIEVersion = parseFloat(RegExp.$1);
+            if (-1 != userAgent.indexOf("MSIE 6.0")) return 6; else if (7 == fIEVersion) return 7; else if (8 == fIEVersion) return 8; else if (9 == fIEVersion) return 9; else if (10 == fIEVersion) return 10; else if (userAgent.toLowerCase().match(/rv:([\d.]+)\) like gecko/)) return 11; else return 999;
         }
     },
     destroyed: function() {

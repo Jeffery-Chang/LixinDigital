@@ -41,7 +41,7 @@
 </head>
 
 <body>
-    <span id="vue" v-cloak>
+    <span id="vue" v-cloak v-if="!ieFG">
       <!--0125 add-->
       <transition name="fade">
       <div class="loadingBox" v-if="!isLoaded">
@@ -71,7 +71,7 @@
     <div class="overlay" id="overlay" :class="{ 'open': isOpen }">
         <nav class="overlay-menu">
             <ul class="index-menu">
-                <li><a class="line" href="index.html">回首頁</a></li>
+                <!-- <li><a class="line" href="index.html">回首頁</a></li> -->
                 <li><a class="line" href="work.html">作品集</a>
                 </li>
                 <li @click.prevent="ctrlMove('.contact', true);"><a class="line" href="#">聯絡我們</a></li>
@@ -86,7 +86,7 @@
     <!-- PC menu -->
     <nav class="pc">
         <ul class="index-menu">
-            <li><a class="line" href="index.html">回首頁</a></li>
+            <!-- <li><a class="line" href="index.html">回首頁</a></li> -->
             <li><a class="line" href="work.html">作品集</a>
             </li>
             <li @click.prevent="ctrlMove('.contact', true);"><a class="line" href="#">聯絡我們</a></li>
@@ -136,26 +136,26 @@
         <section class="marketing full-h">
             <div class="outer">
                 <h2 class="org">數位行銷整合</h2>
-                <div class="carouselBox">
+                <div class="carouselBox wow flipInY">
                     <div class="circle--slider">
                         <div class="rotate--circle">
                             <ul class="circle--rotate" id="circle--rotate">
-                                <li class="block">
+                                <li class="block" data-img="media">
                                     <div class="icon"><i class="iconBox"><img src="img/svg/icon-media.svg"/></i><span> </span></div>
                                 </li>
-                                <li class="block">
+                                <li class="block" data-img="digital">
                                     <div class="icon"><i class="iconBox"><img src="img/svg/icon-digital.svg"/></i><span> </span></div>
                                 </li>
-                                <li class="block">
+                                <li class="block" data-img="analysis">
                                     <div class="icon"><i class="iconBox"><img src="img/svg/icon-analysis.svg"/></i><span> </span></div>
                                 </li>
-                                <li class="block">
+                                <li class="block" data-img="content">
                                     <div class="icon"><i class="iconBox"><img src="img/svg/icon-content.svg"/></i><span> </span></div>
                                 </li>
-                                <li class="block">
+                                <li class="block" data-img="web">
                                     <div class="icon"><i class="iconBox"><img src="img/svg/icon-web.svg"/></i><span> </span></div>
                                 </li>
-                                <li class="block">
+                                <li class="block" data-img="video">
                                     <div class="icon"><i class="iconBox"><img src="img/svg/icon-video.svg"/></i><span> </span></div>
                                 </li>
                             </ul>
@@ -238,7 +238,7 @@
             <h2 class="org wow fadeInUp">我們怎麼做數位</h2>
             <div class="howBox">
                 <ul>
-                    <li class="wow fadeIn">
+                    <li class="wow flipInY">
                         <div class="iconBox">
                             <div class="icon"><img src="img/svg/how-1.svg" />
                                 <div class="line abs howLine"></div>
@@ -246,7 +246,7 @@
                             <p>討論策略</p>
                         </div>
                     </li>
-                    <li class="wow fadeIn" data-wow-delay=".5s">
+                    <li class="wow flipInY" data-wow-delay=".5s">
                         <div class="iconBox">
                             <div class="icon"><img src="img/svg/how-2.svg" />
                                 <div class="line abs howLine"></div>
@@ -254,7 +254,7 @@
                             <p>網路操作</p>
                         </div>
                     </li>
-                    <li class="wow fadeIn" data-wow-delay="1s">
+                    <li class="wow flipInY" data-wow-delay="1s">
                         <div class="iconBox">
                             <div class="icon"><img src="img/svg/how-3.svg" />
                                 <div class="line abs howLine"></div>
@@ -262,7 +262,7 @@
                             <p>數據整合分析</p>
                         </div>
                     </li>
-                    <li class="wow fadeIn" data-wow-delay="1.5s">
+                    <li class="wow flipInY" data-wow-delay="1.5s">
                         <div class="iconBox">
                             <div class="icon"><img src="img/svg/how-4.svg" />
                             </div>
@@ -293,47 +293,47 @@
                                 <div class="work-info">
                                     <h3>房地產｜新板巨星｜小資購屋</h3>
                                     <p>好的規劃並不難，堅持到底的才有收穫<span class="break">別人怎麼生活我不在意，我打造的是每一天都迎向更好的生活</span></p>
-                                </div><a class="btn" id="btn1" data-bg="mUEwilasYVY" href="https://www.youtube.com/watch?v=qWE6nlKQ-4Q" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
+                                </div><a class="btn" id="btn1" data-mbg="" data-bg="mUEwilasYVY" href="https://www.youtube.com/watch?v=qWE6nlKQ-4Q" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
                             </div>
                             <!--work2-->
                             <div class="work2">
                                 <div class="work-info">
                                     <h3>房地產｜新板巨星｜汪星人</h3>
                                     <p>汪星人不說，但汪星人都懂<span class="break">金窩銀窩，都不如有自己溫馨的窩，來聽聽汪星人怎麼說</span></p>
-                                </div><a class="btn" id="btn2" data-bg="u0WVNVc1Y3Q" href="https://www.youtube.com/watch?v=KmQK2cPRHPw" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
+                                </div><a class="btn" id="btn2" data-mbg="" data-bg="u0WVNVc1Y3Q" href="https://www.youtube.com/watch?v=KmQK2cPRHPw" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
                             </div>
                             <!--work3-->
                             <div class="work3">
                                 <div class="work-info">
                                     <h3>房地產｜新板巨星｜名牌生活</h3>
                                     <p>一身名牌，不如一張門牌<span class="break">一樣是小資女孩，她天天追潮流單品當月光族、</span><span class="break">她則買下一座城堡，天天當自己的公主</span></p>
-                                </div><a class="btn" id="btn3" data-bg="JeJ2N2T6Cr0" href="https://www.youtube.com/watch?v=-YpLkKAhUsI" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
+                                </div><a class="btn" id="btn3" data-mbg="" data-bg="JeJ2N2T6Cr0" href="https://www.youtube.com/watch?v=-YpLkKAhUsI" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
                             </div>
                             <!--work4-->
                             <div class="work4">
                                 <div class="work-info">
                                     <h3>房地產｜新板巨星｜不再搬家</h3>
                                     <p>小熊多多為什麼不開心？<span class="break">他說：常常在搬家，搬來搬去都是別人的家‥</span></p>
-                                </div><a class="btn" id="btn4" data-bg="4HaJl62UTbE" href="https://www.youtube.com/watch?v=RanzJCKiiu8" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
+                                </div><a class="btn" id="btn4" data-mbg="" data-bg="4HaJl62UTbE" href="https://www.youtube.com/watch?v=RanzJCKiiu8" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
                             </div>
                             <!--work5-->
                             <div class="work5">
                                 <div class="work-info">
                                     <h3>房地產｜新板巨星｜競選</h3>
                                     <p>我們有多久，不敢擁抱成家的夢想<span class="break">其實夢想，不一定要到很遠的地方</span></p>
-                                </div><a class="btn" id="btn5" data-bg="JX_3PrA3GdU" href="https://www.youtube.com/watch?v=uMDcyCV3qgQ" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
+                                </div><a class="btn" id="btn5" data-mbg="" data-bg="JX_3PrA3GdU" href="https://www.youtube.com/watch?v=uMDcyCV3qgQ" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
                             </div>
                             <!--work6-->
                             <div class="work6">
                                 <div class="work-info">
                                     <h3>房地產｜超級花園｜娘娘駕到</h3>
                                     <p>每天從這裡恢復身心神氣<span class="break">再去面對現實的生活，是多麼令人羨慕的呀</span></p>
-                                </div><a class="btn" id="btn6" data-bg="ZV4c1IXGy7Q" href="https://www.youtube.com/watch?v=dWIik0v7_aA" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
+                                </div><a class="btn" id="btn6" data-mbg="" data-bg="ZV4c1IXGy7Q" href="https://www.youtube.com/watch?v=dWIik0v7_aA" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span class="path2"></span></span><span>觀看影片</span></a>
                             </div>
                         </div>
                         <div class="btm-content">
                             <div class="arrowBox"><a class="left" href="#"><span class="icon-arrow"></span></a><a class="right" href="#"><span class="icon-arrow"></span></a></div>
-                            <a class="more" href="works.html">
+                            <a class="more" href="work.html">
                                 <span>看更多影片</span><span class="line-arrow por"></span></a>
                         </div>
                     </div>
@@ -447,7 +447,7 @@
 
                             </div>
                         </div>
-                        <a class="more" href="#"><span>看更多案例</span><span class="line-arrow por"></span></a>
+                        <a class="more" href="work.html?tab=web"><span>看更多案例</span><span class="line-arrow por"></span></a>
                     </div>
 
                 </div>
@@ -460,34 +460,34 @@
             <div class="slideBox">
                 <div class="logoBox">
                     <ul>
-                        <li><img src="img/client-far.png" />
+                        <li class="wow rollIn" data-wow-delay="0s"><img src="img/client-far.png" />
                         </li>
-                        <li><img src="img/client-yuan.png" />
+                        <li class="wow rollIn" data-wow-delay=".1s"><img src="img/client-yuan.png" />
                         </li>
-                        <li><img src="img/client-yuan.png" />
+                        <li class="wow rollIn" data-wow-delay=".2s"><img src="img/client-yuan.png" />
                         </li>
-                        <li><img src="img/client-far.png" />
+                        <li class="wow rollIn" data-wow-delay=".3s"><img src="img/client-far.png" />
                         </li>
-                        <li><img src="img/client-yuan.png" />
+                        <li class="wow rollIn" data-wow-delay=".4s"><img src="img/client-yuan.png" />
                         </li>
-                        <li><img src="img/client-far.png" />
+                        <li class="wow rollIn" data-wow-delay=".5s"><img src="img/client-far.png" />
                         </li>
                     </ul>
                 </div>
                 <!-- 預留logo DIV -->
                 <div class="logoBox">
                     <ul>
-                        <li><img src="img/client-far.png" />
+                        <li class="wow rollIn" data-wow-delay="0"><img src="img/client-far.png" />
                         </li>
-                        <li><img src="img/client-yuan.png" />
+                        <li class="wow rollIn" data-wow-delay=".1s"><img src="img/client-yuan.png" />
                         </li>
-                        <li><img src="img/client-yuan.png" />
+                        <li class="wow rollIn" data-wow-delay=".2s"><img src="img/client-yuan.png" />
                         </li>
-                        <li><img src="img/client-far.png" />
+                        <li class="wow rollIn" data-wow-delay=".3s"><img src="img/client-far.png" />
                         </li>
-                        <li><img src="img/client-yuan.png" />
+                        <li class="wow rollIn" data-wow-delay=".4s"><img src="img/client-yuan.png" />
                         </li>
-                        <li><img src="img/client-far.png" />
+                        <li class="wow rollIn" data-wow-delay=".5s"><img src="img/client-far.png" />
                         </li>
                     </ul>
                 </div>

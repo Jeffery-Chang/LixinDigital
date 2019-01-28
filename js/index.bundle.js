@@ -3,6 +3,7 @@
 void new Vue({
     el: "#vue",
     data: {
+        ieFG: !1,
         isScroll: !1,
         isOpen: !1,
         isLoaded: !1,
@@ -14,13 +15,14 @@ void new Vue({
             msg: ""
         }
     },
-    computed: {},
     created: function() {
-        window.addEventListener("scroll", this.ctrlScroll);
+        window.addEventListener("scroll", this.ctrlScroll), window.addEventListener("orientationchange", this.avoidAnriod);
     },
     mounted: function() {
         var _this = this;
+        if (this.chkIE() <= 10) return this.ieFG = !0, void (location.href = "index_ie.html");
         window.onload = function() {
+            if (_this.getMobileOperatingSystem()) document.querySelector("body").classList.add("android");
             _this.isLoaded = !0, _this.$nextTick(function() {
                 _this.kvEffect(), _this.howEffect(), _this.marketEffect(), _this.mediaEffect(), 
                 _this.workEffect(), _this.rwdEffect(), _this.caseEffect(), _this.clientEffect(), 
@@ -159,7 +161,7 @@ void new Vue({
                 }
             }).on("beforeChange", function(event, slick, currentSlide, nextSlide) {
                 $(".indicator").css("margin-left", nextSlide * (290 / 6) + "px");
-                var youtubeID = $(".work-video .desBox").find("#btn" + (nextSlide + 1)).data("bg");
+                var source = isMobile.phone ? "mbg" : "bg", youtubeID = $(".work-video .desBox").find("#btn" + (nextSlide + 1)).data(source);
                 $(".work-video .embed-container").fadeOut("fast", function() {
                     $(this).empty().html('<iframe src="https://www.youtube.com/embed/' + youtubeID + "?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=" + youtubeID + '" frameborder="0" allowfullscreen></iframe>');
                 });
@@ -433,9 +435,23 @@ void new Vue({
                     map.setZoom(map.getZoom() - 1);
                 });
             }(zoomControlDiv, map), map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
+        },
+        getMobileOperatingSystem: function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) return !0; else return !1;
+        },
+        avoidAnriod: function() {
+            if (this.getMobileOperatingSystem()) document.querySelector(".trans_bg").classList.add("input_focus"), 
+            screen.orientation.onchange = function() {
+                if ("landscape" == screen.orientation.type.match(/\w+/)[0]) document.querySelector(".trans_bg").classList.remove("input_focus");
+            };
+        },
+        chkIE: function() {
+            var userAgent = navigator.userAgent, fIEVersion = parseFloat(RegExp.$1);
+            if (-1 != userAgent.indexOf("MSIE 6.0")) return 6; else if (7 == fIEVersion) return 7; else if (8 == fIEVersion) return 8; else if (9 == fIEVersion) return 9; else if (10 == fIEVersion) return 10; else if (userAgent.toLowerCase().match(/rv:([\d.]+)\) like gecko/)) return 11; else return 999;
         }
     },
     destroyed: function() {
-        window.removeEventListener("scroll", this.ctrlScroll);
+        window.removeEventListener("scroll", this.ctrlScroll), window.removeEventListener("orientationchange", this.avoidAnriod);
     }
 });

@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/self.css">
   </head>
   <body>
-    <span id="vue">
+    <span id="vue" v-cloak v-if="!ieFG">
       <transition name="fade">
         <div class="loadingBox" v-if="!isLoaded">
           <div class="loading">

@@ -64,9 +64,93 @@
     }
 }
 
-.zoomIn {
-    animation-name: zoomIn;
+@keyframes rollIn {
+    from {
+        opacity: 0;
+        transform: translate3d(-50%, 0, 0) rotate3d(0, 0, 1, -60deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
+
+
+@keyframes flipInY {
+    from {
+        transform: perspective(400px) rotate3d(0, 1, 0, -90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 20deg);
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -10deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 5deg);
+    }
+
+    to {
+        transform: perspective(400px);
+    }
+}
+
+// @keyframes zoomInUp {
+//     from {
+//         opacity: 0;
+//         transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+//         animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+//     }
+
+//     60% {
+//         opacity: 1;
+//         transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+//         animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+//     }
+// }
+@keyframes bounceInDown {
+
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, 5px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+
 
 .fadeInUp {
     animation-name: fadeInUp;
@@ -78,4 +162,25 @@
 
 .fadeIn {
     animation-name: fadeIn;
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+}
+
+.rollIn {
+    animation-name: rollIn;
+}
+
+.flipInY {
+    backface-visibility: visible !important;
+    animation-name: flipInY;
+}
+
+// .zoomInUp {
+//     animation-name: zoomInUp;
+// }
+
+.bounceInDown {
+    animation-name: bounceInDown;
 }
