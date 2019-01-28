@@ -157,7 +157,9 @@ void new Vue({
         var _this = this;
         window.onload = function() {
             _this.isLoaded = !0, _this.$nextTick(function() {
-                $(".main-video li a").fancybox(), _this.changeTab(_this.tab);
+                $(".main-video li a").fancybox(), new WOW({
+                    offset: 200
+                }).init();
             });
         };
     },

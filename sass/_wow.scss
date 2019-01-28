@@ -53,6 +53,18 @@
     }
 }
 
+@keyframes zoomIn {
+    from {
+        transform: scale3d(0, 0, 0);
+    }
+
+    50% {}
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+}
+
 .fadeInUp {
     animation-name: fadeInUp;
 }

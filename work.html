@@ -20,6 +20,7 @@
     <script src="vendor/html5shiv.js"></script>
     <script src="vendor/isMobile.min.js"></script>
     <script src="vendor/TweenMax.min.js"></script>
+    <script src="vendor/wow.min.js"></script>
     <script src="vendor/jquery-3.2.1.min.js"></script>
     <script src="vendor/jquery.fancybox.min.js"></script>
     <script src="vendor/vue.min.js"></script>
@@ -100,7 +101,7 @@
           <!--work-video-->
           <div class="main-video" v-show="tab == 'video'">
             <ul>
-              <li v-for="(item, $index) in videoList" :key="$index">
+              <li v-for="(item, $index) in videoList" :key="$index" class="wow zoomIn" data-wow-duration=".5s">
                 <a class="por" :href="item.href" target="_blank">
                   <div class="inner">
                     <div class="pic por work-video1">
