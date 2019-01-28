@@ -51,7 +51,7 @@
         </div>
       </div>
       <!--add '.scrolled'-->
-      <header><a class="logo" href="index.html" @click.prevent="ctrlMove('body', false);"> <img src="img/svg/logo.svg" alt="logo"></a>
+      <header><a class="logo" href="index.html"> <img src="img/svg/logo.svg" alt="logo"></a>
         <!-- bur-->
         <div class="button_container" id="toggle" :class="{ 'active': isOpen }" @click.prevent="isOpen = !isOpen"><span class="top"></span>  <span class="middle"></span>  <span class="bottom"></span></div>
         <!-- M Menu-->
@@ -93,15 +93,15 @@
             <p class="work-tt org">OUR WORK</p>
             <div class="tabBox por tab-fixed"> 
               <ul>
-                <li><a href="#" :class="{ 'active' : tab == 'video' }" @click.prevent="!isAnimate && changeTab('video')"><span class="icon-work-video"></span></a></li>
-                <li><a href="#" :class="{ 'active' : tab == 'web' }" @click.prevent="!isAnimate && changeTab('web')"><span class="icon-work-web"></span></a></li>
+                <li><a href="#" :class="{ 'active' : tab == 'video' }" @click.prevent="changeTab('video')"><span class="icon-work-video"></span></a></li>
+                <li><a href="#" :class="{ 'active' : tab == 'web' }" @click.prevent="changeTab('web')"><span class="icon-work-web"></span></a></li>
               </ul>
             </div>
           </div>
           <!--work-video-->
           <div class="main-video" v-show="tab == 'video'">
             <ul>
-              <li v-for="(item, $index) in videoList" :key="$index" class="wow zoomIn" data-wow-duration=".5s">
+              <li v-for="(item, $index) in sortList" :key="$index" class="wow zoomIn" data-wow-duration=".5s">
                 <a class="por" :href="item.href" target="_blank">
                   <div class="inner">
                     <div class="pic por work-video1">
@@ -127,7 +127,7 @@
           <!--work-web-->
           <div class="main-web" v-show="tab == 'web'">
             <ul>
-              <li v-for="(item, $index) in webList" :key="$index">
+              <li v-for="(item, $index) in webList" :key="$index" class="wow zoomIn" data-wow-duration=".5s">
                 <a :href="item.href" target="_blank">
                   <div class="pic"><img :src="item.pic"/>
                   </div>
@@ -135,7 +135,7 @@
                 </a>
               </li>
             </ul>
-          </div><a class="m-bl-btn none-pc" href="#">MORE</a>
+          </div><a class="m-bl-btn none-pc" href="#" @click.prevent="getMore" v-show="tab == 'video' && isMore">MORE</a>
           <div class="loading"><span></span></div>
           <div class="bg-logo"><img src="img/svg/logo-work.svg"/>
           </div>

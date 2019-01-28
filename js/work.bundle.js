@@ -6,9 +6,7 @@ void new Vue({
         isScroll: !1,
         isOpen: !1,
         isLoaded: !1,
-        isAnimate: !1,
-        isDone1: !1,
-        isDone2: !1,
+        isMore: !0,
         tab: "video",
         videoList: [ {
             href: "https://www.youtube.com/watch?v=Lzl_eC0ITOk",
@@ -147,9 +145,14 @@ void new Vue({
             href: "#",
             pic: "img/work-video-1.png",
             title: "案例分享｜林版巨星"
-        } ]
+        } ],
+        count: 6
     },
-    computed: {},
+    computed: {
+        sortList: function() {
+            return isMobile.phone ? this.videoList.slice(0, this.count) : this.videoList;
+        }
+    },
     created: function() {
         window.addEventListener("scroll", this.ctrlScroll);
     },
@@ -181,20 +184,11 @@ void new Vue({
         changeTab: function(type) {
             var _this2 = this;
             this.ctrlMove("body", !1, function() {
-                if (_this2.tab = type, !_this2.isDone1 || !_this2.isDone2) _this2.$nextTick(function() {
-                    if (_this2.isAnimate = !0, "video" == _this2.tab) TweenMax.staggerTo(".main-video li", .3, {
-                        scale: 1,
-                        ease: Power0.easeOut
-                    }, .3, function() {
-                        _this2.isAnimate = !1, _this2.isDone1 = !0;
-                    }); else if ("web" == _this2.tab) TweenMax.staggerTo(".main-web li", .3, {
-                        scale: 1,
-                        ease: Power0.easeOut
-                    }, .3, function() {
-                        _this2.isAnimate = !1, _this2.isDone2 = !0;
-                    });
-                });
+                _this2.tab = type;
             });
+        },
+        getMore: function() {
+            if (this.count += 6, this.count >= this.videoList.length) this.isMore = !1;
         }
     },
     destroyed: function() {
