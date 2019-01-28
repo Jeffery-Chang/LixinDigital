@@ -9,7 +9,7 @@ void new Vue({
         isAnimate: !1,
         isDone1: !1,
         isDone2: !1,
-        tab: "web",
+        tab: "video",
         videoList: [ {
             href: "https://www.youtube.com/watch?v=Lzl_eC0ITOk",
             title: "房地產｜海沃創意行銷｜超級城市",
