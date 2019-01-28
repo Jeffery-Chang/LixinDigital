@@ -48,7 +48,8 @@
         background: url(../img/bg-kv.jpg) no-repeat center / cover;
         z-index: -1;
         @include pos-mid;
-        animation: kv 30s linear 1;
+        animation: kv 15s linear 1;
+        animation-fill-mode: forwards;
         // left: 0;
     }
     .mask {

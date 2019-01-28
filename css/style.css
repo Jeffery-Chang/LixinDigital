@@ -352,25 +352,19 @@ header a, header .index-menu a:after, .footer-inner .right .logo, .marketing .li
 
 @-webkit-keyframes kv {
   0% {
-    width: 150%;
+    width: 100%;
     left: 50%; }
-  50% {
-    width: 250%;
-    left: 0; }
   100% {
-    width: 150%;
-    left: 50%; } }
+    width: 200%;
+    left: 0; } }
 
 @keyframes kv {
   0% {
-    width: 150%;
+    width: 100%;
     left: 50%; }
-  50% {
-    width: 250%;
-    left: 0; }
   100% {
-    width: 150%;
-    left: 50%; } }
+    width: 200%;
+    left: 0; } }
 
 .break {
   display: block; }
@@ -1392,8 +1386,10 @@ header {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -webkit-animation: kv 30s linear 1;
-    animation: kv 30s linear 1; }
+    -webkit-animation: kv 15s linear 1;
+    animation: kv 15s linear 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
   @media screen and (max-device-width: 1024px) {
     .kv .mask {
       display: none; } }
