@@ -1392,8 +1392,8 @@ header {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -webkit-animation: kv 30s linear infinite;
-    animation: kv 30s linear infinite; }
+    -webkit-animation: kv 30s linear 1;
+    animation: kv 30s linear 1; }
   @media screen and (max-device-width: 1024px) {
     .kv .mask {
       display: none; } }
