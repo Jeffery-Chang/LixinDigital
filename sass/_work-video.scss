@@ -1,5 +1,6 @@
 .work-video {
     background: #000;
+    margin-top: -10px;
     @include m-767 {
         height: auto;
     }

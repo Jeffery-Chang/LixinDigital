@@ -3,6 +3,7 @@
     position: fixed;
     top: 0;
     z-index: -1;
+    background: $fb;
     .outter {
         height: 100vh;
         position: relative;
@@ -25,6 +26,7 @@
         height: 100vh;
         background: url(../img/svg/clip.svg) no-repeat center / cover;
         z-index: 0;
+        @extend %shade;
         @media screen and (max-width: 1680px) and (min-height: 800px) {
             background: url(../img/svg/clip-2.svg) no-repeat center / cover;
         }
@@ -42,12 +44,13 @@
         }
     }
     .bg {
-        position: absolute;
         width: 100%;
         height: 100vh;
         background: url(../img/bg-kv.jpg) no-repeat center / cover;
         z-index: -1;
-        top: 0;
+        @include pos-mid;
+        animation: kv 30s linear infinite;
+        // left: 0;
     }
     .mask {
         @include m-only {

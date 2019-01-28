@@ -63,6 +63,9 @@ h2 {
     height: 0;
     overflow: hidden;
     max-width: 100%;
+    @include pc-only {
+        pointer-events: none;
+    }
 }
 
 .embed-container iframe,

@@ -4,8 +4,9 @@
     display: flex;
     justify-content: space-between;
     z-index: 1;
+    pointer-events: none;
     @include m-767 {
-        top: 20%;
+        top: 13%;
     }
     a {
         @include size(60px);
@@ -14,6 +15,7 @@
         color: white;
         font-size: 2rem;
         @extend %trans;
+        pointer-events: auto;
         span {
             display: inline-block;
             @extend %trans;
@@ -95,14 +97,22 @@
             padding: 50px 0 0;
         }
         .main {
-            width: 65%;
+            width: 100%;
             @include media-min(768px) {
-                @include pos-mid;
-                left: 45%;
+                height: 100vh;
             }
-            @include m-767 {
-                width: 80%;
-                margin: auto;
+            .inner {
+                width: 65%;
+                @include media-min(768px) {
+                    position: absolute;
+                    left: 45%;
+                    top: 20%;
+                    transform: translateX(-50%);
+                }
+                @include m-767 {
+                    width: 80%;
+                    margin: auto;
+                }
             }
             h3 {
                 font-size: 3rem;
