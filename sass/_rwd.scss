@@ -39,8 +39,12 @@
         }
         @include media-w-h(1280px, 769px) {
             transform: scale(0.85);
-            right: -26%;
+            right: -35%;
             bottom: -4%;
+        }
+        @include media-w-h(1150px, 769px) {
+            transform: scale(0.7);
+            right: -43%;
         }
         @include m-1024 {
             transform: scale(0.65);

@@ -350,6 +350,22 @@ header a, header .index-menu a:after, .footer-inner .right .logo, .marketing .li
   100% {
     height: 0; } }
 
+@-webkit-keyframes kv {
+  0% {
+    width: 100%;
+    left: 50%; }
+  100% {
+    width: 200%;
+    left: 0; } }
+
+@keyframes kv {
+  0% {
+    width: 100%;
+    left: 50%; }
+  100% {
+    width: 200%;
+    left: 0; } }
+
 .break {
   display: block; }
 
@@ -402,6 +418,9 @@ h2 {
   height: 0;
   overflow: hidden;
   max-width: 100%; }
+  @media screen and (min-width: 1025px) {
+    .embed-container {
+      pointer-events: none; } }
 
 .embed-container iframe,
 .embed-container object,
@@ -1321,7 +1340,8 @@ header {
   height: 100vh;
   position: fixed;
   top: 0;
-  z-index: -1; }
+  z-index: -1;
+  background: #3a5796; }
   .kv .outter {
     height: 100vh;
     position: relative;
@@ -1357,12 +1377,19 @@ header {
       .kv .clip {
         background: url(../img/svg/clip-m.svg) no-repeat bottom center/cover; } }
   .kv .bg {
-    position: absolute;
     width: 100%;
     height: 100vh;
     background: url(../img/bg-kv.jpg) no-repeat center/cover;
     z-index: -1;
-    top: 0; }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation: kv 15s linear 1;
+    animation: kv 15s linear 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
   @media screen and (max-device-width: 1024px) {
     .kv .mask {
       display: none; } }
@@ -1427,6 +1454,15 @@ header {
   background-image: url("../img/mask.png");
   background-position: center;
   background-size: cover; }
+  @media screen and (max-width: 1680px) and (min-height: 800px) {
+    .animated-bg {
+      background-image: url(../img/svg/bg-city-2.svg); } }
+  @media screen and (max-width: 1200px) and (min-height: 800px) {
+    .animated-bg {
+      background-image: url(../img/svg/bg-city-3.svg); } }
+  @media screen and (max-width: 1024px) and (min-height: 800px) {
+    .animated-bg {
+      background-image: url(../img/svg/bg-city-h.svg); } }
 
 .element-mask {
   background-color: #fff; }
@@ -1584,7 +1620,8 @@ _:-ms-fullscreen,
 
 .marketing {
   background: url("../img/old_mathematics.png") repeat;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 100vh; }
   .marketing .carouselBox {
     margin-top: 80px;
     position: relative; }
@@ -1658,41 +1695,74 @@ _:-ms-fullscreen,
     opacity: 0.4;
     left: 0%;
     top: 15%; }
+    @media screen and (max-width: 767px) {
+      .marketing .line1 {
+        height: 150px;
+        opacity: 0.4;
+        left: 7%;
+        top: 5%; } }
   .marketing .line2 {
     height: 330px;
     opacity: 0.5;
     left: 0;
     bottom: -8%; }
+    @media screen and (max-width: 767px) {
+      .marketing .line2 {
+        bottom: -30%;
+        opacity: 0.6; } }
   .marketing .line3 {
     height: 400px;
     opacity: 0.1;
     left: 23%;
     top: -10%; }
+    @media screen and (max-width: 767px) {
+      .marketing .line3 {
+        display: none; } }
   .marketing .line4 {
     height: 300px;
     opacity: 0.1;
     left: 20%;
     bottom: 13%; }
+    @media screen and (max-width: 767px) {
+      .marketing .line4 {
+        display: none; } }
   .marketing .line5 {
     height: 500px;
     opacity: 0.1;
     right: 20%;
     top: -8%; }
+    @media screen and (max-width: 767px) {
+      .marketing .line5 {
+        height: 300px;
+        right: 2%;
+        top: 5%; } }
   .marketing .line6 {
     height: 180px;
     opacity: 0.4;
     right: 13%;
     top: 40%; }
+    @media screen and (max-width: 767px) {
+      .marketing .line6 {
+        display: none; } }
   .marketing .line7 {
     height: 500px;
     opacity: 0.1;
     right: 20%;
     bottom: -15%; }
+    @media screen and (max-width: 767px) {
+      .marketing .line7 {
+        height: 300px;
+        opacity: 0.2;
+        right: 2%;
+        bottom: 0%; } }
   .marketing .line8 {
     height: 300px;
     opacity: 0.2;
     right: 0;
     bottom: 5%; }
+    @media screen and (max-width: 767px) {
+      .marketing .line8 {
+        display: none; } }
   .marketing .ani_start {
     height: 0; }
 
@@ -2087,7 +2157,8 @@ canvas {
   background: radial-gradient(circle, #1e3f4d 0%, #121c29 100%); }
 
 .work-video {
-  background: #000; }
+  background: #000;
+  margin-top: -10px; }
   @media screen and (max-width: 767px) {
     .work-video {
       height: auto; } }
@@ -2312,8 +2383,13 @@ canvas {
       .rwd .device {
         -webkit-transform: scale(0.85);
         transform: scale(0.85);
-        right: -26%;
+        right: -35%;
         bottom: -4%; } }
+    @media screen and (max-width: 1150px) and (min-height: 769px) {
+      .rwd .device {
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        right: -43%; } }
     @media screen and (max-width: 1024px) {
       .rwd .device {
         -webkit-transform: scale(0.65);
@@ -2406,10 +2482,11 @@ canvas {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  z-index: 1; }
+  z-index: 1;
+  pointer-events: none; }
   @media screen and (max-width: 767px) {
     .arrowCube {
-      top: 20%; } }
+      top: 13%; } }
   .arrowCube a {
     height: 60px;
     width: 60px;
@@ -2417,7 +2494,8 @@ canvas {
     background: #ed6d34;
     color: white;
     font-size: 20px;
-    font-size: 2rem; }
+    font-size: 2rem;
+    pointer-events: auto; }
     .arrowCube a span {
       display: inline-block; }
     @media screen and (min-width: 1025px) {
@@ -2488,19 +2566,23 @@ canvas {
       .showCase .right {
         padding: 50px 0 0; } }
     .showCase .right .main {
-      width: 65%; }
+      width: 100%; }
       @media screen and (min-width: 768px) {
         .showCase .right .main {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          left: 45%; } }
-      @media screen and (max-width: 767px) {
-        .showCase .right .main {
-          width: 80%;
-          margin: auto; } }
+          height: 100vh; } }
+      .showCase .right .main .inner {
+        width: 65%; }
+        @media screen and (min-width: 768px) {
+          .showCase .right .main .inner {
+            position: absolute;
+            left: 45%;
+            top: 20%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); } }
+        @media screen and (max-width: 767px) {
+          .showCase .right .main .inner {
+            width: 80%;
+            margin: auto; } }
       .showCase .right .main h3 {
         font-size: 30px;
         font-size: 3rem; }
