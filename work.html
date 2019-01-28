@@ -17,8 +17,9 @@
     <!-- css style-->
     <link rel="stylesheet" href="css/style.css">
     <!--if gt IE 9-->
-    <script src="js/vendor/html5shiv.js"></script>
-    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="vendor/html5shiv.js"></script>
+    <script src="vendor/vue.min.js"></script>
+    <script src="vendor/vue-scrollto.min.js"></script>
     <!-- own style-->
     <link rel="stylesheet" href="css/self.css">
   </head>
@@ -37,39 +38,37 @@
         </div>
       </div>
       <!--add '.scrolled'-->
-      <header class="scrolled"><a class="logo" href="index.html"> <img src="img/svg/logo.svg" alt="logo"></a>
+      <header class="scrolled"><a class="logo" href="index.html" @click.prevent="ctrlMove('body', false);"> <img src="img/svg/logo.svg" alt="logo"></a>
         <!-- bur-->
-        <div class="button_container" id="toggle"><span class="top"></span>  <span class="middle"></span>  <span class="bottom"></span></div>
+        <div class="button_container" id="toggle" :class="{ 'active': isOpen }" @click.prevent="isOpen = !isOpen"><span class="top"></span>  <span class="middle"></span>  <span class="bottom"></span></div>
         <!-- M Menu-->
-        <div class="overlay" id="overlay">
+        <div class="overlay" id="overlay" :class="{ 'open': isOpen }">
           <nav class="overlay-menu">
             <ul class="index-menu"> 
               <li><a class="line" href="index.html">回首頁</a></li>
               <li><a class="active">作品集</a>
               </li>
-              <li><a class="line" href="＃">聯絡我們</a></li>
-              <li><a class="line" href="＃">菁英招募</a></li>
+              <li @click.prevent="ctrlMove('.contact', true);"><a class="line" href="#">聯絡我們</a></li>
+              <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01" target="_blank">菁英招募</a></li>
             </ul>
             <ul class="social">
-              <li><a class="fb" href="#"><span class="icon-fb"></span></a></li>
-              <li><a class="yt" href="#"><span class="icon-yt"></span></a>      </li>
+              <li><a class="fb" href="https://www.facebook.com/lixin.com.tw/" target="_blank"><span class="icon-fb"></span></a></li>
+              <li><a class="yt" href="https://www.youtube.com/channel/UChwYvwlnfXs_PTJMUdyR2Eg" target="_blank"><span class="icon-yt"></span></a></li>
             </ul>
           </nav>
         </div>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"> </script>
-        <script src="js/vendor/bur.js"></script>
         <!-- PC menu -->
         <nav class="pc">
           <ul class="index-menu"> 
             <li><a class="line" href="index.html">回首頁</a></li>
             <li><a class="active">作品集</a>
             </li>
-            <li><a class="line" href="＃">聯絡我們</a></li>
-            <li><a class="line" href="＃">菁英招募</a></li>
+            <li @click.prevent="ctrlMove('.contact', true);"><a class="line" href="#">聯絡我們</a></li>
+            <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&amp;j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01" target="_blank">菁英招募</a></li>
           </ul>
           <ul class="social">
-            <li><a class="fb" href="#"><span class="icon-fb"></span></a></li>
-            <li><a class="yt" href="#"><span class="icon-yt"></span></a></li>
+            <li><a class="fb" href="https://www.facebook.com/lixin.com.tw/" target="_blank"><span class="icon-fb"></span></a></li>
+            <li><a class="yt" href="https://www.youtube.com/channel/UChwYvwlnfXs_PTJMUdyR2Eg" target="_blank"><span class="icon-yt"></span></a></li>
           </ul>
         </nav>
       </header>
@@ -77,17 +76,17 @@
       <div class="wrap">
         <div class="workBox">
           <!--add 'scrolled-ttBox'-->
-          <div class="ttBox">
+          <div class="ttBox" :class="{ 'scrolled': isScroll }">
             <p class="work-tt org">OUR WORK</p>
             <div class="tabBox por tab-fixed"> 
               <ul>
-                <li><a href="#"><span class="icon-work-video"></span></a></li>
-                <li><a class="active" href="#"><span class="icon-work-web"></span></a></li>
+                <li><a href="#" :class="{ 'active' : tab == 'video' }" @click.prevent="tab = 'video'"><span class="icon-work-video"></span></a></li>
+                <li><a href="#" :class="{ 'active' : tab == 'web' }" @click.prevent="tab = 'web'"><span class="icon-work-web"></span></a></li>
               </ul>
             </div>
           </div>
           <!--work-video-->
-          <div class="main-video" style="display:none">
+          <div class="main-video" v-show="tab == 'video'">
             <ul>
               <li><a class="por" href="https://www.youtube.com/watch?v=Lzl_eC0ITOk" target="_blank">
                   <div class="inner">
@@ -596,7 +595,7 @@
             </ul>
           </div>
           <!--work-web-->
-          <div class="main-web">
+          <div class="main-web" v-show="tab == 'web'">
             <ul>
               <li><a href="#" target="_blank">
                   <div class="pic"><img src="img/work-video-1.png"/>
@@ -655,7 +654,4 @@
     </span>
     <script src="js/work.bundle.js"></script>
   </body>
-  <!--bootstrap-->
-  <!--Optional JavaScript--><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>

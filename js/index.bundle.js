@@ -23,7 +23,7 @@ void new Vue({
         window.onload = function() {
             _this.isLoaded = !0, _this.$nextTick(function() {
                 _this.kvEffect(), _this.howEffect(), _this.marketEffect(), _this.mediaEffect(), 
-                _this.wordEffect(), _this.rwdEffect(), _this.caseEffect(), _this.clientEffect(), 
+                _this.workEffect(), _this.rwdEffect(), _this.caseEffect(), _this.clientEffect(), 
                 _this.formEffect(), _this.mapEffect(), new WOW({
                     offset: window.innerWidth <= 1025 ? 100 : 0
                 }).init();
@@ -142,7 +142,7 @@ void new Vue({
                 for (var i = 0; i < circleArray.length; i++) circleArray[i].update();
             }();
         },
-        wordEffect: function() {
+        workEffect: function() {
             $(".work-video .desBox a.btn").fancybox(), $(".work-video .main .desBox").slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -157,7 +157,7 @@ void new Vue({
                 $(".indicator").css("margin-left", nextSlide * (290 / 6) + "px");
                 var youtubeID = $(".work-video .desBox").find("#btn" + (nextSlide + 1)).data("bg");
                 $(".work-video .embed-container").fadeOut("fast", function() {
-                    $(this).empty().html('<iframe src="https://www.youtube.com/embed/' + youtubeID + '?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen></iframe>');
+                    $(this).empty().html('<iframe src="https://www.youtube.com/embed/' + youtubeID + "?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=" + youtubeID + '" frameborder="0" allowfullscreen></iframe>');
                 });
             }).on("afterChange", function() {
                 $(".work-video .embed-container").fadeIn("fast");
