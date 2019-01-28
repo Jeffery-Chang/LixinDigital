@@ -120,13 +120,17 @@ void new Vue({
                 };
             }
             var canvas = document.querySelector("canvas");
-            canvas.width = window.innerWidth, canvas.height = isMobile.phone ? window.innerHeight : 625;
+            canvas.width = window.innerWidth, canvas.height = isMobile.phone ? window.innerHeight : 625, 
+            canvas.style.width = canvas.width + "px", canvas.style.height = canvas.height + "px";
             var c = canvas.getContext("2d"), mouse = {
                 x: void 0,
                 y: void 0
             }, maxRadius = 25, imgMaxRadius = 150, colorArray = [ "rgba(99, 84, 75, 0.61)", "rgba(196, 126, 33, 0.6)", "rgba(194, 138, 48, 0.5)", "rgba(79, 69, 63, 0.65)" ];
             window.addEventListener("mousemove", function(event) {
                 mouse.x = event.pageX, mouse.y = event.pageY - document.querySelector(".mediaPartner").offsetTop;
+            }), window.addEventListener("resize", function() {
+                canvas.width = window.innerWidth, canvas.height = isMobile.phone ? window.innerHeight : 625, 
+                canvas.style.width = canvas.width + "px", canvas.style.height = canvas.height + "px";
             });
             for (var circleArray = [], i = 0; i < 300; i++) {
                 var radius = 4 * Math.random() + 1, x = Math.random() * (canvas.width - 2 * radius) + radius, dx = Math.random() - .5, y = Math.random() * (canvas.height - 2 * radius) + radius, dy = Math.random() - .5;
