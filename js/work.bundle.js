@@ -149,6 +149,7 @@ void new Vue({
             title: "案例分享｜林版巨星"
         } ]
     },
+    computed: {},
     created: function() {
         window.addEventListener("scroll", this.ctrlScroll);
     },
@@ -182,12 +183,12 @@ void new Vue({
                     if (_this2.isAnimate = !0, "video" == _this2.tab) TweenMax.staggerTo(".main-video li", .3, {
                         scale: 1,
                         ease: Power0.easeOut
-                    }, .2, function() {
+                    }, .3, function() {
                         _this2.isAnimate = !1, _this2.isDone1 = !0;
                     }); else if ("web" == _this2.tab) TweenMax.staggerTo(".main-web li", .3, {
                         scale: 1,
                         ease: Power0.easeOut
-                    }, .2, function() {
+                    }, .3, function() {
                         _this2.isAnimate = !1, _this2.isDone2 = !0;
                     });
                 });
