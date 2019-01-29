@@ -96,7 +96,7 @@ void new Vue({
                 var url = $(this).attr("data-image");
                 if (url) $(this).css("background-image", "url(" + url + ")");
             }), $("#circle--rotate").circle({
-                autoPlay: !1,
+                autoPlay: !0,
                 delay: 3500
             }), autoHeightCircle(), window.addEventListener("resize", function() {
                 autoHeightCircle();
@@ -187,7 +187,7 @@ void new Vue({
             });
         },
         caseEffect: function() {
-            $(".showCaseBox .showSlick").slick({
+            $(".showCaseBox .left a").fancybox(), $(".showCaseBox .showSlick").slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: !1,
