@@ -2996,6 +2996,9 @@ canvas {
     z-index: 3;
     background: #fff;
     top: 70px; }
+    @media screen and (max-width: 1440px) {
+      .workBox .ttBox {
+        top: 50px; } }
     @media screen and (max-width: 1280px) {
       .workBox .ttBox {
         padding-top: 35px;
@@ -3014,9 +3017,6 @@ canvas {
     margin-left: -15px;
     line-height: 1; }
     @media screen and (max-width: 1440px) {
-      .workBox .work-tt {
-        font-size: 11rem; } }
-    @media screen and (max-width: 1024px) {
       .workBox .work-tt {
         font-size: 8rem; } }
     @media screen and (max-width: 767px) {
