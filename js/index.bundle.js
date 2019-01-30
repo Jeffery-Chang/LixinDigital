@@ -304,7 +304,7 @@ void new Vue({
                     saturation: -100
                 } ]
             }, {
-                featureType: "poi.sport_complex",
+                featureType: "poi.sports_complex",
                 elementType: "geometry.fill",
                 stylers: [ {
                     hue: "#666"
