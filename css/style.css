@@ -1630,14 +1630,9 @@ _:-ms-fullscreen,
         margin-top: 50px; } }
     @media screen and (max-width: 767px) {
       .marketing .carouselBox {
-        -webkit-transform: scale(0.6);
-        transform: scale(0.6);
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75);
         margin-top: 0; } }
-    @media screen and (max-width: 374px) {
-      .marketing .carouselBox {
-        -webkit-transform: scale(0.6);
-        transform: scale(0.6);
-        margin-top: -40px; } }
   .marketing .animate-title {
     font-size: 23px;
     font-size: 2.3rem; }
