@@ -24,6 +24,7 @@ void new Vue({
         window.onload = function() {
             if (_this.getMobileOperatingSystem()) document.querySelector("body").classList.add("android");
             _this.isLoaded = !0, _this.$nextTick(function() {
+                if ("contact" == new URL(location.href).searchParams.get("tab")) _this.ctrlMove(".contact", !1);
                 _this.kvEffect(), _this.howEffect(), _this.marketEffect(), _this.mediaEffect(), 
                 _this.workEffect(), _this.rwdEffect(), _this.caseEffect(), _this.clientEffect(), 
                 _this.formEffect(), _this.mapEffect(), new WOW({
@@ -46,8 +47,10 @@ void new Vue({
         },
         ctrlMove: function(target, isMenu) {
             if (isMenu) this.isOpen = !1;
+            var offset = -1 * document.querySelector(".header-index").offsetHeight;
+            if (".contact" == target) offset *= 2.9;
             this.$scrollTo(target, 500, {
-                offset: -1 * document.querySelector(".header-index").offsetHeight,
+                offset: offset,
                 onDone: function() {}
             });
         },
