@@ -96,7 +96,7 @@ void new Vue({
                 var url = $(this).attr("data-image");
                 if (url) $(this).css("background-image", "url(" + url + ")");
             }), $("#circle--rotate").circle({
-                autoPlay: !0,
+                autoPlay: !1,
                 delay: 3500
             }), autoHeightCircle(), window.addEventListener("resize", function() {
                 autoHeightCircle();
