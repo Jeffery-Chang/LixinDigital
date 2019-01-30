@@ -26,10 +26,10 @@
         display: block;
         border-radius: 50%;
         z-index: 10;
-        visibility: hidden;
+        // visibility: hidden;
         .icon {
             @include size(75px);
-            visibility: visible;
+            // visibility: visible;
             cursor: pointer;
             text-align: center;
             overflow: hidden;
@@ -327,7 +327,7 @@
     // }
     .animate-more {
         opacity: 0;
-        visibility: hidden;
+        // visibility: hidden;
         transition: all .5s .4s;
         // min-width: 131px;
         overflow: hidden;
@@ -346,7 +346,7 @@
     .animate.active {
         .animate-more {
             opacity: 1;
-            visibility: visible;
+            // visibility: visible;
             transform: scale(1);
         }
         .animate-img .animate-img__in {
