@@ -1630,8 +1630,8 @@ _:-ms-fullscreen,
         margin-top: 50px; } }
     @media screen and (max-width: 767px) {
       .marketing .carouselBox {
-        -webkit-transform: scale(0.75);
-        transform: scale(0.75);
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
         margin-top: 0; } }
     @media screen and (max-width: 374px) {
       .marketing .carouselBox {
@@ -2486,7 +2486,10 @@ canvas {
   pointer-events: none; }
   @media screen and (max-width: 767px) {
     .arrowCube {
-      top: 13%; } }
+      top: 17%; } }
+  @media screen and (max-width: 374px) {
+    .arrowCube {
+      top: 14%; } }
   .arrowCube a {
     height: 60px;
     width: 60px;

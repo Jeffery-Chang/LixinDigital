@@ -6,7 +6,10 @@
     z-index: 1;
     pointer-events: none;
     @include m-767 {
-        top: 13%;
+        top: 17%;
+    }
+    @include m-374 {
+        top: 14%;
     }
     a {
         @include size(60px);
