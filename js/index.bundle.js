@@ -27,7 +27,7 @@ void new Vue({
                 _this.kvEffect(), _this.howEffect(), _this.marketEffect(), _this.mediaEffect(), 
                 _this.workEffect(), _this.rwdEffect(), _this.caseEffect(), _this.clientEffect(), 
                 _this.formEffect(), _this.mapEffect(), new WOW({
-                    offset: window.innerWidth <= 1025 ? 100 : 0
+                    offset: window.innerWidth <= 1025 ? 100 : 200
                 }).init();
             });
         };
