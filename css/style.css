@@ -2507,8 +2507,8 @@ canvas {
     -webkit-transform: scale(-1);
     transform: scale(-1); }
   .arrowCube .right:hover span {
-    -webkit-transform: translateX(5px) scale(-1);
-    transform: translateX(5px) scale(-1); }
+    -webkit-transform: translateX(3px) scale(-1);
+    transform: translateX(3px) scale(-1); }
 
 .showCase {
   display: -webkit-box;
@@ -3048,11 +3048,12 @@ canvas {
       background: #ed6d34;
       color: white;
       pointer-events: none; }
-    .tabBox a:hover {
-      background: black;
-      color: white;
-      -webkit-transform: translateY(-10px);
-      transform: translateY(-10px); }
+    @media screen and (min-width: 1025px) {
+      .tabBox a:hover {
+        background: black;
+        color: white;
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px); } }
     @media screen and (max-width: 767px) {
       .tabBox a {
         height: 65px;
@@ -3186,7 +3187,7 @@ canvas {
     .main-video,
     .main-web {
       margin-bottom: 55px;
-      margin-top: 65%; } }
+      margin-top: 60%; } }
   .main-video ul,
   .main-web ul {
     display: -webkit-box;
@@ -3196,18 +3197,15 @@ canvas {
     flex-wrap: wrap; }
 
 .main-web {
-  width: 90%;
+  width: 80%;
   margin-top: 20%; }
   @media screen and (max-width: 1440px) {
     .main-web {
-      width: 80%;
-      margin-top: 20%; } }
-  @media screen and (max-width: 1280px) {
-    .main-web {
-      margin-top: 24%; } }
+      width: 85%;
+      margin-top: 17%; } }
   @media screen and (max-width: 767px) {
     .main-web {
-      margin-top: 65%;
+      margin-top: 60%;
       width: 85%;
       margin-bottom: 20px; } }
   .main-web ul {
