@@ -108,7 +108,7 @@ jQuery.getUrlParam = function(b) {
         },
         mediaEffect: function() {
             var canvas = document.querySelector("canvas"), c = canvas.getContext("2d"), quality = c.backingStorePixelRatio || c.webkitBackingStorePixelRatio || c.mozBackingStorePixelRatio || c.msBackingStorePixelRatio || c.oBackingStorePixelRatio || c.backingStorePixelRatio || 1, ratio = (window.devicePixelRatio || 1) / quality;
-            console.log(ratio), canvas.width = window.innerWidth * ratio, canvas.height = (isMobile.phone ? window.innerHeight : 625) * ratio, 
+            canvas.width = window.innerWidth * ratio, canvas.height = (isMobile.phone ? window.innerHeight : 625) * ratio, 
             canvas.style.width = window.innerWidth + "px", canvas.style.height = isMobile.phone ? window.innerHeight : "625px", 
             this.$nextTick(function() {
                 function Circle(x, y, dx, dy, radius, isImg, img_src) {
@@ -119,8 +119,10 @@ jQuery.getUrlParam = function(b) {
                         c.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, !1), c.fillStyle = this.color, 
                         c.fill();
                     }, this.update = function() {
-                        if (this.x + this.radius > canvas.width || this.x - this.radius < 0) this.dx = -this.dx;
-                        if (this.y + this.radius > canvas.height || this.y - this.radius < 0) this.dy = -this.dy;
+                        var x1 = this.isImg ? this.x + radius > canvas.width / ratio : this.x + this.radius > canvas.width / ratio, x2 = this.isImg ? this.x <= 0 : this.x - this.radius <= 0;
+                        if (x1 || x2) this.dx = -this.dx;
+                        var y1 = this.isImg ? this.y + radius > canvas.height / ratio : this.y + this.radius > canvas.height / ratio, y2 = this.isImg ? this.y <= 0 : this.y - this.radius <= 0;
+                        if (y1 || y2) this.dy = -this.dy;
                         this.y += this.dy, this.x += this.dx;
                         var max = this.isImg ? imgMaxRadius : maxRadius;
                         if (mouse.x - this.x - this.radius / 2 < 100 && -100 < mouse.x - this.x - this.radius / 2 && mouse.y - this.y - this.radius / 2 < 100 && -100 < mouse.y - this.y - this.radius / 2) {
@@ -142,14 +144,14 @@ jQuery.getUrlParam = function(b) {
                     c.setTransform(ratio, 0, 0, ratio, 0, 0);
                 });
                 for (var circleArray = [], i = 0; i < 300; i++) {
-                    var radius = 4 * Math.random() + 1, x = (Math.random() * (canvas.width - 2 * radius) + radius) / ratio, dx = Math.random() - .5, y = (Math.random() * (canvas.height - 2 * radius) + radius) / ratio, dy = Math.random() - .5;
+                    var radius = 4 * Math.random() + 1, x = Math.random() * (canvas.width / ratio - radius), dx = Math.random() - .3, y = Math.random() * (canvas.height / ratio - radius), dy = Math.random() - .3;
                     circleArray.push(new Circle(x, y, dx, dy, radius));
                 }
                 [ "01", "apple", "cn", "ebc", "eco", "et", "fb", "free", "gg", "gon", "ig", "line", "mirror", "now", "one", "ptt", "setn", "son", "tvbs", "udn", "us", "yahoo", "yt" ].forEach(function(obj) {
                     var logoImg = new Image();
                     logoImg.src = "img/media-" + obj + ".png";
-                    var radius = isMobile.phone ? Math.random() + 60 : Math.random() + 60, x = (Math.random() * (canvas.width - 2 * radius) + radius) / ratio, dx = Math.random() - .5, y = (Math.random() * (canvas.height - 2 * radius) + radius) / ratio, dy = Math.random() - .5;
-                    circleArray.push(new Circle(x, y, dx, dy, radius, !0, logoImg));
+                    var x = Math.random() * (canvas.width / ratio - 60), dx = Math.random() - .5, y = Math.random() * (canvas.height / ratio - 60), dy = Math.random() - .5;
+                    circleArray.push(new Circle(x, y, dx, dy, 60, !0, logoImg));
                 }), function animate() {
                     requestAnimationFrame(animate), c.clearRect(0, 0, canvas.width, canvas.height);
                     for (var i = 0; i < circleArray.length; i++) circleArray[i].update();
