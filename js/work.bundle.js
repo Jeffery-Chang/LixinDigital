@@ -1,6 +1,9 @@
 "use strict";
 
-void new Vue({
+jQuery.getUrlParam = function(b) {
+    var c = new RegExp("(^|&)" + b + "=([^&]*)(&|$)"), d = window.location.search.substr(1).match(c);
+    return null == d ? null : unescape(d[2]);
+}, void new Vue({
     el: "#vue",
     data: {
         ieFG: !1,
@@ -158,7 +161,7 @@ void new Vue({
         window.addEventListener("scroll", this.ctrlScroll);
     },
     beforeMount: function() {
-        var tab = new URL(location.href).searchParams.get("tab");
+        var tab = $.getUrlParam("tab");
         if (tab) this.tab = tab;
     },
     mounted: function() {

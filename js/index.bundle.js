@@ -1,6 +1,9 @@
 "use strict";
 
-void new Vue({
+jQuery.getUrlParam = function(b) {
+    var c = new RegExp("(^|&)" + b + "=([^&]*)(&|$)"), d = window.location.search.substr(1).match(c);
+    return null == d ? null : unescape(d[2]);
+}, void new Vue({
     el: "#vue",
     data: {
         ieFG: !1,
@@ -21,17 +24,17 @@ void new Vue({
     mounted: function() {
         var _this = this;
         if (this.chkIE() <= 10) return this.ieFG = !0, void (location.href = "index_ie.html");
-        window.onload = function() {
-            if (_this.getMobileOperatingSystem()) document.querySelector("body").classList.add("android");
-            _this.isLoaded = !0, _this.$nextTick(function() {
-                if ("contact" == new URL(location.href).searchParams.get("tab")) _this.ctrlMove(".contact", !1);
-                _this.kvEffect(), _this.howEffect(), _this.marketEffect(), _this.mediaEffect(), 
-                _this.workEffect(), _this.rwdEffect(), _this.caseEffect(), _this.clientEffect(), 
-                _this.formEffect(), _this.mapEffect(), new WOW({
-                    offset: window.innerWidth <= 1025 ? 100 : 200
-                }).init();
-            });
-        };
+        if (this.getMobileOperatingSystem()) document.querySelector("body").classList.add("android");
+        this.isLoaded = !0, this.$nextTick(function() {
+            if ("contact" == $.getUrlParam("tab")) setTimeout(function() {
+                _this.ctrlMove(".contact", !1);
+            }, 500);
+            _this.kvEffect(), _this.howEffect(), _this.marketEffect(), _this.mediaEffect(), 
+            _this.workEffect(), _this.rwdEffect(), _this.caseEffect(), _this.clientEffect(), 
+            _this.formEffect(), _this.mapEffect(), new WOW({
+                offset: window.innerWidth <= 1025 ? 100 : 200
+            }).init();
+        });
     },
     methods: {
         ctrlScroll: function() {
