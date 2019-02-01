@@ -107,7 +107,7 @@
             <div class="outter">
                 <div class="slogan"><img src="img/svg/slogan.svg" />
                 </div>
-                <div class="mask">
+                <div class="mask" v-if="chkIE() > 11">
                     <div class="wrapper full-size">
                         <div class="blend-multiply full-size">
                             <div class="animated-bg full-size"> </div>
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="clip"></div>
+                <div class="clip" :style="clipStyle"></div>
                 <div class="bg">
                     <!-- <iframe src="https://www.youtube.com/embed/qWE6nlKQ-4Q?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=qWE6nlKQ-4Q" frameborder="0" allowfullscreen></iframe> -->
                 </div>

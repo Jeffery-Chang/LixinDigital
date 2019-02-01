@@ -18,6 +18,13 @@ jQuery.getUrlParam = function(b) {
             msg: ""
         }
     },
+    computed: {
+        clipStyle: function() {
+            if (11 < this.chkIE()) return {}; else return {
+                transform: "scale(1.35)"
+            };
+        }
+    },
     created: function() {
         window.addEventListener("scroll", this.ctrlScroll), window.addEventListener("orientationchange", this.avoidAnriod);
     },
@@ -69,9 +76,7 @@ jQuery.getUrlParam = function(b) {
                 width: imgWidth,
                 delay: .75,
                 onComplete: function() {
-                    TweenMax.set([ ".kv .slogan", ".kv .slogan img" ], {
-                        clearProps: "all"
-                    });
+                    TweenMax.set([ ".kv .slogan", ".kv .slogan img" ]);
                 }
             });
             var timer, mouseX = 0, mouseY = 0, xp = 0, yp = 0, circle = $("#circle");
