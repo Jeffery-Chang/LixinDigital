@@ -25,16 +25,11 @@
     <script src="vendor/wow.min.js">
     </script>
     <script src="vendor/jquery-3.2.1.min.js"></script>
-    <!-- <script src="vendor/jquery-ui.min.js"></script> -->
     <script src="vendor/slick.min.js"></script>
     <script src="vendor/jquery.fancybox.min.js"></script>
     <script src="vendor/vue.min.js"></script>
     <script src="vendor/vue-scrollto.min.js"></script>
     <script src="vendor/carousel.min.js"></script>
-    <!--bootstrap-->
-    <!--Optional JavaScript-->
-    <!-- <script src="vendor/popper.min.js"></script>
-    <script src="vendor/bootstrap.min.js"></script> -->
 
     <!-- own style-->
     <link rel="stylesheet" href="css/index.css">
@@ -115,7 +110,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="clip" :style="clipStyle"></div>
+                <div class="clip" :class="{ 'ie': chkIE() == 11 }"></div>
                 <div class="bg">
                     <!-- <iframe src="https://www.youtube.com/embed/qWE6nlKQ-4Q?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=qWE6nlKQ-4Q" frameborder="0" allowfullscreen></iframe> -->
                 </div>

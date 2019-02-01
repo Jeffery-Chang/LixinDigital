@@ -1376,6 +1376,23 @@ header {
     @media screen and (max-device-width: 767px) {
       .kv .clip {
         background: url(../img/svg/clip-m.svg) no-repeat bottom center/cover; } }
+    .kv .clip.ie {
+      background: url(../img/svg/clip.png) no-repeat center/cover; }
+      @media screen and (max-width: 1680px) and (min-height: 800px) {
+        .kv .clip.ie {
+          background: url(../img/svg/clip-2.png) no-repeat center/cover; } }
+      @media screen and (max-width: 1200px) and (min-height: 800px) {
+        .kv .clip.ie {
+          background: url(../img/svg/clip-3.png) no-repeat center/cover; } }
+      @media screen and (max-width: 1024px) and (min-height: 800px) {
+        .kv .clip.ie {
+          background: url(../img/svg/clip-h.png) no-repeat center/cover; } }
+      @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        .kv .clip.ie {
+          background: url(../img/svg/clip-pad.png) no-repeat center/cover; } }
+      @media screen and (max-device-width: 767px) {
+        .kv .clip.ie {
+          background: url(../img/svg/clip-m.png) no-repeat bottom center/cover; } }
   .kv .bg {
     width: 100%;
     height: 100vh;
