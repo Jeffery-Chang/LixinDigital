@@ -32,13 +32,13 @@ jQuery.getUrlParam = function(b) {
         var _this = this;
         if (this.chkIE() <= 10) return this.ieFG = !0, void (location.href = "index_ie.html");
         if (this.getMobileOperatingSystem()) document.querySelector("body").classList.add("android");
+        this.kvEffect(), this.howEffect(), this.marketEffect(), this.mediaEffect(), this.workEffect(), 
+        this.rwdEffect(), this.caseEffect(), this.clientEffect(), this.formEffect(), this.mapEffect(), 
         this.isLoaded = !0, this.$nextTick(function() {
             if ("contact" == $.getUrlParam("tab")) setTimeout(function() {
                 _this.ctrlMove(".contact", !1);
-            }, 500);
-            _this.kvEffect(), _this.howEffect(), _this.marketEffect(), _this.mediaEffect(), 
-            _this.workEffect(), _this.rwdEffect(), _this.caseEffect(), _this.clientEffect(), 
-            _this.formEffect(), _this.mapEffect(), new WOW({
+            }, 1e3);
+            new WOW({
                 offset: window.innerWidth <= 1025 ? 100 : 200
             }).init();
         });
@@ -58,7 +58,7 @@ jQuery.getUrlParam = function(b) {
         ctrlMove: function(target, isMenu) {
             if (isMenu) this.isOpen = !1;
             var offset = -1 * document.querySelector(".header-index").offsetHeight;
-            if (".contact" == target) offset *= 2.9;
+            if (".contact" == target) if (isMobile.phone) offset *= 2; else offset *= 2.9;
             this.$scrollTo(target, 500, {
                 offset: offset,
                 onDone: function() {}
