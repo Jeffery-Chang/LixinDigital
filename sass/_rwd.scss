@@ -13,6 +13,7 @@
         }
         @include m-374 {
             width: 100%;
+            top: 15%;
         }
     }
     .device {
@@ -80,7 +81,7 @@
         @include m-only(374px) {
             transform: scale(0.35);
             right: -195%;
-            bottom: -33%;
+            bottom: -42%;
         }
         @include m-413 {}
         @include m-374 {}

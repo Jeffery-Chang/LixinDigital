@@ -43,6 +43,9 @@ h2 {
     @include m-767 {
         font-size: 3.2rem;
     }
+    @include m-374 {
+        font-size: 2.5rem;
+    }
 }
 
 .w {

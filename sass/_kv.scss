@@ -41,7 +41,10 @@
         @include media-m(767px) {
             background: url(../img/svg/clip-m.svg) no-repeat bottom center / cover;
         }
-        &.ie { 
+        @include media-m(374px) {
+            background-position: center;
+        }
+        &.ie {
             background: url(../img/svg/clip.png) no-repeat center / cover;
             @media screen and (max-width: 1680px) and (min-height: 800px) {
                 background: url(../img/svg/clip-2.png) no-repeat center / cover;
@@ -85,6 +88,9 @@
     @include m-767 {
         bottom: 18vh;
     }
+    @include m-374 {
+        bottom: 13vh;
+    }
     .txt {
         color: #fff;
         font-size: 1.3rem;
@@ -92,6 +98,9 @@
         letter-spacing: 1px;
         margin-top: 10px;
         @include v-write;
+        @include m-374 {
+            font-size: 1.2rem;
+        }
     }
     .line {
         position: absolute;
@@ -104,6 +113,9 @@
         background-color: #efefef;
         @include m-767 {
             top: 100px;
+        }
+        @include m-374 {
+            top: 85px;
         }
         span {
             position: absolute;

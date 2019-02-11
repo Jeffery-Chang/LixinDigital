@@ -402,6 +402,9 @@ h2 {
   @media screen and (max-width: 767px) {
     h2 {
       font-size: 3.2rem; } }
+  @media screen and (max-width: 374px) {
+    h2 {
+      font-size: 2.5rem; } }
 
 .w {
   color: #fff; }
@@ -1376,6 +1379,9 @@ header {
     @media screen and (max-device-width: 767px) {
       .kv .clip {
         background: url(../img/svg/clip-m.svg) no-repeat bottom center/cover; } }
+    @media screen and (max-device-width: 374px) {
+      .kv .clip {
+        background-position: center; } }
     .kv .clip.ie {
       background: url(../img/svg/clip.png) no-repeat center/cover; }
       @media screen and (max-width: 1680px) and (min-height: 800px) {
@@ -1418,6 +1424,9 @@ header {
   @media screen and (max-width: 767px) {
     .scroll {
       bottom: 18vh; } }
+  @media screen and (max-width: 374px) {
+    .scroll {
+      bottom: 13vh; } }
   .scroll .txt {
     color: #fff;
     font-size: 13px;
@@ -1429,6 +1438,9 @@ header {
     -webkit-writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl; }
+    @media screen and (max-width: 374px) {
+      .scroll .txt {
+        font-size: 1.2rem; } }
   .scroll .line {
     position: absolute;
     overflow: hidden;
@@ -1442,6 +1454,9 @@ header {
     @media screen and (max-width: 767px) {
       .scroll .line {
         top: 100px; } }
+    @media screen and (max-width: 374px) {
+      .scroll .line {
+        top: 85px; } }
     .scroll .line span {
       position: absolute;
       width: 1px;
@@ -1650,6 +1665,11 @@ _:-ms-fullscreen,
         -webkit-transform: scale(0.75);
         transform: scale(0.75);
         margin-top: 0; } }
+    @media screen and (max-width: 374px) {
+      .marketing .carouselBox {
+        -webkit-transform: scale(0.65);
+        transform: scale(0.65);
+        margin-top: -40px; } }
   .marketing .animate-title {
     font-size: 23px;
     font-size: 2.3rem; }
@@ -2204,15 +2224,24 @@ canvas {
         background: #fff;
         position: inherit;
         padding: 30px 10% 100px; } }
+    @media screen and (max-width: 374px) {
+      .work-video .main {
+        padding: 15px 10% 75px; } }
   .work-video h3 {
     margin-bottom: 10px; }
     @media screen and (max-width: 1024px) {
       .work-video h3 {
         font-size: 1.8rem; } }
+    @media screen and (max-width: 374px) {
+      .work-video h3 {
+        font-size: 1.6rem; } }
   .work-video p {
     color: #585858; }
   .work-video .work-tt {
     margin-bottom: 30px; }
+    @media screen and (max-width: 374px) {
+      .work-video .work-tt {
+        margin-bottom: 20px; } }
   .work-video .work-info {
     margin-bottom: 10px; }
     .work-video .work-info p {
@@ -2221,6 +2250,12 @@ canvas {
       @media screen and (max-width: 1024px) {
         .work-video .work-info p {
           font-size: 1.6rem; } }
+      @media screen and (max-width: 374px) {
+        .work-video .work-info p {
+          font-size: 1.4rem; } }
+    @media screen and (max-width: 767px) {
+      .work-video .work-info span {
+        display: inline; } }
   .work-video a {
     font-size: 14px;
     font-size: 1.4rem;
@@ -2361,7 +2396,8 @@ canvas {
         transform: translate(-50%, -50%); } }
     @media screen and (max-width: 374px) {
       .rwd h2 {
-        width: 100%; } }
+        width: 100%;
+        top: 15%; } }
   .rwd .device {
     right: -180px;
     bottom: 3%;
@@ -2438,7 +2474,7 @@ canvas {
         -webkit-transform: scale(0.35);
         transform: scale(0.35);
         right: -195%;
-        bottom: -33%; } }
+        bottom: -42%; } }
   .rwd .slidePic {
     z-index: -1; }
   .rwd .mac {
@@ -2576,6 +2612,9 @@ canvas {
     @media screen and (max-width: 767px) {
       .showCase .right {
         padding: 50px 0 0; } }
+    @media screen and (max-width: 374px) {
+      .showCase .right {
+        padding: 30px 0 0; } }
     .showCase .right .main {
       width: 100%; }
       @media screen and (min-width: 768px) {
