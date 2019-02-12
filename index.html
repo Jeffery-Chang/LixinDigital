@@ -48,7 +48,7 @@
       </transition>
       <div class="trans_bg">
         <div class="trans_ipad">
-          <div class="trans_center"><img src="img/ipad_ok_landscape.png">                
+          <div class="trans_center"><img src="img/ipad_ok.png">                
             <p>請將裝置轉至橫式<br>體驗最佳瀏覽方式</p>
           </div>
         </div>
@@ -100,16 +100,17 @@
             <div class="scroll"><span class="txt">SCROLL</span><span class="line"><span></span></span>
             </div>
             <div class="outter">
-                <div class="slogan"><img src="img/svg/slogan.svg" />
+                <div class="slogan">
+                    <p>數位戰略的夥伴</p>
                 </div>
-                <div class="mask" v-if="chkIE() > 11">
+                <!-- <div class="mask" v-if="chkIE() > 11">
                     <div class="wrapper full-size">
                         <div class="blend-multiply full-size">
                             <div class="animated-bg full-size"> </div>
                             <div class="blend-screen element-mask full-size"><span class="circle-follow" id="circle"></span></div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="clip" :class="{ 'ie': chkIE() == 11 }"></div>
                 <div class="bg">
                     <!-- <iframe src="https://www.youtube.com/embed/qWE6nlKQ-4Q?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=qWE6nlKQ-4Q" frameborder="0" allowfullscreen></iframe> -->
@@ -368,7 +369,9 @@
         </section>
         <!--rwd-->
         <section class="rwd full-h">
-            <h2><p class="wow fadeInUp">響應式設計</p></h2>
+            <h2>
+                <p class="wow fadeInUp">響應式設計</p>
+            </h2>
             <div class="device abs">
                 <div class="phone abs wow fadeInRight" data-wow-delay=".35s">
                     <div class="cover por"><img src="img/rwd-phone.png" />

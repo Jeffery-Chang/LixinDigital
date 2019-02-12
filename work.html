@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http - equiv="x-ua-compatible" content="ie=edge">
     <title>立炘數位行銷 | 網路行銷、媒體整合、網站製作、影片製作 | 官網</title>
@@ -25,11 +26,12 @@
     <script src="vendor/jquery.fancybox.min.js"></script>
     <script src="vendor/vue.min.js"></script>
     <script src="vendor/vue-scrollto.min.js"></script>
-    
+
     <!-- own style-->
     <link rel="stylesheet" href="css/self.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <span id="vue" v-cloak v-if="!ieFG">
       <transition name="fade">
         <div class="loadingBox" v-if="!isLoaded">
@@ -41,7 +43,7 @@
         </transition>
       <div class="trans_bg">
         <div class="trans_ipad">
-          <div class="trans_center"><img src="img/ipad_ok_landscape.png">                
+          <div class="trans_center"><img src="img/ipad_ok.png">                
             <p>請將裝置轉至橫式<br>體驗最佳瀏覽方式</p>
           </div>
         </div>
@@ -54,118 +56,120 @@
       <!--add '.scrolled'-->
       <header><a class="logo" href="index.html"> <img src="img/svg/logo.svg" alt="logo"></a>
         <!-- bur-->
-        <div class="button_container" id="toggle" :class="{ 'active': isOpen }" @click.prevent="isOpen = !isOpen"><span class="top"></span>  <span class="middle"></span>  <span class="bottom"></span></div>
-        <!-- M Menu-->
-        <div class="overlay" id="overlay" :class="{ 'open': isOpen }">
-          <nav class="overlay-menu">
-            <ul class="index-menu"> 
-              <li><a class="line" href="index.html">回首頁</a></li>
-              <li><a class="active">作品集</a>
-              </li>
-              <li><a class="line" href="index.html?tab=contact">聯絡我們</a></li>
-              <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01" target="_blank">菁英招募</a></li>
+        <div class="button_container" id="toggle" :class="{ 'active': isOpen }" @click.prevent="isOpen = !isOpen"><span class="top"></span> <span class="middle"></span> <span class="bottom"></span></div>
+    <!-- M Menu-->
+    <div class="overlay" id="overlay" :class="{ 'open': isOpen }">
+        <nav class="overlay-menu">
+            <ul class="index-menu">
+                <li><a class="line" href="index.html">回首頁</a></li>
+                <li><a class="active">作品集</a>
+                </li>
+                <li><a class="line" href="index.html?tab=contact">聯絡我們</a></li>
+                <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01" target="_blank">菁英招募</a></li>
             </ul>
             <ul class="social">
-              <li><a class="fb" href="https://www.facebook.com/lixin.com.tw/" target="_blank"><span class="icon-fb"></span></a></li>
-              <li><a class="yt" href="https://www.youtube.com/channel/UChwYvwlnfXs_PTJMUdyR2Eg" target="_blank"><span class="icon-yt"></span></a></li>
+                <li><a class="fb" href="https://www.facebook.com/lixin.com.tw/" target="_blank"><span class="icon-fb"></span></a></li>
+                <li><a class="yt" href="https://www.youtube.com/channel/UChwYvwlnfXs_PTJMUdyR2Eg" target="_blank"><span class="icon-yt"></span></a></li>
             </ul>
-          </nav>
-        </div>
-        <!-- PC menu -->
-        <nav class="pc">
-          <ul class="index-menu"> 
+        </nav>
+    </div>
+    <!-- PC menu -->
+    <nav class="pc">
+        <ul class="index-menu">
             <li><a class="line" href="index.html">回首頁</a></li>
             <li><a class="active">作品集</a>
             </li>
             <li><a class="line" href="index.html?tab=contact">聯絡我們</a></li>
             <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&amp;j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01" target="_blank">菁英招募</a></li>
-          </ul>
-          <ul class="social">
+        </ul>
+        <ul class="social">
             <li><a class="fb" href="https://www.facebook.com/lixin.com.tw/" target="_blank"><span class="icon-fb"></span></a></li>
             <li><a class="yt" href="https://www.youtube.com/channel/UChwYvwlnfXs_PTJMUdyR2Eg" target="_blank"><span class="icon-yt"></span></a></li>
-          </ul>
-        </nav>
-      </header>
-      <!-- content-->
-      <div class="wrap">
+        </ul>
+    </nav>
+    </header>
+    <!-- content-->
+    <div class="wrap">
         <div class="workBox">
-          <!--add 'scrolled-ttBox'-->
-          <div class="ttBox" :class="{ 'scrolled-ttBox': isScroll }">
-            <p class="work-tt org">OUR WORK</p>
-            <div class="tabBox por tab-fixed"> 
-              <ul>
-                <li><a href="#" :class="{ 'active' : tab == 'video' }" @click.prevent="changeTab('video')"><span class="icon-work-video"></span></a></li>
-                <li><a href="#" :class="{ 'active' : tab == 'web' }" @click.prevent="changeTab('web')"><span class="icon-work-web"></span></a></li>
-              </ul>
+            <!--add 'scrolled-ttBox'-->
+            <div class="ttBox" :class="{ 'scrolled-ttBox': isScroll }">
+                <p class="work-tt org">OUR WORK</p>
+                <div class="tabBox por tab-fixed">
+                    <ul>
+                        <li><a href="#" :class="{ 'active' : tab == 'video' }" @click.prevent="changeTab('video')"><span class="icon-work-video"></span></a></li>
+                        <li><a href="#" :class="{ 'active' : tab == 'web' }" @click.prevent="changeTab('web')"><span class="icon-work-web"></span></a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <!--work-video-->
-          <div class="main-video" v-show="tab == 'video'">
-            <ul>
-              <li v-for="(item, $index) in sortList" :key="$index" class="wow zoomIn" data-wow-duration=".5s">
-                <a class="por" :href="item.href" target="_blank">
-                  <div class="inner">
-                    <div class="pic por work-video1">
-                      <div class="icon"><img src="img/svg/play.svg"/>
-                      </div>
-                    </div>
-                    <div class="infoBox">
-                      <div class="info">
-                        <p>PROJECT</p>
-                        <p>{{ item.title }}</p>
-                      </div>
-                      <div class="info">
-                        <p>CLIENT</p>
-                        <p>{{ item.des }}</p>
-                      </div>
-                    </div>
-                    <div class="num abs">{{ ($index+1) }}</div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!--work-web-->
-          <div class="main-web" v-show="tab == 'web'">
-            <ul>
-              <li v-for="(item, $index) in webList" :key="$index" class="wow zoomIn" data-wow-duration=".5s">
-                <a :href="item.href" target="_blank">
-                  <div class="pic"><img :src="item.pic"/>
-                  </div>
-                  <p>{{ item.title }}</p>
-                </a>
-              </li>
-            </ul>
-          </div><a class="m-bl-btn none-pc" href="#" @click.prevent="getMore" v-show="tab == 'video' && isMore">MORE</a>
-          <div class="loading"><span></span></div>
-          <div class="bg-logo"><img src="img/svg/logo-work.svg"/>
-          </div>
+            <!--work-video-->
+            <div class="main-video" v-show="tab == 'video'">
+                <ul>
+                    <li v-for="(item, $index) in sortList" :key="$index" class="wow zoomIn" data-wow-duration=".5s">
+                        <a class="por" :href="item.href" target="_blank">
+                            <div class="inner">
+                                <div class="pic por work-video1">
+                                    <div class="icon"><img src="img/svg/play.svg" />
+                                    </div>
+                                </div>
+                                <div class="infoBox">
+                                    <div class="info">
+                                        <p>PROJECT</p>
+                                        <p>{{ item.title }}</p>
+                                    </div>
+                                    <div class="info">
+                                        <p>CLIENT</p>
+                                        <p>{{ item.des }}</p>
+                                    </div>
+                                </div>
+                                <div class="num abs">{{ ($index+1) }}</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--work-web-->
+            <div class="main-web" v-show="tab == 'web'">
+                <ul>
+                    <li v-for="(item, $index) in webList" :key="$index" class="wow zoomIn" data-wow-duration=".5s">
+                        <a :href="item.href" target="_blank">
+                            <div class="pic"><img :src="item.pic" />
+                            </div>
+                            <p>{{ item.title }}</p>
+                        </a>
+                    </li>
+                </ul>
+            </div><a class="m-bl-btn none-pc" href="#" @click.prevent="getMore" v-show="tab == 'video' && isMore">MORE</a>
+            <div class="loading"><span></span></div>
+            <div class="bg-logo"><img src="img/svg/logo-work.svg" />
+            </div>
         </div>
         <footer class="footer-inner por">
-          <div class="footer-info">
-            <div class="inner">
-              <div class="left">
-                <div class="infoBox">
-                  <div class="info">
-                    <p class="por">ADDRESS</p>
-                    <p>台北市中山區建國北路二段65號4樓</p>
-                  </div>
-                  <div class="info">
-                    <p class="por">CONTACT</p>
-                    <p>電話<br>02-2500-0818</p>
-                  </div>
+            <div class="footer-info">
+                <div class="inner">
+                    <div class="left">
+                        <div class="infoBox">
+                            <div class="info">
+                                <p class="por">ADDRESS</p>
+                                <p>台北市中山區建國北路二段65號4樓</p>
+                            </div>
+                            <div class="info">
+                                <p class="por">CONTACT</p>
+                                <p>電話<br>02-2500-0818</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <a class="logo" href="index.html"> <img src="img/svg/logo-w.svg" /></a>
+                        <p>© 2019 立炘數位行銷有限公司. ALL RIGHTS RESERVED.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="right"><a class="logo" href="index.html"> <img src="img/svg/logo-w.svg"/></a>
-                <p>© 2019 立炘數位行銷有限公司.  ALL RIGHTS RESERVED.</p>
-              </div>
             </div>
-          </div>
-          <div class="building abs"><img src="img/footer.png"/>
-          </div>
+            <div class="building abs"><img src="img/footer.png" />
+            </div>
         </footer>
-      </div>
+    </div>
     </span>
     <script src="js/work.bundle.js"></script>
-  </body>
+</body>
+
 </html>

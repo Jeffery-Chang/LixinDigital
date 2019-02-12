@@ -1351,35 +1351,44 @@ header {
     z-index: 0;
     overflow: hidden; }
   .kv .slogan {
-    width: 415px;
     position: absolute;
     top: 35vh;
-    z-index: 3; }
+    z-index: 3;
+    font-size: 60px;
+    font-size: 6rem;
+    color: #fff;
+    font-weight: bold; }
+    @media screen and (max-width: 1440px) {
+      .kv .slogan {
+        top: 30vh; } }
     @media screen and (max-width: 767px) {
       .kv .slogan {
-        width: 80%;
-        top: 30vh; } }
+        font-size: 4.5rem;
+        top: 27vh; } }
+    @media screen and (max-width: 374px) {
+      .kv .slogan {
+        font-size: 3.5rem; } }
   .kv .clip {
     width: 100%;
     height: 100vh;
-    background: url(../img/svg/clip.svg) no-repeat center/cover;
+    background: url(../img/mask.png) no-repeat center/cover, url(../img/svg/clip.svg) no-repeat center/cover;
     z-index: 0; }
     @media screen and (max-width: 1680px) and (min-height: 800px) {
       .kv .clip {
-        background: url(../img/svg/clip-2.svg) no-repeat center/cover; } }
+        background: url(../img/mask.png) no-repeat center/cover, url(../img/svg/clip-2.svg) no-repeat center/cover; } }
     @media screen and (max-width: 1200px) and (min-height: 800px) {
       .kv .clip {
-        background: url(../img/svg/clip-3.svg) no-repeat center/cover; } }
+        background: url(../img/mask-3.png) no-repeat center/cover, url(../img/svg/clip-3.svg) no-repeat center/cover; } }
     @media screen and (max-width: 1024px) and (min-height: 800px) {
       .kv .clip {
-        background: url(../img/svg/clip-h.svg) no-repeat center/cover; } }
-    @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        background: url(../img/mask-h.png) no-repeat center/cover, url(../img/svg/clip-h.svg) no-repeat center/cover; } }
+    @media screen and (max-width: 1024px) {
       .kv .clip {
-        background: url(../img/svg/clip-pad.svg) no-repeat center/cover; } }
-    @media screen and (max-device-width: 767px) {
+        background: url(../img/mask-pad.png) no-repeat center/cover, url(../img/svg/clip-pad.svg) no-repeat center/cover; } }
+    @media screen and (max-width: 767px) {
       .kv .clip {
-        background: url(../img/svg/clip-m.svg) no-repeat bottom center/cover; } }
-    @media screen and (max-device-width: 374px) {
+        background: url(../img/mask-m.png) no-repeat center/cover, url(../img/svg/clip-m.svg) no-repeat bottom center/cover; } }
+    @media screen and (max-width: 374px) {
       .kv .clip {
         background-position: center; } }
     .kv .clip.ie {
