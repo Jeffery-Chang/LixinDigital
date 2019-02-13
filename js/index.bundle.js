@@ -28,11 +28,15 @@ jQuery.getUrlParam = function(b) {
         this.kvEffect(), this.howEffect(), this.marketEffect(), this.mediaEffect(), this.workEffect(), 
         this.rwdEffect(), this.caseEffect(), this.clientEffect(), this.formEffect(), this.mapEffect(), 
         this.isLoaded = !0, this.$nextTick(function() {
-            if ("contact" == $.getUrlParam("tab")) setTimeout(function() {
+            if (setTimeout(function() {
+                setInterval(function() {
+                    $(".actions button").eq(1).click();
+                }, 5e3);
+            }, 1e3), "contact" == $.getUrlParam("tab")) setTimeout(function() {
                 _this.ctrlMove(".contact", !1);
             }, 1e3);
             new WOW({
-                offset: window.innerWidth <= 1025 ? 100 : 200
+                offset: window.innerWidth <= 1025 ? 25 : 50
             }).init();
         });
     },
@@ -58,32 +62,44 @@ jQuery.getUrlParam = function(b) {
             });
         },
         kvEffect: function() {
-            var imgWidth = document.querySelector(".kv .slogan").offsetWidth;
-            TweenMax.set(".kv .slogan img", {
-                width: imgWidth,
-                maxWidth: imgWidth,
-                minWidth: imgWidth
-            }), TweenMax.set(".kv .slogan", {
-                width: 0
-            }), TweenMax.to(".kv .slogan", .75, {
-                width: imgWidth,
-                delay: .75,
-                onComplete: function() {
-                    TweenMax.set([ ".kv .slogan", ".kv .slogan img" ]);
-                }
-            });
-            var timer, mouseX = 0, mouseY = 0, xp = 0, yp = 0, circle = $("#circle");
-            window.addEventListener("mousemove", function(e) {
-                circle.addClass("moving"), mouseX = e.clientX - 110, mouseY = e.clientY - 110, clearTimeout(timer), 
-                timer = setTimeout(function() {
-                    circle.removeClass("moving");
-                }, 3e3);
-            }), setInterval(function() {
-                xp += (mouseX - xp) / 6, yp += (mouseY - yp) / 6, circle.css({
-                    left: xp + "px",
-                    top: yp + "px"
+            var Slideshow = function(el) {
+                this.el = el, this.current = 0, this.slides = [];
+                var self = this;
+                [].slice.call(this.el.querySelectorAll(".slide")).forEach(function(slide) {
+                    self.slides.push(new function(el) {
+                        this.el = el, this.txt = new TextFx(this.el.querySelector(".title"));
+                    }(slide));
+                }), this.slidesTotal = this.slides.length, this.effect = this.el.getAttribute("data-effect"), 
+                this.callback = function() {
+                    console.log(1);
+                };
+            };
+            Slideshow.prototype._navigate = function(direction) {
+                if (this.isAnimating) return !1;
+                this.isAnimating = !0;
+                var self = this, currentSlide = this.slides[this.current];
+                this.current = "next" === direction ? this.current < this.slidesTotal - 1 ? this.current + 1 : 0 : this.current = 0 < this.current ? this.current - 1 : this.slidesTotal - 1;
+                var nextSlide = this.slides[this.current], checkEndCnt = 0, checkEnd = function() {
+                    if (2 == ++checkEndCnt) currentSlide.el.classList.remove("slide--current"), nextSlide.el.classList.add("slide--current"), 
+                    self.isAnimating = !1;
+                };
+                currentSlide.txt.hide(this.effect, function() {
+                    currentSlide.el.style.opacity = 0, checkEnd();
+                }), nextSlide.txt.hide(), nextSlide.el.style.opacity = 1, nextSlide.txt.show(this.effect, function() {
+                    checkEnd();
                 });
-            }, 30);
+            }, Slideshow.prototype.next = function() {
+                this._navigate("next");
+            }, Slideshow.prototype.prev = function() {
+                this._navigate("prev");
+            }, [].slice.call(document.querySelectorAll(".outter")).forEach(function(el) {
+                var slideshow = new Slideshow(el.querySelector(".slideshow"));
+                console.log(1), el.querySelector(".actions").firstElementChild.addEventListener("click", function() {
+                    slideshow.prev();
+                }), el.querySelector(".actions").lastElementChild.addEventListener("click", function() {
+                    slideshow.next();
+                });
+            });
         },
         howEffect: function() {
             if (isMobile.phone || $(window).width() < 768) $(".how .howBox li").removeAttr("data-wow-delay");
@@ -163,6 +179,8 @@ jQuery.getUrlParam = function(b) {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: !0,
+                autoplay: !0,
+                autoplaySpeed: 5e3,
                 prevArrow: $(".work-video .arrowBox .left"),
                 nextArrow: $(".work-video .arrowBox .right"),
                 appendDots: $(".work-video .slider"),
