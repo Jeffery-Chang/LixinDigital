@@ -100,9 +100,17 @@
             <div class="scroll"><span class="txt">SCROLL</span><span class="line"><span></span></span>
             </div>
             <div class="outter">
-                <div class="slogan">
-                    <p>數位戰略的夥伴</p>
+                <div class=" slogan slideshow slideshow--15" data-effect="fx15">
+                    <div class="slide slide--current">
+                        <p>數位戰略的夥伴</p>
+                    </div>
+                    <div class="slide">
+                        <p>夥伴夥伴夥伴</p>
+                    </div>
                 </div>
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
+
+                <script src="js/kv_slide.js"></script>
                 <!-- <div class="mask" v-if="chkIE() > 11">
                     <div class="wrapper full-size">
                         <div class="blend-multiply full-size">
@@ -111,7 +119,7 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="clip" :class="{ 'ie': chkIE() == 11 }"></div>
+                <div class="clip"></div>
                 <div class="bg">
                     <!-- <iframe src="https://www.youtube.com/embed/qWE6nlKQ-4Q?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=qWE6nlKQ-4Q" frameborder="0" allowfullscreen></iframe> -->
                 </div>

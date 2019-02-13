@@ -19,6 +19,7 @@
         font-size: 6rem;
         color: #fff;
         font-weight: bold;
+        text-align: center;
         @include pc-1440 {
             top: 30vh;
         }
@@ -36,41 +37,41 @@
         background: url(../img/mask.png) no-repeat center / cover, url(../img/svg/clip.svg) no-repeat center / cover;
         z-index: 0;
         @media screen and (max-width: 1680px) and (min-height: 800px) {
-            background: url(../img/mask.png) no-repeat center / cover, url(../img/svg/clip-2.svg) no-repeat center / cover;
+            background: url(../img/svg/clip-2.png) no-repeat center / cover;
         }
         @media screen and (max-width: 1200px) and (min-height: 800px) {
-            background: url(../img/mask-3.png) no-repeat center / cover, url(../img/svg/clip-3.svg) no-repeat center / cover;
+            background: url(../img/svg/clip-3.png) no-repeat center / cover;
         }
         @media screen and (max-width: 1024px) and (min-height: 800px) {
-            background: url(../img/mask-h.png) no-repeat center / cover, url(../img/svg/clip-h.svg) no-repeat center / cover;
+            background: url(../img/svg/clip-h.png) no-repeat center / cover;
         }
         @include m-1024 {
-            background: url(../img/mask-pad.png) no-repeat center / cover, url(../img/svg/clip-pad.svg) no-repeat center / cover;
+            background: url(../img/svg/clip-pad.png) no-repeat center / cover;
         }
         @include m-767 {
-            background: url(../img/mask-m.png) no-repeat center / cover, url(../img/svg/clip-m.svg) no-repeat bottom center / cover;
+            background: url(../img/svg/clip-m.png) no-repeat bottom center / cover;
         }
         @include m-374 {
             background-position: center;
         }
-        &.ie {
-            background: url(../img/svg/clip.png) no-repeat center / cover;
-            @media screen and (max-width: 1680px) and (min-height: 800px) {
-                background: url(../img/svg/clip-2.png) no-repeat center / cover;
-            }
-            @media screen and (max-width: 1200px) and (min-height: 800px) {
-                background: url(../img/svg/clip-3.png) no-repeat center / cover;
-            }
-            @media screen and (max-width: 1024px) and (min-height: 800px) {
-                background: url(../img/svg/clip-h.png) no-repeat center / cover;
-            }
-            @include pad-only {
-                background: url(../img/svg/clip-pad.png) no-repeat center / cover;
-            }
-            @include media-m(767px) {
-                background: url(../img/svg/clip-m.png) no-repeat bottom center / cover;
-            }
-        }
+        // &.ie {
+        //     background: url(../img/svg/clip.png) no-repeat center / cover;
+        //     @media screen and (max-width: 1680px) and (min-height: 800px) {
+        //         background: url(../img/svg/clip-2.png) no-repeat center / cover;
+        //     }
+        //     @media screen and (max-width: 1200px) and (min-height: 800px) {
+        //         background: url(../img/svg/clip-3.png) no-repeat center / cover;
+        //     }
+        //     @media screen and (max-width: 1024px) and (min-height: 800px) {
+        //         background: url(../img/svg/clip-h.png) no-repeat center / cover;
+        //     }
+        //     @include pad-only {
+        //         background: url(../img/svg/clip-pad.png) no-repeat center / cover;
+        //     }
+        //     @include media-m(767px) {
+        //         background: url(../img/svg/clip-m.png) no-repeat bottom center / cover;
+        //     }
+        // }
     }
     .bg {
         width: 100%;

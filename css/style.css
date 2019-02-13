@@ -1357,7 +1357,8 @@ header {
     font-size: 60px;
     font-size: 6rem;
     color: #fff;
-    font-weight: bold; }
+    font-weight: bold;
+    text-align: center; }
     @media screen and (max-width: 1440px) {
       .kv .slogan {
         top: 30vh; } }
@@ -1375,39 +1376,22 @@ header {
     z-index: 0; }
     @media screen and (max-width: 1680px) and (min-height: 800px) {
       .kv .clip {
-        background: url(../img/mask.png) no-repeat center/cover, url(../img/svg/clip-2.svg) no-repeat center/cover; } }
+        background: url(../img/svg/clip-2.png) no-repeat center/cover; } }
     @media screen and (max-width: 1200px) and (min-height: 800px) {
       .kv .clip {
-        background: url(../img/mask-3.png) no-repeat center/cover, url(../img/svg/clip-3.svg) no-repeat center/cover; } }
+        background: url(../img/svg/clip-3.png) no-repeat center/cover; } }
     @media screen and (max-width: 1024px) and (min-height: 800px) {
       .kv .clip {
-        background: url(../img/mask-h.png) no-repeat center/cover, url(../img/svg/clip-h.svg) no-repeat center/cover; } }
+        background: url(../img/svg/clip-h.png) no-repeat center/cover; } }
     @media screen and (max-width: 1024px) {
       .kv .clip {
-        background: url(../img/mask-pad.png) no-repeat center/cover, url(../img/svg/clip-pad.svg) no-repeat center/cover; } }
+        background: url(../img/svg/clip-pad.png) no-repeat center/cover; } }
     @media screen and (max-width: 767px) {
       .kv .clip {
-        background: url(../img/mask-m.png) no-repeat center/cover, url(../img/svg/clip-m.svg) no-repeat bottom center/cover; } }
+        background: url(../img/svg/clip-m.png) no-repeat bottom center/cover; } }
     @media screen and (max-width: 374px) {
       .kv .clip {
         background-position: center; } }
-    .kv .clip.ie {
-      background: url(../img/svg/clip.png) no-repeat center/cover; }
-      @media screen and (max-width: 1680px) and (min-height: 800px) {
-        .kv .clip.ie {
-          background: url(../img/svg/clip-2.png) no-repeat center/cover; } }
-      @media screen and (max-width: 1200px) and (min-height: 800px) {
-        .kv .clip.ie {
-          background: url(../img/svg/clip-3.png) no-repeat center/cover; } }
-      @media screen and (max-width: 1024px) and (min-height: 800px) {
-        .kv .clip.ie {
-          background: url(../img/svg/clip-h.png) no-repeat center/cover; } }
-      @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        .kv .clip.ie {
-          background: url(../img/svg/clip-pad.png) no-repeat center/cover; } }
-      @media screen and (max-device-width: 767px) {
-        .kv .clip.ie {
-          background: url(../img/svg/clip-m.png) no-repeat bottom center/cover; } }
   .kv .bg {
     width: 100%;
     height: 100vh;
@@ -3055,15 +3039,15 @@ canvas {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding-top: 50px;
     position: fixed;
     width: 100%;
     z-index: 3;
     background: #fff;
-    top: 70px; }
+    padding: 70px 10% 20px; }
     @media screen and (max-width: 1440px) {
       .workBox .ttBox {
-        top: 50px; } }
+        top: 50px;
+        padding: 70px 7.5% 20px; } }
     @media screen and (max-width: 1280px) {
       .workBox .ttBox {
         padding-top: 35px;
@@ -3073,21 +3057,20 @@ canvas {
         -webkit-box-align: end;
         -ms-flex-align: end;
         align-items: flex-end;
-        top: 45px;
-        padding-bottom: 25px; } }
+        top: 50px;
+        padding-bottom: 25px;
+        padding: 35px 7% 20px; } }
   .workBox .work-tt {
     font-size: 132px;
     font-size: 13.2rem;
     font-weight: bold;
-    margin-left: -15px;
     line-height: 1; }
     @media screen and (max-width: 1440px) {
       .workBox .work-tt {
         font-size: 8rem; } }
     @media screen and (max-width: 767px) {
       .workBox .work-tt {
-        font-size: 6rem;
-        margin-left: -6px; } }
+        font-size: 5rem; } }
 
 .scrolled-ttBox {
   -webkit-box-shadow: 0px 0px 21px 1px rgba(0, 0, 0, .1);
@@ -3151,7 +3134,9 @@ canvas {
   @media screen and (max-width: 767px) {
     .main-video li {
       width: 100%;
-      border: 0.5px solid #9f9a98; } }
+      border: 0; }
+      .main-video li:not(:last-child) {
+        border-bottom: 0.5px solid rgba(159, 154, 152, .7); } }
 
 .main-video a {
   padding: 50px 0;
@@ -3243,7 +3228,13 @@ canvas {
 
 .main-video,
 .main-web {
+  width: 80%;
   margin: 20% auto 80px; }
+  @media screen and (max-width: 1440px) {
+    .main-video,
+    .main-web {
+      width: 85%;
+      margin-top: 17%; } }
   @media screen and (max-width: 1024px) {
     .main-video,
     .main-web {
@@ -3251,8 +3242,9 @@ canvas {
   @media screen and (max-width: 767px) {
     .main-video,
     .main-web {
-      margin-bottom: 55px;
-      margin-top: 60%; } }
+      width: 100%;
+      margin-top: 55%;
+      margin-bottom: 20px; } }
   .main-video ul,
   .main-web ul {
     display: -webkit-box;
@@ -3261,48 +3253,44 @@ canvas {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
 
-.main-web {
-  width: 80%;
-  margin-top: 20%; }
-  @media screen and (max-width: 1440px) {
-    .main-web {
-      width: 85%;
-      margin-top: 17%; } }
+@media screen and (max-width: 767px) {
+  .main-web {
+    width: 80%; } }
+
+.main-web ul {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.main-web li {
+  width: 30%;
+  margin-bottom: 50px; }
+  @media screen and (max-width: 1280px) {
+    .main-web li {
+      margin-bottom: 40px; } }
   @media screen and (max-width: 767px) {
-    .main-web {
-      margin-top: 60%;
-      width: 85%;
-      margin-bottom: 20px; } }
-  .main-web ul {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
-  .main-web li {
-    width: 30%;
-    margin-bottom: 50px; }
-    @media screen and (max-width: 1280px) {
-      .main-web li {
-        margin-bottom: 40px; } }
-    @media screen and (max-width: 767px) {
-      .main-web li {
-        width: 100%; } }
-  .main-web .pic {
-    width: 100%; }
-  .main-web p {
-    font-size: 18px;
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-top: 20px;
-    color: #000; }
-    @media screen and (max-width: 1280px) {
-      .main-web p {
-        font-size: 1.6rem;
-        margin-top: 10px; } }
-    @media screen and (max-width: 767px) {
-      .main-web p {
-        font-size: 1.8rem; } }
-  .main-web a {
-    pointer-events: none; }
+    .main-web li {
+      width: 100%; } }
+
+.main-web .pic {
+  width: 100%; }
+
+.main-web p {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #000; }
+  @media screen and (max-width: 1280px) {
+    .main-web p {
+      font-size: 1.6rem;
+      margin-top: 10px; } }
+  @media screen and (max-width: 767px) {
+    .main-web p {
+      font-size: 1.8rem; } }
+
+.main-web a {
+  pointer-events: none; }
 
 .bg-logo {
   width: 50%;
@@ -3354,5 +3342,41 @@ canvas {
 @media screen and (max-width: 767px) {
   .android .main-video {
     margin-top: 40%; } }
+
+.slideshow,
+.slide {
+  position: relative; }
+
+.slide {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center; }
+
+.slide:not(.slide--current) {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  opacity: 0; }
+
+.letter-effect {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
 /*# sourceMappingURL=style.css.map */

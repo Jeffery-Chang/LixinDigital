@@ -31,14 +31,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 50px;
         position: fixed;
         width: 100%;
         z-index: 3;
         background: #fff;
-        top: 70px;
+        padding: 70px 10% 20px;
         @include pc-1440 {
             top: 50px;
+            padding: 70px 7.5% 20px;
         }
         @include pc-1280 {
             padding-top: 35px;
@@ -46,14 +46,14 @@
         }
         @include m-767 {
             align-items: flex-end;
-            top: 45px;
+            top: 50px;
             padding-bottom: 25px;
+            padding: 35px 7% 20px;
         }
     }
     .work-tt {
         font-size: 13.2rem;
         font-weight: bold;
-        margin-left: -15px;
         line-height: 1;
         @include pc-1440 {
             font-size: 8rem;
@@ -62,8 +62,7 @@
         //     font-size: 8rem;
         // }
         @include m-767 {
-            font-size: 6rem;
-            margin-left: -6px;
+            font-size: 5rem;
         }
     }
 }
@@ -132,7 +131,10 @@
         border: 0.5px solid rgba(159, 154, 152, 0.22);
         @include m-767 {
             width: 100%;
-            border: 0.5px solid rgba(159, 154, 152, 1);
+            border: 0;
+            &:not(:last-child) {
+                border-bottom: 0.5px solid rgba(159, 154, 152, 0.7);
+            }
         }
     }
     a {
@@ -241,13 +243,19 @@
 
 .main-video,
 .main-web {
+    width: 80%;
     margin: 20% auto 80px;
+    @include pc-1440 {
+        width: 85%;
+        margin-top: 17%;
+    }
     @include m-1024 {
         margin-bottom: 15px;
     }
     @include m-767 {
-        margin-bottom: 55px;
-        margin-top: 60%;
+        width: 100%;
+        margin-top: 55%;
+        margin-bottom: 20px;
     }
     ul {
         display: flex;
@@ -256,16 +264,8 @@
 }
 
 .main-web {
-    width: 80%;
-    margin-top: 20%;
-    @include pc-1440 {
-        width: 85%;
-        margin-top: 17%;
-    }
     @include m-767 {
-        margin-top: 60%;
-        width: 85%;
-        margin-bottom: 20px;
+        width: 80%;
     }
     ul {
         justify-content: space-between;
