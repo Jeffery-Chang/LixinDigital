@@ -3043,10 +3043,11 @@ canvas {
     width: 100%;
     z-index: 3;
     background: #fff;
-    padding: 70px 10% 20px; }
+    padding: 70px 10% 20px;
+    top: 30px; }
     @media screen and (max-width: 1440px) {
       .workBox .ttBox {
-        top: 50px;
+        top: 35px;
         padding: 70px 7.5% 20px; } }
     @media screen and (max-width: 1280px) {
       .workBox .ttBox {

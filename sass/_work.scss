@@ -36,8 +36,9 @@
         z-index: 3;
         background: #fff;
         padding: 70px 10% 20px;
+        top: 30px;
         @include pc-1440 {
-            top: 50px;
+            top: 35px;
             padding: 70px 7.5% 20px;
         }
         @include pc-1280 {
