@@ -27,17 +27,16 @@ jQuery.getUrlParam = function(b) {
         if (this.getMobileOperatingSystem()) document.querySelector("body").classList.add("android");
         this.kvEffect(), this.howEffect(), this.marketEffect(), this.mediaEffect(), this.workEffect(), 
         this.rwdEffect(), this.caseEffect(), this.clientEffect(), this.formEffect(), this.mapEffect(), 
-        this.isLoaded = !0, this.$nextTick(function() {
-            if (setTimeout(function() {
-                setInterval(function() {
-                    $(".actions button").eq(1).click();
-                }, 5e3);
-            }, 1e3), "contact" == $.getUrlParam("tab")) setTimeout(function() {
-                _this.ctrlMove(".contact", !1);
-            }, 1e3);
+        this.$nextTick(function() {
             new WOW({
                 offset: window.innerWidth <= 1025 ? 25 : 50
-            }).init();
+            }).init(), setTimeout(function() {
+                _this.isLoaded = !0, setInterval(function() {
+                    $(".actions button").eq(1).click();
+                }, 5e3), setTimeout(function() {
+                    if ("contact" == $.getUrlParam("tab")) _this.ctrlMove(".contact", !1);
+                }, 500);
+            }, 1500);
         });
     },
     methods: {
@@ -69,10 +68,7 @@ jQuery.getUrlParam = function(b) {
                     self.slides.push(new function(el) {
                         this.el = el, this.txt = new TextFx(this.el.querySelector(".title"));
                     }(slide));
-                }), this.slidesTotal = this.slides.length, this.effect = this.el.getAttribute("data-effect"), 
-                this.callback = function() {
-                    console.log(1);
-                };
+                }), this.slidesTotal = this.slides.length, this.effect = this.el.getAttribute("data-effect");
             };
             Slideshow.prototype._navigate = function(direction) {
                 if (this.isAnimating) return !1;
@@ -94,7 +90,7 @@ jQuery.getUrlParam = function(b) {
                 this._navigate("prev");
             }, [].slice.call(document.querySelectorAll(".outter")).forEach(function(el) {
                 var slideshow = new Slideshow(el.querySelector(".slideshow"));
-                console.log(1), el.querySelector(".actions").firstElementChild.addEventListener("click", function() {
+                el.querySelector(".actions").firstElementChild.addEventListener("click", function() {
                     slideshow.prev();
                 }), el.querySelector(".actions").lastElementChild.addEventListener("click", function() {
                     slideshow.next();
