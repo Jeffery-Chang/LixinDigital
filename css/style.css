@@ -1372,6 +1372,7 @@ header {
     @media screen and (max-width: 767px) {
       .kv .slogan {
         font-size: 4.5rem;
+        width: 80%;
         top: 27vh; } }
     @media screen and (max-width: 374px) {
       .kv .slogan {
