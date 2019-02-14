@@ -20,6 +20,9 @@
         color: #fff;
         font-weight: bold;
         text-align: center;
+        width: 50%;
+        display: flex;
+        justify-content: center;
         @include pc-1440 {
             top: 30vh;
         }

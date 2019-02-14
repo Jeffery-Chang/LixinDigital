@@ -65,64 +65,62 @@
             <!-- bur-->
             <div class="button_container" id="toggle" :class="{ 'active': isOpen }" @click.prevent="isOpen = !isOpen"><span
                     class="top"></span> <span class="middle"></span> <span class="bottom"></span></div>
-            <!-- M Menu-->
-            <div class="overlay" id="overlay" :class="{ 'open': isOpen }">
-                <nav class="overlay-menu">
-                    <ul class="index-menu">
-                        <!-- <li><a class="line" href="index.html">回首頁</a></li> -->
-                        <li><a class="line" href="work.html">作品集</a>
-                        </li>
-                        <li @click.prevent="ctrlMove('.contact', true);"><a class="line" href="#">聯絡我們</a></li>
-                        <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01"
-                                target="_blank">菁英招募</a></li>
-                    </ul>
-                    <ul class="social">
-                        <li><a class="fb" href="https://www.facebook.com/lixin.com.tw/" target="_blank"><span class="icon-fb"></span></a></li>
-                        <li><a class="yt" href="https://www.youtube.com/channel/UChwYvwlnfXs_PTJMUdyR2Eg" target="_blank"><span
+    <!-- M Menu-->
+    <div class="overlay" id="overlay" :class="{ 'open': isOpen }">
+        <nav class="overlay-menu">
+            <ul class="index-menu">
+                <!-- <li><a class="line" href="index.html">回首頁</a></li> -->
+                <li><a class="line" href="work.html">作品集</a>
+                </li>
+                <li @click.prevent="ctrlMove('.contact', true);"><a class="line" href="#">聯絡我們</a></li>
+                <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01" target="_blank">菁英招募</a></li>
+            </ul>
+            <ul class="social">
+                <li><a class="fb" href="https://www.facebook.com/lixin.com.tw/" target="_blank"><span class="icon-fb"></span></a></li>
+                <li><a class="yt" href="https://www.youtube.com/channel/UChwYvwlnfXs_PTJMUdyR2Eg" target="_blank"><span
                                     class="icon-yt"></span></a></li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- PC menu -->
-            <nav class="pc">
-                <ul class="index-menu">
-                    <!-- <li><a class="line" href="index.html">回首頁</a></li> -->
-                    <li><a class="line" href="work.html">作品集</a>
-                    </li>
-                    <li @click.prevent="ctrlMove('.contact', true);"><a class="line" href="#">聯絡我們</a></li>
-                    <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&amp;j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01"
-                            target="_blank">菁英招募</a></li>
-                </ul>
-                <ul class="social">
-                    <li><a class="fb" href="https://www.facebook.com/lixin.com.tw/" target="_blank"><span class="icon-fb"></span></a></li>
-                    <li><a class="yt" href="https://www.youtube.com/channel/UChwYvwlnfXs_PTJMUdyR2Eg" target="_blank"><span
+            </ul>
+        </nav>
+    </div>
+    <!-- PC menu -->
+    <nav class="pc">
+        <ul class="index-menu">
+            <!-- <li><a class="line" href="index.html">回首頁</a></li> -->
+            <li><a class="line" href="work.html">作品集</a>
+            </li>
+            <li @click.prevent="ctrlMove('.contact', true);"><a class="line" href="#">聯絡我們</a></li>
+            <li><a class="line" href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&amp;j=3e4c446d3638406932343c653a40381b82b2b2b284438382664j01" target="_blank">菁英招募</a></li>
+        </ul>
+        <ul class="social">
+            <li><a class="fb" href="https://www.facebook.com/lixin.com.tw/" target="_blank"><span class="icon-fb"></span></a></li>
+            <li><a class="yt" href="https://www.youtube.com/channel/UChwYvwlnfXs_PTJMUdyR2Eg" target="_blank"><span
                                 class="icon-yt"></span></a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- content-->
-        <div class="wrap">
-            <!--kv-->
-            <section class="kv">
-                <div class="scroll"><span class="txt">SCROLL</span><span class="line"><span></span></span>
-                </div>
-                <div class="outter">
-                    <div class="slogan slideshow slideshow--15" data-effect="fx15">
-                        <div class="slide">
-                            <p class="title">數位戰略的夥伴</p>
-                        </div>
-                        <div class="slide slide--current">
-                            <p class="title">夥伴夥伴夥伴</p>
-                        </div>
-                        <nav class="actions" v-show="false">
-                            <button class="btn btn--trigger">Previous</button>
-                            <button class="btn btn--trigger">Next</button>
-                        </nav>
+        </ul>
+    </nav>
+    </header>
+    <!-- content-->
+    <div class="wrap">
+        <!--kv-->
+        <section class="kv">
+            <div class="scroll"><span class="txt">SCROLL</span><span class="line"><span></span></span>
+            </div>
+            <div class="outter">
+                <div class="slogan slideshow slideshow--15" data-effect="fx15">
+                    <div class="slide">
+                        <p class="title">數位戰略的夥伴</p>
                     </div>
-                    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script> -->
+                    <div class="slide slide--current">
+                        <p class="title">夥伴夥伴夥伴</p>
+                    </div>
+                    <nav class="actions" v-show="false">
+                        <button class="btn btn--trigger">Previous</button>
+                        <button class="btn btn--trigger">Next</button>
+                    </nav>
+                </div>
+                <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script> -->
 
-                    <!-- <script src="js/kv_slide.js"></script> -->
-                    <!-- <div class="mask" v-if="chkIE() > 11">
+                <!-- <script src="js/kv_slide.js"></script> -->
+                <!-- <div class="mask" v-if="chkIE() > 11">
                     <div class="wrapper full-size">
                         <div class="blend-multiply full-size">
                             <div class="animated-bg full-size"> </div>
@@ -130,14 +128,14 @@
                         </div>
                     </div>
                 </div> -->
-                    <div class="clip"></div>
-                    <div class="bg">
-                        <!-- <iframe src="https://www.youtube.com/embed/qWE6nlKQ-4Q?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=qWE6nlKQ-4Q" frameborder="0" allowfullscreen></iframe> -->
-                    </div>
+                <div class="clip"></div>
+                <div class="bg">
+                    <!-- <iframe src="https://www.youtube.com/embed/qWE6nlKQ-4Q?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=qWE6nlKQ-4Q" frameborder="0" allowfullscreen></iframe> -->
                 </div>
-            </section>
-            <!--about-->
-            <!-- <section class="about full-h">
+            </div>
+        </section>
+        <!--about-->
+        <!-- <section class="about full-h">
                 <div class="cover"><img src="img/svg/cover.svg" />
                 </div>
                 <div class="main">
@@ -149,444 +147,431 @@
                             class="break">期許在這個數位化時代，用數據看見趨勢，</span><span class="break"> <strong>用創意進行溝通，帶來不一樣的行銷方式。</strong></span></p>
                 </div>
             </section> -->
-            <!--what we do-->
-            <section class="marketing full-h">
-                <div class="outer">
-                    <h2 class="org wow fadeInUp">數位行銷整合</h2>
-                    <div class="wow flipInY">
-                        <div class="carouselBox">
-                            <div class="circle--slider">
-                                <div class="rotate--circle">
-                                    <ul class="circle--rotate" id="circle--rotate">
-                                        <li class="block" data-img="media">
-                                            <div class="icon"><i class="iconBox"><img src="img/svg/icon-media.svg" /></i><span>
+        <!--what we do-->
+        <section class="marketing full-h">
+            <div class="outer">
+                <h2 class="org wow fadeInUp">數位行銷整合</h2>
+                <div class="wow flipInY">
+                    <div class="carouselBox">
+                        <div class="circle--slider">
+                            <div class="rotate--circle">
+                                <ul class="circle--rotate" id="circle--rotate">
+                                    <li class="block" data-img="media">
+                                        <div class="icon"><i class="iconBox"><img src="img/svg/icon-media.svg" /></i><span>
                                                 </span></div>
-                                        </li>
-                                        <li class="block" data-img="digital">
-                                            <div class="icon"><i class="iconBox"><img src="img/svg/icon-digital.svg" /></i><span>
+                                    </li>
+                                    <li class="block" data-img="digital">
+                                        <div class="icon"><i class="iconBox"><img src="img/svg/icon-digital.svg" /></i><span>
                                                 </span></div>
-                                        </li>
-                                        <li class="block" data-img="analysis">
-                                            <div class="icon"><i class="iconBox"><img src="img/svg/icon-analysis.svg" /></i><span>
+                                    </li>
+                                    <li class="block" data-img="analysis">
+                                        <div class="icon"><i class="iconBox"><img src="img/svg/icon-analysis.svg" /></i><span>
                                                 </span></div>
-                                        </li>
-                                        <li class="block" data-img="content">
-                                            <div class="icon"><i class="iconBox"><img src="img/svg/icon-content.svg" /></i><span>
+                                    </li>
+                                    <li class="block" data-img="content">
+                                        <div class="icon"><i class="iconBox"><img src="img/svg/icon-content.svg" /></i><span>
                                                 </span></div>
-                                        </li>
-                                        <li class="block" data-img="web">
-                                            <div class="icon"><i class="iconBox"><img src="img/svg/icon-web.svg" /></i><span>
+                                    </li>
+                                    <li class="block" data-img="web">
+                                        <div class="icon"><i class="iconBox"><img src="img/svg/icon-web.svg" /></i><span>
                                                 </span></div>
-                                        </li>
-                                        <li class="block" data-img="video">
-                                            <div class="icon"><i class="iconBox"><img src="img/svg/icon-video.svg" /></i><span>
+                                    </li>
+                                    <li class="block" data-img="video">
+                                        <div class="icon"><i class="iconBox"><img src="img/svg/icon-video.svg" /></i><span>
                                                 </span></div>
-                                        </li>
-                                    </ul>
-                                    <div class="animate-wrapper">
-                                        <div class="animate">
-                                            <div class="animate-more">
-                                                <div class="animate-title">
-                                                    <h4>媒體整合行銷</h4>
-                                                    <h5>Media</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="animate">
-                                            <div class="animate-more">
-                                                <div class="animate-title">
-                                                    <h4>數位操作規劃</h4>
-                                                    <h5>Digital</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="animate">
-                                            <div class="animate-more">
-                                                <div class="animate-title">
-                                                    <h4>數據分析優化</h4>
-                                                    <h5>Analysis</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="animate">
-                                            <div class="animate-more">
-                                                <div class="animate-title">
-                                                    <h4>內容行銷規劃</h4>
-                                                    <h5>Content</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="animate">
-                                            <div class="animate-more">
-                                                <div class="animate-title">
-                                                    <h4>網站建置管理</h4>
-                                                    <h5>Website</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="animate">
-                                            <div class="animate-more">
-                                                <div class="animate-title">
-                                                    <h4>影像故事製作</h4>
-                                                    <h5>Video</h5>
-                                                </div>
+                                    </li>
+                                </ul>
+                                <div class="animate-wrapper">
+                                    <div class="animate">
+                                        <div class="animate-more">
+                                            <div class="animate-title">
+                                                <h4>媒體整合行銷</h4>
+                                                <h5>Media</h5>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="prev" v-show="false"><span>PREV</span></div>
-                                    <div class="next" v-show="false"><span>NEXT</span></div>
+                                    <div class="animate">
+                                        <div class="animate-more">
+                                            <div class="animate-title">
+                                                <h4>數位操作規劃</h4>
+                                                <h5>Digital</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="animate">
+                                        <div class="animate-more">
+                                            <div class="animate-title">
+                                                <h4>數據分析優化</h4>
+                                                <h5>Analysis</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="animate">
+                                        <div class="animate-more">
+                                            <div class="animate-title">
+                                                <h4>內容行銷規劃</h4>
+                                                <h5>Content</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="animate">
+                                        <div class="animate-more">
+                                            <div class="animate-title">
+                                                <h4>網站建置管理</h4>
+                                                <h5>Website</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="animate">
+                                        <div class="animate-more">
+                                            <div class="animate-title">
+                                                <h4>影像故事製作</h4>
+                                                <h5>Video</h5>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="prev" v-show="false"><span>PREV</span></div>
+                                <div class="next" v-show="false"><span>NEXT</span></div>
                             </div>
-                            <div class="logo abs"><img src="img/svg/logo_en.svg" />
+                        </div>
+                        <div class="logo abs"><img src="img/svg/logo_en.svg" />
+                        </div>
+                        <!--change the bg-icon with carous-->
+                        <div class="bg-icon abs"><img src="img/svg/icon-media.svg" />
+                            <!-- 'icon-media','icon-digital','icon-analysis','icon-content','icon-web','icon-video'-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--remove 'ani_start' when scrolling-->
+            <div class="bg-line">
+                <div class="line line1 abs ani_start"></div>
+                <div class="line line2 abs ani_start"></div>
+                <div class="line line3 abs ani_start"></div>
+                <div class="line line4 abs ani_start"></div>
+                <div class="line line5 abs ani_start"></div>
+                <div class="line line6 abs ani_start"></div>
+                <div class="line line7 abs ani_start"></div>
+                <div class="line line8 abs ani_start"></div>
+            </div>
+        </section>
+        <!--how we do-->
+        <section class="how full-h">
+            <h2 class="org wow fadeInUp">我們怎麼做數位</h2>
+            <div class="howBox">
+                <ul>
+                    <li class="wow flipInY">
+                        <div class="iconBox">
+                            <div class="icon"><img src="img/svg/how-1.svg" />
+                                <div class="line abs howLine"></div>
                             </div>
-                            <!--change the bg-icon with carous-->
-                            <div class="bg-icon abs"><img src="img/svg/icon-media.svg" />
-                                <!-- 'icon-media','icon-digital','icon-analysis','icon-content','icon-web','icon-video'-->
+                            <p>討論策略</p>
+                        </div>
+                    </li>
+                    <li class="wow flipInY" data-wow-delay=".5s">
+                        <div class="iconBox">
+                            <div class="icon"><img src="img/svg/how-2.svg" />
+                                <div class="line abs howLine"></div>
+                            </div>
+                            <p>網路操作</p>
+                        </div>
+                    </li>
+                    <li class="wow flipInY" data-wow-delay="1s">
+                        <div class="iconBox">
+                            <div class="icon"><img src="img/svg/how-3.svg" />
+                                <div class="line abs howLine"></div>
+                            </div>
+                            <p>數據整合分析</p>
+                        </div>
+                    </li>
+                    <li class="wow flipInY" data-wow-delay="1.5s">
+                        <div class="iconBox">
+                            <div class="icon"><img src="img/svg/how-4.svg" />
+                            </div>
+                            <p>優化轉換</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--media partner-->
+        <section class="mediaPartner">
+            <span class="wow fadeInUp">
+                    <h2 class="w">代理媒體</h2>
+                </span>
+            <canvas id="responsive-canvas"></canvas>
+        </section>
+        <section class="work-video">
+            <div class="slideBox">
+                <div class="video full-h">
+                    <div class="main">
+                        <div class="work-tt wow fadeInUp">
+                            <h2 class="org">我們的作品</h2>
+                            <p>設計 + 多元版型組合 + 持續強化的系統功能 + 專案管理流程 </p>
+                        </div>
+                        <div class="desBox">
+                            <!--work1-->
+                            <div class="work1">
+                                <div class="work-info">
+                                    <h3>房地產｜新板巨星｜小資購屋</h3>
+                                    <p>好的規劃並不難，堅持到底的才有收穫<span class="break">別人怎麼生活我不在意，我打造的是每一天都迎向更好的生活</span></p>
+                                </div><a class="btn" id="btn1" data-mbg="" data-bg="mUEwilasYVY" href="https://www.youtube.com/watch?v=qWE6nlKQ-4Q" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span
+                                                class="path2"></span></span><span>觀看影片</span></a>
+                            </div>
+                            <!--work2-->
+                            <div class="work2">
+                                <div class="work-info">
+                                    <h3>房地產｜新板巨星｜汪星人</h3>
+                                    <p>汪星人不說，但汪星人都懂<span class="break">金窩銀窩，都不如有自己溫馨的窩，來聽聽汪星人怎麼說</span></p>
+                                </div><a class="btn" id="btn2" data-mbg="" data-bg="u0WVNVc1Y3Q" href="https://www.youtube.com/watch?v=KmQK2cPRHPw" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span
+                                                class="path2"></span></span><span>觀看影片</span></a>
+                            </div>
+                            <!--work3-->
+                            <div class="work3">
+                                <div class="work-info">
+                                    <h3>房地產｜新板巨星｜名牌生活</h3>
+                                    <p>一身名牌，不如一張門牌<span class="break">一樣是小資女孩，她天天追潮流單品當月光族、</span><span class="break">她則買下一座城堡，天天當自己的公主</span></p>
+                                </div><a class="btn" id="btn3" data-mbg="" data-bg="JeJ2N2T6Cr0" href="https://www.youtube.com/watch?v=-YpLkKAhUsI" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span
+                                                class="path2"></span></span><span>觀看影片</span></a>
+                            </div>
+                            <!--work4-->
+                            <div class="work4">
+                                <div class="work-info">
+                                    <h3>房地產｜新板巨星｜不再搬家</h3>
+                                    <p>小熊多多為什麼不開心？<span class="break">他說：常常在搬家，搬來搬去都是別人的家‥</span></p>
+                                </div><a class="btn" id="btn4" data-mbg="" data-bg="4HaJl62UTbE" href="https://www.youtube.com/watch?v=RanzJCKiiu8" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span
+                                                class="path2"></span></span><span>觀看影片</span></a>
+                            </div>
+                            <!--work5-->
+                            <div class="work5">
+                                <div class="work-info">
+                                    <h3>房地產｜新板巨星｜競選</h3>
+                                    <p>我們有多久，不敢擁抱成家的夢想<span class="break">其實夢想，不一定要到很遠的地方</span></p>
+                                </div><a class="btn" id="btn5" data-mbg="" data-bg="JX_3PrA3GdU" href="https://www.youtube.com/watch?v=uMDcyCV3qgQ" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span
+                                                class="path2"></span></span><span>觀看影片</span></a>
+                            </div>
+                            <!--work6-->
+                            <div class="work6">
+                                <div class="work-info">
+                                    <h3>房地產｜超級花園｜娘娘駕到</h3>
+                                    <p>每天從這裡恢復身心神氣<span class="break">再去面對現實的生活，是多麼令人羨慕的呀</span></p>
+                                </div><a class="btn" id="btn6" data-mbg="" data-bg="ZV4c1IXGy7Q" href="https://www.youtube.com/watch?v=dWIik0v7_aA" target="_blank"><span class="icon-btn-play"><span class="path1"></span><span
+                                                class="path2"></span></span><span>觀看影片</span></a>
+                            </div>
+                        </div>
+                        <div class="btm-content">
+                            <div class="arrowBox"><a class="left" href="#"><span class="icon-arrow"></span></a><a class="right" href="#"><span class="icon-arrow"></span></a></div>
+                            <a class="more" href="work.html">
+                                <span>看更多影片</span><span class="line-arrow por"></span></a>
+                        </div>
+                    </div>
+                    <div class="yt-video">
+                        <div class="embed-container">
+                            <!-- <iframe src="https://www.youtube.com/embed/qWE6nlKQ-4Q" frameborder="0" allowfullscreen=""></iframe> -->
+                            <iframe src="https://www.youtube.com/embed/mUEwilasYVY?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=mUEwilasYVY" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider">
+                    <ul>
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                        <div class="indicator"></div>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--rwd-->
+        <section class="rwd full-h">
+            <h2>
+                <p class="wow fadeInUp">響應式設計</p>
+            </h2>
+            <div class="device abs">
+                <div class="phone abs wow fadeInRight" data-wow-delay=".35s">
+                    <div class="cover por"><img src="img/rwd-phone.png" />
+                        <div class="slidePic abs">
+                            <div class="dots abs"><span class="active"></span><span></span><span></span></div>
+                            <div class="picBox">
+                                <div class="web-m1"><img src="img/web-m1.png" />
+                                </div>
+                                <div class="web-m1"><img src="img/web-m1.png" />
+                                </div>
+                                <div class="web-m1"><img src="img/web-m1.png" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--remove 'ani_start' when scrolling-->
-                <div class="bg-line">
-                    <div class="line line1 abs ani_start"></div>
-                    <div class="line line2 abs ani_start"></div>
-                    <div class="line line3 abs ani_start"></div>
-                    <div class="line line4 abs ani_start"></div>
-                    <div class="line line5 abs ani_start"></div>
-                    <div class="line line6 abs ani_start"></div>
-                    <div class="line line7 abs ani_start"></div>
-                    <div class="line line8 abs ani_start"></div>
+                <div class="mac wow fadeInRight">
+                    <div class="cover por"><img src="img/rwd-mac.png" />
+                        <div class="slidePic abs">
+                            <div class="dots abs"><span class="active"></span><span></span><span></span></div>
+                            <div class="picBox">
+                                <div class="web-pc1"><img src="img/web-pc1.png" />
+                                </div>
+                                <div class="web-pc1"><img src="img/web-pc1.png" />
+                                </div>
+                                <div class="web-pc1"><img src="img/web-pc1.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
-            <!--how we do-->
-            <section class="how full-h">
-                <h2 class="org wow fadeInUp">我們怎麼做數位</h2>
-                <div class="howBox">
+            </div>
+        </section>
+        <!--show case-->
+        <section class="showCaseBox">
+            <div class="arrowCube"><a class="left" href="#"><span class="icon-arrow"></span></a><a class="right" href="#"><span class="icon-arrow"></span></a></div>
+            <div class="showCase-slide">
+                <div class="showCase full-h showCase_01">
+                    <div class="left por full-h">
+                        <a class="caseBg full-h" href="https://www.youtube.com/watch?v=NrmLPaJE88o">
+                            <div class="play"><img src="img/svg/play.svg" /></div>
+                        </a>
+                    </div>
+                    <div class="right por wow fadeInUp">
+                        <div class="showSlick">
+                            <div>
+                                <div class="main">
+                                    <div class="inner">
+                                        <h3 class="org">一個巨星的誕生 － 林版新</h3>
+                                        <p>一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生</p><a class="btn" href="#">DETAIL</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div class="main">
+                                    <div class="inner">
+                                        <h3 class="org">一個巨星的誕生 － 林版新</h3>
+                                        <p>一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生</p><a class="btn" href="#">DETAIL</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div class="main">
+                                    <div class="inner">
+                                        <h3 class="org">一個巨星的誕生 － 林版新</h3>
+                                        <p>一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生</p><a class="btn" href="#">DETAIL</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <a class="more" href="work.html?tab=web"><span>看更多案例</span><span class="line-arrow por"></span></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--client-->
+        <section class="client">
+            <div class="arrowCube"><a class="left" href="#"><span class="icon-arrow"></span></a><a class="right" href="#"><span class="icon-arrow"></span></a></div>
+            <h2 class="org wow fadeInUp">服務客戶</h2>
+            <div class="slideBox">
+                <div class="logoBox">
                     <ul>
-                        <li class="wow flipInY">
-                            <div class="iconBox">
-                                <div class="icon"><img src="img/svg/how-1.svg" />
-                                    <div class="line abs howLine"></div>
-                                </div>
-                                <p>討論策略</p>
-                            </div>
+                        <li class="wow flipInY" data-wow-delay="0s"><img src="img/client-far.png" />
                         </li>
-                        <li class="wow flipInY" data-wow-delay=".5s">
-                            <div class="iconBox">
-                                <div class="icon"><img src="img/svg/how-2.svg" />
-                                    <div class="line abs howLine"></div>
-                                </div>
-                                <p>網路操作</p>
-                            </div>
+                        <li class="wow flipInY" data-wow-delay=".1s"><img src="img/client-yuan.png" />
                         </li>
-                        <li class="wow flipInY" data-wow-delay="1s">
-                            <div class="iconBox">
-                                <div class="icon"><img src="img/svg/how-3.svg" />
-                                    <div class="line abs howLine"></div>
-                                </div>
-                                <p>數據整合分析</p>
-                            </div>
+                        <li class="wow flipInY" data-wow-delay=".2s"><img src="img/client-yuan.png" />
                         </li>
-                        <li class="wow flipInY" data-wow-delay="1.5s">
-                            <div class="iconBox">
-                                <div class="icon"><img src="img/svg/how-4.svg" />
-                                </div>
-                                <p>優化轉換</p>
-                            </div>
+                        <li class="wow flipInY" data-wow-delay=".3s"><img src="img/client-far.png" />
+                        </li>
+                        <li class="wow flipInY" data-wow-delay=".4s"><img src="img/client-yuan.png" />
+                        </li>
+                        <li class="wow flipInY" data-wow-delay=".5s"><img src="img/client-far.png" />
                         </li>
                     </ul>
                 </div>
-            </section>
-            <!--media partner-->
-            <section class="mediaPartner">
-                <span class="wow fadeInUp">
-                    <h2 class="w">代理媒體</h2>
-                </span>
-                <canvas id="responsive-canvas"></canvas>
-            </section>
-            <section class="work-video">
-                <div class="slideBox">
-                    <div class="video full-h">
-                        <div class="main">
-                            <div class="work-tt wow fadeInUp">
-                                <h2 class="org">我們的作品</h2>
-                                <p>設計 + 多元版型組合 + 持續強化的系統功能 + 專案管理流程 </p>
-                            </div>
-                            <div class="desBox">
-                                <!--work1-->
-                                <div class="work1">
-                                    <div class="work-info">
-                                        <h3>房地產｜新板巨星｜小資購屋</h3>
-                                        <p>好的規劃並不難，堅持到底的才有收穫<span class="break">別人怎麼生活我不在意，我打造的是每一天都迎向更好的生活</span></p>
-                                    </div><a class="btn" id="btn1" data-mbg="" data-bg="mUEwilasYVY" href="https://www.youtube.com/watch?v=qWE6nlKQ-4Q"
-                                        target="_blank"><span class="icon-btn-play"><span class="path1"></span><span
-                                                class="path2"></span></span><span>觀看影片</span></a>
-                                </div>
-                                <!--work2-->
-                                <div class="work2">
-                                    <div class="work-info">
-                                        <h3>房地產｜新板巨星｜汪星人</h3>
-                                        <p>汪星人不說，但汪星人都懂<span class="break">金窩銀窩，都不如有自己溫馨的窩，來聽聽汪星人怎麼說</span></p>
-                                    </div><a class="btn" id="btn2" data-mbg="" data-bg="u0WVNVc1Y3Q" href="https://www.youtube.com/watch?v=KmQK2cPRHPw"
-                                        target="_blank"><span class="icon-btn-play"><span class="path1"></span><span
-                                                class="path2"></span></span><span>觀看影片</span></a>
-                                </div>
-                                <!--work3-->
-                                <div class="work3">
-                                    <div class="work-info">
-                                        <h3>房地產｜新板巨星｜名牌生活</h3>
-                                        <p>一身名牌，不如一張門牌<span class="break">一樣是小資女孩，她天天追潮流單品當月光族、</span><span class="break">她則買下一座城堡，天天當自己的公主</span></p>
-                                    </div><a class="btn" id="btn3" data-mbg="" data-bg="JeJ2N2T6Cr0" href="https://www.youtube.com/watch?v=-YpLkKAhUsI"
-                                        target="_blank"><span class="icon-btn-play"><span class="path1"></span><span
-                                                class="path2"></span></span><span>觀看影片</span></a>
-                                </div>
-                                <!--work4-->
-                                <div class="work4">
-                                    <div class="work-info">
-                                        <h3>房地產｜新板巨星｜不再搬家</h3>
-                                        <p>小熊多多為什麼不開心？<span class="break">他說：常常在搬家，搬來搬去都是別人的家‥</span></p>
-                                    </div><a class="btn" id="btn4" data-mbg="" data-bg="4HaJl62UTbE" href="https://www.youtube.com/watch?v=RanzJCKiiu8"
-                                        target="_blank"><span class="icon-btn-play"><span class="path1"></span><span
-                                                class="path2"></span></span><span>觀看影片</span></a>
-                                </div>
-                                <!--work5-->
-                                <div class="work5">
-                                    <div class="work-info">
-                                        <h3>房地產｜新板巨星｜競選</h3>
-                                        <p>我們有多久，不敢擁抱成家的夢想<span class="break">其實夢想，不一定要到很遠的地方</span></p>
-                                    </div><a class="btn" id="btn5" data-mbg="" data-bg="JX_3PrA3GdU" href="https://www.youtube.com/watch?v=uMDcyCV3qgQ"
-                                        target="_blank"><span class="icon-btn-play"><span class="path1"></span><span
-                                                class="path2"></span></span><span>觀看影片</span></a>
-                                </div>
-                                <!--work6-->
-                                <div class="work6">
-                                    <div class="work-info">
-                                        <h3>房地產｜超級花園｜娘娘駕到</h3>
-                                        <p>每天從這裡恢復身心神氣<span class="break">再去面對現實的生活，是多麼令人羨慕的呀</span></p>
-                                    </div><a class="btn" id="btn6" data-mbg="" data-bg="ZV4c1IXGy7Q" href="https://www.youtube.com/watch?v=dWIik0v7_aA"
-                                        target="_blank"><span class="icon-btn-play"><span class="path1"></span><span
-                                                class="path2"></span></span><span>觀看影片</span></a>
-                                </div>
-                            </div>
-                            <div class="btm-content">
-                                <div class="arrowBox"><a class="left" href="#"><span class="icon-arrow"></span></a><a
-                                        class="right" href="#"><span class="icon-arrow"></span></a></div>
-                                <a class="more" href="work.html">
-                                    <span>看更多影片</span><span class="line-arrow por"></span></a>
-                            </div>
-                        </div>
-                        <div class="yt-video">
-                            <div class="embed-container">
-                                <!-- <iframe src="https://www.youtube.com/embed/qWE6nlKQ-4Q" frameborder="0" allowfullscreen=""></iframe> -->
-                                <iframe src="https://www.youtube.com/embed/mUEwilasYVY?rel=0&controls=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=mUEwilasYVY"
-                                    frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider">
-                        <ul>
-                            <li>
-                                <a href="#"></a>
-                            </li>
-                            <li>
-                                <a href="#"></a>
-                            </li>
-                            <li>
-                                <a href="#"></a>
-                            </li>
-                            <li>
-                                <a href="#"></a>
-                            </li>
-                            <li>
-                                <a href="#"></a>
-                            </li>
-                            <li>
-                                <a href="#"></a>
-                            </li>
-                            <div class="indicator"></div>
-                        </ul>
-                    </div>
+                <!-- 預留logo DIV -->
+                <div class="logoBox">
+                    <ul>
+                        <li class="wow flipInY" data-wow-delay="0"><img src="img/client-far.png" />
+                        </li>
+                        <li class="wow flipInY" data-wow-delay=".1s"><img src="img/client-yuan.png" />
+                        </li>
+                        <li class="wow flipInY" data-wow-delay=".2s"><img src="img/client-yuan.png" />
+                        </li>
+                        <li class="wow flipInY" data-wow-delay=".3s"><img src="img/client-far.png" />
+                        </li>
+                        <li class="wow flipInY" data-wow-delay=".4s"><img src="img/client-yuan.png" />
+                        </li>
+                        <li class="wow flipInY" data-wow-delay=".5s"><img src="img/client-far.png" />
+                        </li>
+                    </ul>
                 </div>
-            </section>
-            <!--rwd-->
-            <section class="rwd full-h">
-                <h2>
-                    <p class="wow fadeInUp">響應式設計</p>
-                </h2>
-                <div class="device abs">
-                    <div class="phone abs wow fadeInRight" data-wow-delay=".35s">
-                        <div class="cover por"><img src="img/rwd-phone.png" />
-                            <div class="slidePic abs">
-                                <div class="dots abs"><span class="active"></span><span></span><span></span></div>
-                                <div class="picBox">
-                                    <div class="web-m1"><img src="img/web-m1.png" />
-                                    </div>
-                                    <div class="web-m1"><img src="img/web-m1.png" />
-                                    </div>
-                                    <div class="web-m1"><img src="img/web-m1.png" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mac wow fadeInRight">
-                        <div class="cover por"><img src="img/rwd-mac.png" />
-                            <div class="slidePic abs">
-                                <div class="dots abs"><span class="active"></span><span></span><span></span></div>
-                                <div class="picBox">
-                                    <div class="web-pc1"><img src="img/web-pc1.png" />
-                                    </div>
-                                    <div class="web-pc1"><img src="img/web-pc1.png" />
-                                    </div>
-                                    <div class="web-pc1"><img src="img/web-pc1.png" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--show case-->
-            <section class="showCaseBox">
-                <div class="arrowCube"><a class="left" href="#"><span class="icon-arrow"></span></a><a class="right"
-                        href="#"><span class="icon-arrow"></span></a></div>
-                <div class="showCase-slide">
-                    <div class="showCase full-h showCase_01">
-                        <div class="left por full-h">
-                            <a class="caseBg full-h" href="https://www.youtube.com/watch?v=NrmLPaJE88o">
-                                <div class="play"><img src="img/svg/play.svg" /></div>
-                            </a>
-                        </div>
-                        <div class="right por wow fadeInUp">
-                            <div class="showSlick">
-                                <div>
-                                    <div class="main">
-                                        <div class="inner">
-                                            <h3 class="org">一個巨星的誕生 － 林版新</h3>
-                                            <p>一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生</p><a
-                                                class="btn" href="#">DETAIL</a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div>
-                                    <div class="main">
-                                        <div class="inner">
-                                            <h3 class="org">一個巨星的誕生 － 林版新</h3>
-                                            <p>一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生</p><a
-                                                class="btn" href="#">DETAIL</a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div>
-                                    <div class="main">
-                                        <div class="inner">
-                                            <h3 class="org">一個巨星的誕生 － 林版新</h3>
-                                            <p>一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生一個巨星的誕生</p><a
-                                                class="btn" href="#">DETAIL</a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <a class="more" href="work.html?tab=web"><span>看更多案例</span><span class="line-arrow por"></span></a>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            <!--client-->
-            <section class="client">
-                <div class="arrowCube"><a class="left" href="#"><span class="icon-arrow"></span></a><a class="right"
-                        href="#"><span class="icon-arrow"></span></a></div>
-                <h2 class="org wow fadeInUp">服務客戶</h2>
-                <div class="slideBox">
-                    <div class="logoBox">
-                        <ul>
-                            <li class="wow flipInY" data-wow-delay="0s"><img src="img/client-far.png" />
-                            </li>
-                            <li class="wow flipInY" data-wow-delay=".1s"><img src="img/client-yuan.png" />
-                            </li>
-                            <li class="wow flipInY" data-wow-delay=".2s"><img src="img/client-yuan.png" />
-                            </li>
-                            <li class="wow flipInY" data-wow-delay=".3s"><img src="img/client-far.png" />
-                            </li>
-                            <li class="wow flipInY" data-wow-delay=".4s"><img src="img/client-yuan.png" />
-                            </li>
-                            <li class="wow flipInY" data-wow-delay=".5s"><img src="img/client-far.png" />
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- 預留logo DIV -->
-                    <div class="logoBox">
-                        <ul>
-                            <li class="wow flipInY" data-wow-delay="0"><img src="img/client-far.png" />
-                            </li>
-                            <li class="wow flipInY" data-wow-delay=".1s"><img src="img/client-yuan.png" />
-                            </li>
-                            <li class="wow flipInY" data-wow-delay=".2s"><img src="img/client-yuan.png" />
-                            </li>
-                            <li class="wow flipInY" data-wow-delay=".3s"><img src="img/client-far.png" />
-                            </li>
-                            <li class="wow flipInY" data-wow-delay=".4s"><img src="img/client-yuan.png" />
-                            </li>
-                            <li class="wow flipInY" data-wow-delay=".5s"><img src="img/client-far.png" />
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!--contact-->
-            <section class="contact">
-                <p class="hello abs wow fadeInLeft">HELLO</p>
-                <div class="main">
-                    <div class="infoBox">
-                        <div class="info wow fadeInUp">
-                            <p class="por">ADDRESS</p>
-                            <p>台北市中山區建國北路二段65號4樓</p>
-                        </div>
-                        <div class="info wow fadeInUp">
-                            <p class="por">CONTACT</p>
-                            <p>電話<br>02-2500-0818</p>
-                        </div>
-                    </div>
-                    <div class="form">
-                        <div class="form-info">
-                            <div class="mat-div wow fadeInUp">
-                                <label class="mat-label">姓名*</label>
-                                <input class="mat-input" type="text" autocomplete="off" v-model="sendData.name">
-                            </div>
-                            <div class="mat-div wow fadeInUp">
-                                <label class="mat-label">公司</label>
-                                <input class="mat-input" type="text" autocomplete="off" v-model="sendData.company">
-                            </div>
-                            <div class="mat-div wow fadeInUp">
-                                <label class="mat-label">信箱*</label>
-                                <input class="mat-input" type="text" autocomplete="off" v-model="sendData.email">
-                            </div>
-                            <div class="mat-div wow fadeInUp">
-                                <label class="mat-label">電話</label>
-                                <input class="mat-input" type="number" autocomplete="off" v-model.number="sendData.phone">
-                            </div>
-                        </div>
-                        <div class="textBox wow fadeInUp">
-                            <textarea type="text" placeholder="詢問內容" name="contactContent" maxlength="400" v-model="sendData.msg"></textarea>
-                        </div>
-                        <!--0125 add btn--><a class="send wow fadeInUp" href="#">GO!</a>
-                    </div>
-                </div>
-            </section>
-            <!-- map-->
-            <div class="map">
-                <section id="cd-google-map">
-                    <div id="google-container"></div>
-                    <div id="cd-zoom-in"></div>
-                    <div id="cd-zoom-out"></div>
-                </section>
             </div>
-            <footer class="footer-index">© 2019 立炘數位行銷有限公司. ALL RIGHTS RESERVED.</footer>
+        </section>
+        <!--contact-->
+        <section class="contact">
+            <p class="hello abs wow fadeInLeft">HELLO</p>
+            <div class="main">
+                <div class="infoBox">
+                    <div class="info wow fadeInUp">
+                        <p class="por">ADDRESS</p>
+                        <p>台北市中山區建國北路二段65號4樓</p>
+                    </div>
+                    <div class="info wow fadeInUp">
+                        <p class="por">CONTACT</p>
+                        <p>電話<br>02-2500-0818</p>
+                    </div>
+                </div>
+                <div class="form">
+                    <div class="form-info">
+                        <div class="mat-div wow fadeInUp">
+                            <label class="mat-label">姓名*</label>
+                            <input class="mat-input" type="text" autocomplete="off" v-model="sendData.name">
+                        </div>
+                        <div class="mat-div wow fadeInUp">
+                            <label class="mat-label">公司</label>
+                            <input class="mat-input" type="text" autocomplete="off" v-model="sendData.company">
+                        </div>
+                        <div class="mat-div wow fadeInUp">
+                            <label class="mat-label">信箱*</label>
+                            <input class="mat-input" type="text" autocomplete="off" v-model="sendData.email">
+                        </div>
+                        <div class="mat-div wow fadeInUp">
+                            <label class="mat-label">電話</label>
+                            <input class="mat-input" type="number" autocomplete="off" v-model.number="sendData.phone">
+                        </div>
+                    </div>
+                    <div class="textBox wow fadeInUp">
+                        <textarea type="text" placeholder="詢問內容" name="contactContent" maxlength="400" v-model="sendData.msg"></textarea>
+                    </div>
+                    <!--0125 add btn--><a class="send wow fadeInUp" href="#">GO!</a>
+                </div>
+            </div>
+        </section>
+        <!-- map-->
+        <div class="map">
+            <section id="cd-google-map">
+                <div id="google-container"></div>
+                <div id="cd-zoom-in"></div>
+                <div id="cd-zoom-out"></div>
+            </section>
         </div>
+        <footer class="footer-index">© 2019 立炘數位行銷有限公司. ALL RIGHTS RESERVED.</footer>
+    </div>
     </span>
     <script src="js/index.bundle.js"></script>
 </body>

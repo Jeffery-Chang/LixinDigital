@@ -1358,7 +1358,14 @@ header {
     font-size: 6rem;
     color: #fff;
     font-weight: bold;
-    text-align: center; }
+    text-align: center;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
     @media screen and (max-width: 1440px) {
       .kv .slogan {
         top: 30vh; } }
